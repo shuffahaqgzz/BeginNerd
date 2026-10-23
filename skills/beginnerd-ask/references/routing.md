@@ -1,6 +1,6 @@
 # Ask Routing Reference
 
-Read current project state and the workflow registry before choosing a route. Routing is based on **what the user needs**, not a simplistic global phase lock.
+Read current project state; open packaged references/workflow-registry.md when exact workflow IDs/owners matter. Routing is based on **what the user needs**, not a simplistic global phase lock.
 
 | User intent | Responsible skill | Workflow |
 |---|---|---|
@@ -25,7 +25,7 @@ Read current project state and the workflow registry before choosing a route. Ro
 - A single bug fix does not require recreating all prior SDLC documents.
 - A current critical architecture/security conflict requires scoped HOLD and return to the owning phase.
 - Partial G2 supports planning only for unblocked work; missing data must not be quietly made up.
-- No lifecycle skill implementation in the repository yet means routing is a **design recommendation**, not proof that automated handoff can execute.
+- Routing to a lifecycle owner is a **design recommendation** unless that skill is actually installed, discoverable, and verified. Do not claim automatic handoff based solely on this registry.
 - Graphify/Hindsight may assist context only after permission and functional verification; never replace approved documents.
 
 Example response:

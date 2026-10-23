@@ -2,7 +2,7 @@
 
 **BeginNerd** adalah framework **Guided Building** untuk membantu pengguna pemula dan tim campuran merencanakan, membangun, menguji, merilis, dan memelihara aplikasi bersama AI coding agent.
 
-> **Status: FOUNDATION BOOTSTRAP / UNDER REVIEW.** Desain framework enam fase dan 32 workflow telah disetujui. Dua companion SKILL.md di sini merupakan starter implementation yang **belum diuji pada agent runtime aktual**. Enam lifecycle skills belum diimplementasikan.
+> **Status: REPOSITORY BASELINE MERGED; SKILL ENGINEERING / PORTABILITY UNDER REVIEW.** Desain framework enam fase dan 32 workflow telah disetujui. Dua companion SKILL.md di sini merupakan starter implementation yang **belum diuji pada agent runtime aktual**. Enam lifecycle skills belum diimplementasikan.
 
 ## Arsitektur target
 
@@ -31,19 +31,22 @@ Delapan nama skill adalah target framework; direktori lifecycle sengaja hanya be
 - [Implementation status](docs/implementation/STATUS.md) dan [validation plan](docs/implementation/VALIDATION-PLAN.md).
 - [Skills inventory](skills/README.md) dan [runtime quickstart](docs/setup/QUICKSTART.md).
 
-## Verifikasi repository
+## Verifikasi repository dan packaging
 
-Untuk meninjau branch bootstrap sebelum di-merge:
+Untuk memeriksa baseline dari `main` atau branch PR yang ditinjau:
 
 ```bash
 git clone https://github.com/shuffahaqgzz/BeginNerd.git
 cd BeginNerd
-git switch setup/framework-foundation-v1
 python3 scripts/validate_repository.py
+python3 scripts/build_portable_references.py --check
+python3 scripts/validate_skill_packages.py
 python3 -m unittest discover -s tests/contracts -p 'test_*.py' -v
 ```
 
-Validator memeriksa kontrak statis dan inventaris. Skenario di [tests/behavioral/scenarios.json](tests/behavioral/scenarios.json) adalah **spesifikasi**, bukan hasil eksekusi agent. CI hijau tidak membuktikan kemampuan routing runtime atau Graphify/Hindsight yang benar-benar berfungsi.
+Target instalasi awal: `beginnerd-ask` dan `beginnerd-setup`, bukan keenam lifecycle skills yang masih berupa kontrak desain. [Skill Engineering Standard](docs/engineering/SKILL-ENGINEERING-AND-DISTRIBUTION-STANDARD.md) dan [Distribution Readiness](docs/implementation/DISTRIBUTION-READINESS.md) menerangkan batas validasi, installation scope, serta persyaratan izin.
+
+Validator memeriksa kontrak statis, snapshots dan inventaris; penggunaan pada runtime tetap memerlukan pengujian. Skenario di [tests/behavioral/scenarios.json](tests/behavioral/scenarios.json) serta [activation queries](tests/activation/queries.json) adalah **spesifikasi**, bukan hasil eksekusi agent. CI hijau tidak membuktikan kemampuan routing runtime atau Graphify/Hindsight yang benar-benar berfungsi.
 
 ## Prinsip
 

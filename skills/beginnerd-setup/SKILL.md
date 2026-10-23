@@ -1,6 +1,6 @@
 ---
 name: beginnerd-setup
-description: Onboard users into BeginNerd, choose guidance preferences, inspect existing configuration, and provision/verify project-scoped Graphify knowledge and Hindsight memory only with explicit authorization.
+description: Use for first-use BeginNerd onboarding, guidance preferences, project setup, existing skill/provider inventory, or Graphify and Hindsight knowledge/memory configuration and verification. Require approval before making changes.
 ---
 
 # BeginNerd Setup — Cross-Phase Companion
@@ -33,4 +33,4 @@ Prepare the BeginNerd user experience and knowledge/memory integration safely, a
 - Never claim session recall or retain when not called, inaccessible, or unacknowledged.
 
 ## References
-Load references/onboarding.md when interviewing the user. Load references/provider-verification.md only when integrating or validating the providers. Follow AGENTS.md and docs/governance/MEMORY-KNOWLEDGE-CONTRACT.md.
+Load references/onboarding.md for the first-use interview or rerun. Load references/provider-verification.md and references/memory-knowledge-contract.md only when discovering, integrating, or validating Graphify/Hindsight. Load references/agent-governance.md before material authorization, configuration changes, or recovery. All packaged references live inside this skill directory. Respect consumer-project AGENTS.md if present, but never depend on the BeginNerd source repository being available.
