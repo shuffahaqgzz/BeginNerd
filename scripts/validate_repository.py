@@ -15,6 +15,8 @@ COUNTS = {"PF": 4, "SOLUTION": 8, "PLANNING": 4, "FOUNDATION": 5,
 REQUIRED = (
     "README.md", "AGENTS.md", "docs/architecture/FRAMEWORK-ARCHITECTURE.md",
     "docs/decisions/DECISION-REGISTER.md",
+    "docs/decisions/BN-DEC-009-APPROVED-DETAILS.md",
+    "docs/architecture/ARTIFACT-AND-READINESS-CONTRACT.md",
     "docs/workflows/WORKFLOW-REGISTRY.md",
     "docs/governance/AGENT-GOVERNANCE.md",
     "docs/governance/MEMORY-KNOWLEDGE-CONTRACT.md",

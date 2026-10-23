@@ -47,6 +47,12 @@ class RepositoryContractsTests(unittest.TestCase):
         self.assertIn("MEMORY_SYNC_PENDING", memory)
         self.assertIn("maximum two attempts", policy.lower())
 
+    def test_phase_decision_matrix_coverage(self):
+        import re
+        content = (ROOT / "docs/decisions/BN-DEC-009-APPROVED-DETAILS.md").read_text(encoding="utf-8")
+        self.assertEqual(len(re.findall(r"^\| 5[A-N] \|", content, re.M)), 14)
+        self.assertEqual(len(re.findall(r"^\| 6[A-F] \|", content, re.M)), 6)
+
     def test_behavioral_cases_remain_not_executed(self):
         import json
         cases = json.loads((ROOT / "tests/behavioral/scenarios.json").read_text(encoding="utf-8"))

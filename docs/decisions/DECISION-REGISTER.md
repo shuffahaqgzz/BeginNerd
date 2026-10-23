@@ -1,5 +1,7 @@
 # BeginNerd Decision Register — Known Approved Baseline
 
+See [BN-DEC-009 Approved Details](BN-DEC-009-APPROVED-DETAILS.md) for explicit 5A–N, 6A–F, phase boundaries, and addenda.
+
 This register captures decisions supported by the supplied BeginNerd source discussions. Do not invent absent decisions or treat historical proposals as new approvals. The canonical decision evidence should eventually be consolidated and versioned; source transcripts are not committed wholesale to this public repository.
 
 | Decision | Recorded outcome | Status |

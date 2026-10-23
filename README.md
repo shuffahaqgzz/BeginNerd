@@ -22,8 +22,9 @@ Delapan nama skill adalah target framework; direktori lifecycle sengaja hanya be
 ## Dokumentasi canonical
 
 - [Arsitektur framework](docs/architecture/FRAMEWORK-ARCHITECTURE.md) — enam fase dan quality/readiness checks.
+- [Artifact & readiness contract](docs/architecture/ARTIFACT-AND-READINESS-CONTRACT.md) — dokumen, keterlacakan dan bukti fase.
 - [Workflow registry](docs/workflows/WORKFLOW-REGISTRY.md) — 32 IDs, owner dan tanggung jawab.
-- [Decision register](docs/decisions/DECISION-REGISTER.md) — keputusan yang telah didukung sumber, termasuk provenance gaps.
+- [Decision register](docs/decisions/DECISION-REGISTER.md) dan [detail keputusan BN-DEC-009](docs/decisions/BN-DEC-009-APPROVED-DETAILS.md) — approved design serta provenance gaps.
 - [Agent governance](docs/governance/AGENT-GOVERNANCE.md) — approval, no-overclaim, batas remediasi.
 - [Memory & knowledge](docs/governance/MEMORY-KNOWLEDGE-CONTRACT.md) — Graphify, Hindsight, session continuity.
 - [Research & reuse](docs/governance/RESEARCH-REUSE-POLICY.md) dan [work structure](docs/governance/WORK-STRUCTURE-POLICY.md).
