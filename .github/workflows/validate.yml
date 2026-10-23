@@ -1,0 +1,25 @@
+name: BeginNerd static contract validation
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Check Python
+        run: python3 --version
+      - name: Validate baseline
+        run: python3 scripts/validate_repository.py
+      - name: Run unit contract tests
+        run: python3 -m unittest discover -s tests/contracts -p 'test_*.py' -v
