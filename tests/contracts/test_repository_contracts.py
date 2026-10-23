@@ -32,12 +32,21 @@ class RepositoryContractsTests(unittest.TestCase):
                 self.assertIn("description:", skill)
 
     def test_lifecycle_skill_implementation_not_falsely_claimed(self):
-        for name in ("beginnerd-product", "beginnerd-solution", "beginnerd-plan",
+        for name in ("beginnerd-solution", "beginnerd-plan",
                      "beginnerd-foundation", "beginnerd-implement", "beginnerd-release"):
             with self.subTest(skill=name):
                 self.assertFalse((ROOT / "skills" / name / "SKILL.md").exists())
                 contents = (ROOT / "skills" / name / "README.md").read_text(encoding="utf-8")
                 self.assertIn("NOT IMPLEMENTED", contents)
+
+    def test_product_skill_exists_but_runtime_unverified(self):
+        skill = (ROOT / "skills" / "beginnerd-product" / "SKILL.md").read_text(encoding="utf-8")
+        self.assertIn("name: beginnerd-product", skill)
+        for workflow in ("PF-01", "PF-02", "PF-03", "PF-04", "G1"):
+            self.assertIn(workflow, skill)
+        state = (ROOT / "docs" / "implementation" / "STATUS.md").read_text(encoding="utf-8")
+        self.assertIn("beginnerd-product", state)
+        self.assertIn("NOT VERIFIED", state)
 
     def test_memory_and_recovery_limits_documented(self):
         memory = (ROOT / "docs/governance/MEMORY-KNOWLEDGE-CONTRACT.md").read_text(encoding="utf-8")

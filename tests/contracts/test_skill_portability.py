@@ -17,15 +17,15 @@ class SkillPortabilityTests(unittest.TestCase):
     def test_generated_references_are_current(self):
         self.assertEqual(synchronize(check=True), [])
 
-    def test_exactly_two_distributable_skills(self):
+    def test_exactly_three_distributable_skills(self):
         self.assertEqual(validate(), [])
 
     def test_canonical_sources_have_portable_copies(self):
-        self.assertEqual(len(SOURCES), 3)
-        self.assertEqual(sum(len(paths) for paths in SOURCES.values()), 5)
+        self.assertEqual(len(SOURCES), 5)
+        self.assertEqual(sum(len(paths) for paths in SOURCES.values()), 9)
 
     def test_standalone_copy_needs_no_repository_docs(self):
-        for name in ("beginnerd-ask", "beginnerd-setup"):
+        for name in ("beginnerd-ask", "beginnerd-setup", "beginnerd-product"):
             with self.subTest(skill=name), tempfile.TemporaryDirectory() as folder:
                 portable = Path(folder) / name
                 shutil.copytree(ROOT / "skills" / name, portable)
@@ -50,7 +50,7 @@ class SkillPortabilityTests(unittest.TestCase):
         data = json.loads((ROOT / "tests" / "activation" / "queries.json").read_text(encoding="utf-8"))
         self.assertGreaterEqual(len(data), 12)
         self.assertTrue(all(x["execution_status"] == "NOT_EXECUTED" for x in data))
-        self.assertEqual({x["skill"] for x in data}, {"beginnerd-ask", "beginnerd-setup"})
+        self.assertEqual({x["skill"] for x in data}, {"beginnerd-ask", "beginnerd-setup", "beginnerd-product"})
 
 
 if __name__ == "__main__":

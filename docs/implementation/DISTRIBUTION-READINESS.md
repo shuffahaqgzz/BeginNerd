@@ -48,3 +48,6 @@ npx skills@latest update -g  # Hanya untuk instalasi global; perlu approval
 - Runtime invocation: NOT EXECUTED.
 - Graphify/Hindsight integration: UNVERIFIED.
 - Issue #2 tetap OPEN untuk validasi runtime.
+
+## Phase 1 product candidate (in separate PR)
+Pada branch implementasi Phase 1, `beginnerd-product` mempunyai `SKILL.md` dan references self-contained. Target **setelah PR di-merge** adalah discovery **3 skills**, tetapi hal ini belum terbukti melalui Skills CLI pada `srv-test01`. Jangan menginstal otomatis ke seluruh proyek; source `main` sebelum merge masih hanya dua skill. Setelah merge, lakukan `--list` dan kemudian install in isolated project dengan approval, diikuti activation/behavioral evaluation. Hanya setelah evidence nyata skill bisa dinyatakan runtime-verified.

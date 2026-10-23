@@ -14,13 +14,21 @@ SOURCES = {
     "docs/governance/AGENT-GOVERNANCE.md": (
         "skills/beginnerd-ask/references/agent-governance.md",
         "skills/beginnerd-setup/references/agent-governance.md",
+        "skills/beginnerd-product/references/agent-governance.md",
     ),
     "docs/governance/MEMORY-KNOWLEDGE-CONTRACT.md": (
         "skills/beginnerd-ask/references/memory-knowledge-contract.md",
         "skills/beginnerd-setup/references/memory-knowledge-contract.md",
+        "skills/beginnerd-product/references/memory-knowledge-contract.md",
     ),
     "docs/workflows/WORKFLOW-REGISTRY.md": (
         "skills/beginnerd-ask/references/workflow-registry.md",
+    ),
+    "docs/governance/RESEARCH-REUSE-POLICY.md": (
+        "skills/beginnerd-product/references/research-reuse-policy.md",
+    ),
+    "docs/architecture/ARTIFACT-AND-READINESS-CONTRACT.md": (
+        "skills/beginnerd-product/references/artifact-readiness-contract.md",
     ),
 }
 

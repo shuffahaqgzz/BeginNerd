@@ -11,9 +11,9 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-ACTIVE = ("beginnerd-ask", "beginnerd-setup")
+ACTIVE = ("beginnerd-ask", "beginnerd-setup", "beginnerd-product")
 LIFECYCLE = (
-    "beginnerd-product", "beginnerd-solution", "beginnerd-plan",
+    "beginnerd-solution", "beginnerd-plan",
     "beginnerd-foundation", "beginnerd-implement", "beginnerd-release",
 )
 NAME = re.compile(r"[a-z0-9]+(?:-[a-z0-9]+)*\Z")
@@ -138,7 +138,7 @@ def main() -> int:
             print(" - " + error)
         return 1
     print("SKILL PACKAGE STATIC CHECK: PASS")
-    print("Validated 2 companion skill metadata and packaged refs; 6 lifecycle skills excluded.")
+    print("Validated 2 companion + 1 product skill metadata and packaged refs; 5 lifecycle skills pending.")
     print("NOT VERIFIED: full upstream YAML spec, Skills CLI install, runtime triggering, providers.")
     return 0
 

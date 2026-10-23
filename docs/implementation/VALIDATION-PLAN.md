@@ -27,6 +27,3 @@ BLOCKED: critical prerequisite missing or unsafe to proceed.
 UNVERIFIED: claims lacking direct evidence, even when a document describes expected behavior.
 
 CI static tests are insufficient to declare package PASS. Required proof includes actual invocation, plugin/provider behavior, and safe second-run testing.
-
-## Companion portability precondition (V02-R, within existing Paket 01)
-Prior to runtime V03–V10, reconcile runtime inventory and isolated package resources. `scripts/build_portable_references.py --check` verifies generated governance/reference parity. `scripts/validate_skill_packages.py` checks the local format subset and references. CI is not proof of actual runtime installation. Positive and negative activation prompts in `tests/activation/queries.json` remain NOT_EXECUTED until verified in supported Codex sessions. See `docs/engineering/SKILL-ENGINEERING-AND-DISTRIBUTION-STANDARD.md` and `docs/implementation/DISTRIBUTION-READINESS.md`.

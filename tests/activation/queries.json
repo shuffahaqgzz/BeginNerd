@@ -110,5 +110,75 @@
     "query": "Apa status terakhir QA dan approval task ini?",
     "should_trigger": false,
     "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-PRODUCT-01",
+    "skill": "beginnerd-product",
+    "query": "Bantu saya discovery ide aplikasi POS dan tentukan masalah pengguna.",
+    "should_trigger": true,
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-PRODUCT-02",
+    "skill": "beginnerd-product",
+    "query": "Susun PRD untuk produk saya, dengan REQUIREMENTS dan acceptance criteria.",
+    "should_trigger": true,
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-PRODUCT-03",
+    "skill": "beginnerd-product",
+    "query": "Tentukan fitur minimum MVP untuk validasi pertama dan fitur yang ditunda.",
+    "should_trigger": true,
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-PRODUCT-04",
+    "skill": "beginnerd-product",
+    "query": "Buat Technical Requirements berdasarkan kebutuhan produk dan risiko.",
+    "should_trigger": true,
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-PRODUCT-05",
+    "skill": "beginnerd-product",
+    "query": "Audit G1 Product Baseline Readiness, jelaskan apakah PASS atau PARTIAL.",
+    "should_trigger": true,
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-PRODUCT-06",
+    "skill": "beginnerd-product",
+    "query": "Pilih antara Next.js dan Nuxt berdasarkan benchmark terbaru.",
+    "should_trigger": false,
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-PRODUCT-07",
+    "skill": "beginnerd-product",
+    "query": "Buat roadmap dan pecah milestone menjadi tasks untuk coding agent.",
+    "should_trigger": false,
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-PRODUCT-08",
+    "skill": "beginnerd-product",
+    "query": "Implementasikan endpoint pembayaran sesuai approved task.",
+    "should_trigger": false,
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-PRODUCT-09",
+    "skill": "beginnerd-product",
+    "query": "Aktifkan Hindsight dan registrasikan MCP Graphify ke Codex.",
+    "should_trigger": false,
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-PRODUCT-10",
+    "skill": "beginnerd-product",
+    "query": "Jalankan deployment release candidate ke staging dan acceptance.",
+    "should_trigger": false,
+    "execution_status": "NOT_EXECUTED"
   }
 ]

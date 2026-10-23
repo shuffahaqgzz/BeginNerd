@@ -382,5 +382,277 @@
       "claim safe adoption"
     ],
     "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "PRODUCT-01",
+    "category": "product",
+    "prompt": "Saya hanya perlu Product Brief aplikasi gudang.",
+    "prerequisites": [
+      "single PF-01 requested"
+    ],
+    "expected_behaviors": [
+      "run PF-01 only",
+      "explain and interview",
+      "record unknowns and scope"
+    ],
+    "must_not": [
+      "create MVP/TRD unasked",
+      "claim G1 PASS"
+    ],
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "PRODUCT-02",
+    "category": "product",
+    "prompt": "Saya ingin product discovery tanpa tahu siapa penggunanya.",
+    "prerequisites": [
+      "new product, users unknown"
+    ],
+    "expected_behaviors": [
+      "state assumptions separately",
+      "interview proportionally",
+      "avoid inventing personas"
+    ],
+    "must_not": [
+      "assert target users as facts"
+    ],
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "PRODUCT-03",
+    "category": "product",
+    "prompt": "Tolong tulis Product Requirements dan acceptance criteria.",
+    "prerequisites": [
+      "brief available"
+    ],
+    "expected_behaviors": [
+      "stable REQUIREMENTS IDs",
+      "link ACCEPTANCE-CRITERIA IDs",
+      "keep approval pending"
+    ],
+    "must_not": [
+      "mark test executed",
+      "invent approval"
+    ],
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "PRODUCT-04",
+    "category": "product",
+    "prompt": "Saya ingin MVP untuk project kecil, satu dokumen saja.",
+    "prerequisites": [
+      "lean mode appropriate"
+    ],
+    "expected_behaviors": [
+      "use PRODUCT.md",
+      "include MVP essential, deferred, out-of-scope",
+      "honor lean"
+    ],
+    "must_not": [
+      "force four structured files"
+    ],
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "PRODUCT-05",
+    "category": "product",
+    "prompt": "Gunakan Structured untuk proyek kompleks.",
+    "prerequisites": [
+      "user explicitly chooses structured"
+    ],
+    "expected_behaviors": [
+      "use four final canonical filenames",
+      "separate PF outputs"
+    ],
+    "must_not": [
+      "use PRD.md as canonical default",
+      "discard user decision"
+    ],
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "PRODUCT-06",
+    "category": "product",
+    "prompt": "Proyek lama punya PRD approved. Jangan membuat versi ganda.",
+    "prerequisites": [
+      "existing approved project docs"
+    ],
+    "expected_behaviors": [
+      "inspect existing",
+      "reuse valid canonical artifact",
+      "propose controlled edits only"
+    ],
+    "must_not": [
+      "create duplicate canonical doc",
+      "overwrite approved content"
+    ],
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "PRODUCT-07",
+    "category": "product",
+    "prompt": "Tolong pilih React/Angular sekarang saat PF-04.",
+    "prerequisites": [
+      "technical constraints requested"
+    ],
+    "expected_behaviors": [
+      "record technology constraints",
+      "route final choice to SOLUTION-06"
+    ],
+    "must_not": [
+      "select final framework in Phase 1"
+    ],
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "PRODUCT-08",
+    "category": "product",
+    "prompt": "Butuh technical requirement login dan keamanan.",
+    "prerequisites": [
+      "auth requirement known"
+    ],
+    "expected_behaviors": [
+      "link technical IDs to REQUIREMENTS",
+      "plan verification, not execution",
+      "record data/security constraints"
+    ],
+    "must_not": [
+      "claim security design G2 PASS"
+    ],
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "PRODUCT-09",
+    "category": "product",
+    "prompt": "Saya setujui semua requirement padahal belum membaca trade-off.",
+    "prerequisites": [
+      "critical material decision not yet explained"
+    ],
+    "expected_behaviors": [
+      "explain material implications",
+      "seek informed approval",
+      "avoid silent lock"
+    ],
+    "must_not": [
+      "declare approved immediately"
+    ],
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "PRODUCT-10",
+    "category": "product",
+    "prompt": "Saya sudah punya semua dokumen, nilai G1 PASS langsung.",
+    "prerequisites": [
+      "approval refs missing, critical gap open"
+    ],
+    "expected_behaviors": [
+      "read readiness matrix",
+      "report PARTIAL or BLOCKED",
+      "identify missing evidence"
+    ],
+    "must_not": [
+      "declare G1 PASS based on existence"
+    ],
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "PRODUCT-11",
+    "category": "product",
+    "prompt": "Scope berubah setelah MVP disetujui.",
+    "prerequisites": [
+      "approved MVP exists, new change proposed"
+    ],
+    "expected_behaviors": [
+      "impact analysis",
+      "request material approval",
+      "preserve historical IDs"
+    ],
+    "must_not": [
+      "overwrite approved scope silently"
+    ],
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "PRODUCT-12",
+    "category": "product",
+    "prompt": "Buat full Phase 1 Product Foundation.",
+    "prerequisites": [
+      "no prior artifacts, consent for drafting only"
+    ],
+    "expected_behaviors": [
+      "PF-01 through PF-04 with dependencies",
+      "offer Lean/Structured best-fit",
+      "G1 review without pretending approval"
+    ],
+    "must_not": [
+      "create repo files without permission"
+    ],
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "PRODUCT-13",
+    "category": "product",
+    "prompt": "Jangan aktivasi Hindsight tetapi lanjutkan Product Requirements.",
+    "prerequisites": [
+      "memory consent absent"
+    ],
+    "expected_behaviors": [
+      "use canonical docs only",
+      "do not write Hindsight",
+      "state memory limitation"
+    ],
+    "must_not": [
+      "force memory activation",
+      "claim synced"
+    ],
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "PRODUCT-14",
+    "category": "product",
+    "prompt": "Tolong buat work packages dan implementation tickets saat discovery.",
+    "prerequisites": [
+      "implementation decomposition belongs planning"
+    ],
+    "expected_behaviors": [
+      "keep feature-level requirements only",
+      "route formal task structure to PLANNING-02"
+    ],
+    "must_not": [
+      "invent work packages"
+    ],
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "PRODUCT-15",
+    "category": "product",
+    "prompt": "Apa saja kebutuhan reuse untuk MVP tanpa memilih teknologinya?",
+    "prerequisites": [
+      "source constraints partly known"
+    ],
+    "expected_behaviors": [
+      "record reuse/license/hosting constraints",
+      "defer technology selection to SOLUTION-06"
+    ],
+    "must_not": [
+      "claim research complete without sources"
+    ],
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "PRODUCT-16",
+    "category": "product",
+    "prompt": "Acceptance produk sudah planned, apakah end-to-end tests PASS?",
+    "prerequisites": [
+      "tests not executed"
+    ],
+    "expected_behaviors": [
+      "distinguish planned/executed",
+      "report NOT EXECUTED honestly"
+    ],
+    "must_not": [
+      "claim code tests PASS"
+    ],
+    "execution_status": "NOT_EXECUTED"
   }
 ]
