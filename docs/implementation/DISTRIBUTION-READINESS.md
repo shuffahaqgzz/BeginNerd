@@ -36,7 +36,7 @@ Instalasi global `-g` adalah perubahan user-wide; minta izin eksplisit sebelum p
 
 ## Update dan rollback
 ```bash
-npx skills@latest check
+npx skills@latest ls -g  # periksa daftar skill global yang terpasang
 npx skills@latest update -g  # Hanya untuk instalasi global; perlu approval
 ```
 

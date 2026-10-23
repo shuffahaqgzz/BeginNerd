@@ -1,7 +1,7 @@
 <!-- GENERATED FILE — DO NOT EDIT DIRECTLY.
 Canonical source: docs/governance/MEMORY-KNOWLEDGE-CONTRACT.md
 Canonical Git blob SHA-1: a1b2a185ea28fa9df5509b52bd0cc1ddeb9cc652
-Regenerate: python3 scripts/build_portable_references.py --write
+Regenerate in source repository: build_portable_references.py --write
 -->
 
 # Graphify & Hindsight — Knowledge and Memory Contract

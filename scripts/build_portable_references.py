@@ -38,7 +38,7 @@ def render(source: str, content: bytes) -> str:
         "<!-- GENERATED FILE — DO NOT EDIT DIRECTLY.\n"
         f"Canonical source: {source}\n"
         f"Canonical Git blob SHA-1: {git_blob_sha(content)}\n"
-        "Regenerate: python3 scripts/build_portable_references.py --write\n"
+        "Regenerate in source repository: build_portable_references.py --write\n"
         "-->\n\n"
     )
     return banner + text.rstrip("\n") + "\n"

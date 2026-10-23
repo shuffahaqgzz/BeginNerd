@@ -1,7 +1,7 @@
 <!-- GENERATED FILE — DO NOT EDIT DIRECTLY.
 Canonical source: docs/governance/AGENT-GOVERNANCE.md
 Canonical Git blob SHA-1: 11c5e2767df2b28ccddcf34c9a832db874f8efaf
-Regenerate: python3 scripts/build_portable_references.py --write
+Regenerate in source repository: build_portable_references.py --write
 -->
 
 # Universal Agent Governance Contract

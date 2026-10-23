@@ -1,7 +1,7 @@
 <!-- GENERATED FILE — DO NOT EDIT DIRECTLY.
 Canonical source: docs/workflows/WORKFLOW-REGISTRY.md
 Canonical Git blob SHA-1: a462b6cbc2b08bd3c0684980424c900e3e13acf6
-Regenerate: python3 scripts/build_portable_references.py --write
+Regenerate in source repository: build_portable_references.py --write
 -->
 
 # BeginNerd Workflow Registry — Approved 32 Contracts
