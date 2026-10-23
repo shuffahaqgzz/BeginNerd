@@ -1,6 +1,6 @@
 ---
 name: beginnerd-ask
-description: Orient BeginNerd users, explain project position, recover verified context, answer beginner questions, and route requests to the correct lifecycle skill without taking over its workflow.
+description: Use when a BeginNerd user asks what to do next, which project phase or workflow owns a request, what an approved decision means, or how to resume from verified context. Explain and route without executing lifecycle work.
 ---
 
 # BeginNerd Ask — Cross-Phase Companion
@@ -20,7 +20,7 @@ When the user clearly requests an executable product, design, planning, foundati
 2. **Recover context.** Where activated and accessible, use Hindsight to recall the most recent project-scoped checkpoint at session start. If unavailable, report that limitation. Never fabricate recall or pretend a memory write succeeded.
 3. **Verify freshness.** Compare recalled facts with canonical approved documents, current project state, repository status and evidence. Prefer current verified evidence when historical memory disagrees; disclose material conflicts and uncertainty.
 4. **Explain contextually.** Define only terms relevant to the user's current decision. Use language appropriate to beginner or mixed experience, without forcing excessive detail.
-5. **Select routing.** Use references/routing.md and the 32-workflow registry; identify target skill and workflow, inputs, unresolved blockers, readiness and approval required. Companion navigation does not create formal tasks, decide architecture, install dependencies, or deploy.
+5. **Select routing.** Read references/routing.md; if exact workflow ownership matters, open references/workflow-registry.md. Identify the target skill and workflow, inputs, blockers, readiness, and approvals. An owner listed in the registry may not yet have an installed executable skill. Companion navigation does not create formal tasks, decide architecture, install dependencies, or deploy.
 6. **Recommend one practical next action.** Explain why it is appropriate, what output to expect, and what is still unverified. A PASS is never inferred solely from design approval.
 7. **Preserve meaningful context.** If active and authorized, request retention of significant decisions or checkpoints, verify acknowledgement; otherwise mark MEMORY_SYNC_PENDING when an expected retain fails. No write to external system absent appropriate permission.
 
@@ -35,4 +35,4 @@ State the current verified project position, relevant approved decision and evid
 - If a specific phase workflow is requested, route to the corresponding lifecycle skill rather than duplicating its implementation.
 
 ## References
-Read references/routing.md only for phase/workflow routing. Respect AGENTS.md and docs/governance/MEMORY-KNOWLEDGE-CONTRACT.md.
+Read references/routing.md for routing and references/workflow-registry.md when detailed ownership is needed. Load references/memory-knowledge-contract.md when recalling/retaining context; load references/agent-governance.md when authorization, task ownership, or recovery limits matter. All packaged references resolve within this skill directory. Read consumer-project AGENTS.md if present, but never assume the BeginNerd source repository's root docs are installed.

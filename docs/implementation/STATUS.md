@@ -1,31 +1,30 @@
 # BeginNerd Repository Implementation Status
 
-Date: 2026-10-23. Snapshot applies to bootstrap Pull Request #1, not the user runtime outside this repository.
+**Updated:** 24 October 2026 WIB. Repository evidence and user-reported `srv-test01` V01–V02 assessment are distinct. This file records a snapshot, not live background monitoring.
 
-| Component | Current assessment |
+| Component | Latest grounded status |
 |---|---|
-| Six-phase / 32-workflow architecture | APPROVED — DESIGN |
-| Companion skill contracts ask/setup | APPROVED — DESIGN |
-| Repository bootstrap | IN PROGRESS — PR REVIEW |
-| beginnerd-ask starter SKILL.md | PROPOSED IMPLEMENTATION — NOT RUNTIME VERIFIED |
-| beginnerd-setup starter SKILL.md | PROPOSED IMPLEMENTATION — NOT RUNTIME VERIFIED |
-| Six lifecycle SKILL.md files | NOT IMPLEMENTED |
-| Graphify installation / connection | NOT VERIFIED |
-| Hindsight installation / connection | NOT VERIFIED; historical MEMORY_SYNC_PENDING requires fresh check |
-| Static contract validation | PASS on first PR check run 39947425565 (7 unit tests); latest PR head must be rechecked before merge |
-| Agent behavioral acceptance | SPECIFIED, NOT EXECUTED |
-| End-to-end greenfield/brownfield | NOT EXECUTED |
-| Framework release / operational status | NOT READY |
+| Six-phase / 32-workflow design | APPROVED — DESIGN |
+| Companion skill boundaries and contracts | APPROVED — DESIGN |
+| Repository bootstrap PR #1 | MERGED — `main` `3eb7d6990c2bea2999bd4f3c25923b2b352f8020` |
+| Static CI for merged baseline | PASS — 8 contract unit tests and post-merge validation |
+| V01–V02 at `srv-test01` | PARTIAL per Owner-supplied executor report; Codex CLI 0.164.0; installed Ask/Setup not found in inspected locations |
+| V02 installed-vs-starter diff | BLOCKED until actual installed copies exist |
+| Starter Ask/Setup source | PRESENT, portable packaging changes IN PR REVIEW, runtime NOT VERIFIED |
+| Six lifecycle `SKILL.md` | NOT IMPLEMENTED |
+| Graphify/Hindsight functional provider tests | NOT VERIFIED; preserve existing external registrations |
+| 22 behavioral tests & activation tests | NOT EXECUTED; activation cases are specifications only |
+| Skills CLI discovery/install/update | NOT EXECUTED from `srv-test01` |
+| Framework release & full E2E | NOT READY |
 
-## Verified CI evidence
-- [GitHub Actions static validation run](https://github.com/shuffahaqgzz/BeginNerd/actions/runs/39947425565): PASS for commit f10d60a755abeaaa9cbb69cba2e76ee9adeed1d2, validator PASS, 7 unittest cases OK.
-- This evidence does **not** prove behavioral/runtime integration. Check the newest PR head separately.
+## Evidence references
+- [PR #1 merged](https://github.com/shuffahaqgzz/BeginNerd/pull/1) and [main commit](https://github.com/shuffahaqgzz/BeginNerd/commit/3eb7d6990c2bea2999bd4f3c25923b2b352f8020).
+- [Baseline post-merge CI](https://github.com/shuffahaqgzz/BeginNerd/actions/runs/39999038991) — user-reported PASS.
+- [Paket 01 Issue #2](https://github.com/shuffahaqgzz/BeginNerd/issues/2); V01–V02 executor report supplied by Owner in conversation, not stored as raw provider data in this public repository.
+- Packaging preparation and authoring standard are proposed on a separate PR; **do not claim this branch has merged or its CI passed until verified**.
 
-## Immediate sequence
-1. Review / merge bootstrap PR when repository checks and owner review are satisfactory.
-2. Compare the companion starter implementations with any existing actual runtime-installed skill files; reconcile without overwriting provenance.
-3. Validate companion routing, setup idempotence, provider discovery, and Graphify/Hindsight read/write/recall in an authorized test environment.
-4. Implement lifecycle skills according to approved workflow references and traceability, in controlled increments.
-5. Execute behavioral and E2E acceptance evidence before framework readiness PASS.
-
-Do not confuse Markdown syntax/static CI success with successful installation or operational provider integration.
+## Next handoff
+1. Review proposed standard, reference snapshots and isolated-copy CI. Reconcile actual installation target, preserving Hindsight and unrelated project registrations.
+2. On approved test environment, perform Skills CLI discovery without install, review scope and diff, then explicitly authorize controlled installation if suitable.
+3. Run activation triggers, 22 behavioral scenarios, and Graphify/Hindsight provider-native tests with per-step permission; preserve sanitized evidence.
+4. Keep Issue #2 open until actual execution evidence supports its verdict. Design approval and CI syntax PASS cannot establish runtime readiness.

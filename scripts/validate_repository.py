@@ -24,6 +24,11 @@ REQUIRED = (
     "docs/governance/WORK-STRUCTURE-POLICY.md",
     "docs/implementation/STATUS.md",
     "tests/behavioral/scenarios.json",
+    "tests/activation/queries.json",
+    "docs/engineering/SKILL-ENGINEERING-AND-DISTRIBUTION-STANDARD.md",
+    "docs/implementation/DISTRIBUTION-READINESS.md",
+    "scripts/build_portable_references.py",
+    "scripts/validate_skill_packages.py",
 )
 ROW = re.compile(r"^\|\s*(PF|SOLUTION|PLANNING|FOUNDATION|IMPLEMENT|RELEASE|OPS)-(\d{2})\s*\|", re.M)
 

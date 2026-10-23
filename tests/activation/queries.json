@@ -1,0 +1,114 @@
+[
+  {
+    "id": "ACT-ASK-01",
+    "skill": "beginnerd-ask",
+    "query": "BeginNerd kita sudah sampai phase berapa? Saya mau lanjut dari checkpoint kemarin.",
+    "should_trigger": true,
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-ASK-02",
+    "skill": "beginnerd-ask",
+    "query": "Aku lupa keputusan G2 minggu lalu, tolong jelaskan sesuai dokumen terbaru.",
+    "should_trigger": true,
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-ASK-03",
+    "skill": "beginnerd-ask",
+    "query": "Workflow mana yang cocok untuk membandingkan Postgres dan SQLite?",
+    "should_trigger": true,
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-ASK-04",
+    "skill": "beginnerd-ask",
+    "query": "Kenapa task saya ditandai HOLD dan apa langkah berikutnya?",
+    "should_trigger": true,
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-ASK-05",
+    "skill": "beginnerd-ask",
+    "query": "Tolong buat roadmap dan task breakdown versi final sekarang.",
+    "should_trigger": false,
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-ASK-06",
+    "skill": "beginnerd-ask",
+    "query": "Buatkan endpoint login sesuai acceptance task IMPLEMENT-002.",
+    "should_trigger": false,
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-ASK-07",
+    "skill": "beginnerd-ask",
+    "query": "Aktifkan Hindsight persistent memory sekarang dan simpan sesi ini.",
+    "should_trigger": false,
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-ASK-08",
+    "skill": "beginnerd-ask",
+    "query": "Mulai setup BeginNerd pertama kali, tolong pilih mode guidance.",
+    "should_trigger": false,
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-SETUP-01",
+    "skill": "beginnerd-setup",
+    "query": "Baru pertama pakai BeginNerd. Bimbing saya menyiapkan preferensi.",
+    "should_trigger": true,
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-SETUP-02",
+    "skill": "beginnerd-setup",
+    "query": "Saya ingin setup Graphify dan Hindsight untuk proyek baru.",
+    "should_trigger": true,
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-SETUP-03",
+    "skill": "beginnerd-setup",
+    "query": "Cek apakah skill BeginNerd terpasang ganda sebelum konfigurasi.",
+    "should_trigger": true,
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-SETUP-04",
+    "skill": "beginnerd-setup",
+    "query": "Bisa cek apakah persistent memory project-scoped sudah benar?",
+    "should_trigger": true,
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-SETUP-05",
+    "skill": "beginnerd-setup",
+    "query": "Bagaimana cara saya menerapkan API Guide untuk sistem saya?",
+    "should_trigger": false,
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-SETUP-06",
+    "skill": "beginnerd-setup",
+    "query": "Tolong pecah milestone implementasi ke vertical slices.",
+    "should_trigger": false,
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-SETUP-07",
+    "skill": "beginnerd-setup",
+    "query": "Saya butuh rekomendasi apakah menggunakan Redis atau tidak.",
+    "should_trigger": false,
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-SETUP-08",
+    "skill": "beginnerd-setup",
+    "query": "Apa status terakhir QA dan approval task ini?",
+    "should_trigger": false,
+    "execution_status": "NOT_EXECUTED"
+  }
+]

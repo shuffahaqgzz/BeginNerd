@@ -21,5 +21,9 @@ jobs:
         run: python3 --version
       - name: Validate baseline
         run: python3 scripts/validate_repository.py
+      - name: Verify portable reference snapshots
+        run: python3 scripts/build_portable_references.py --check
+      - name: Validate self-contained skill packages
+        run: python3 scripts/validate_skill_packages.py
       - name: Run unit contract tests
         run: python3 -m unittest discover -s tests/contracts -p 'test_*.py' -v
