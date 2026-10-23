@@ -1,0 +1,26 @@
+# OS / editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+# Python validation cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+# Secrets and local data
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+.secrets/
+credentials/
+# Runtime state and private memory must not enter source control
+.runtime/
+.local/
+data/memory/
+data/knowledge/
+evidence/private/
