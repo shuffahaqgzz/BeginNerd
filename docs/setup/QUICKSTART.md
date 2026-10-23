@@ -18,3 +18,6 @@ The companion starter skills describe the user-facing behavior but do not deploy
 
 ## Git policy
 Use PR-based integration, keep main protected according to owner preference, and never commit .env, tokens, private knowledge, or memory checkpoints. Branch protection settings require separate authorized admin configuration.
+
+## Phase 1 candidate
+Jika PR `beginnerd-product` sedang ditinjau, periksa `SKILL.md`, workflow references dan assets di branch PR serta `PHASE-1-PRODUCT-IMPLEMENTATION-CONTRACT.md`. Jangan mengira file dalam PR sudah masuk `main`. Lakukan discovery tiga skill dan instalasi project-scoped **setelah** merge dan approval untuk runtime.

@@ -4,17 +4,17 @@ Target: eight skills — two cross-phase companions plus six lifecycle skills co
 
 | Skill | Type | Repository state |
 |---|---|---|
-| beginnerd-ask | Companion | Starter SKILL.md with portable generated references; runtime invocation unverified |
-| beginnerd-setup | Companion | Starter SKILL.md drafted; runtime invocation unverified |
-| beginnerd-product | Lifecycle Phase 1 | Design boundary only; implementation pending |
+| beginnerd-ask | Companion | Source installed; basic invocation reported on srv-test01; broader behavior unverified |
+| beginnerd-setup | Companion | Source installed; read-only assessment reported on srv-test01; provider integration partial |
+| beginnerd-product | Lifecycle Phase 1 | SKILL.md + four PF references, G1, templates; candidate under PR, runtime NOT VERIFIED |
 | beginnerd-solution | Lifecycle Phase 2 | Design boundary only; implementation pending |
 | beginnerd-plan | Lifecycle Phase 3 | Design boundary only; implementation pending |
 | beginnerd-foundation | Lifecycle Phase 4 | Design boundary only; implementation pending |
 | beginnerd-implement | Lifecycle Phase 5 | Design boundary only; implementation pending |
 | beginnerd-release | Lifecycle Phase 6 | Design boundary only; implementation pending |
 
-The two companion skills bundle **generated snapshots** of their shared canonical governance and registry dependencies under `references/`. Run `python3 scripts/build_portable_references.py --check` to detect drift. See `docs/engineering/SKILL-ENGINEERING-AND-DISTRIBUTION-STANDARD.md`.
+The two companion skills and product candidate bundle **generated snapshots** of relevant canonical governance, knowledge/memory, and/or readiness contracts under `references/`. Run `python3 scripts/build_portable_references.py --check` to detect drift. See `docs/engineering/SKILL-ENGINEERING-AND-DISTRIBUTION-STANDARD.md`.
 
-Do not use a lifecycle directory as an executable skill until its SKILL.md, references, test contracts, and runtime evidence are added.
+Five lifecycle directories are still **NOT IMPLEMENTED**; do not count them as installable. Having a `SKILL.md` in `beginnerd-product` proves source availability, not runtime validation.
 
 If actual installed ask/setup files exist outside this repository, treat the starter definitions here as candidates to reconcile, not exact copies. Keep configuration and modifications made by the user.
