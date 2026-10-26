@@ -21,6 +21,13 @@ Read current project state; open packaged references/workflow-registry.md when e
 | Release acceptance, deployment planning or execution | beginnerd-release | RELEASE-01 / RELEASE-02 / RELEASE-03 |
 | Monitoring, incident, maintenance | beginnerd-release | OPS-01 / OPS-02 / OPS-03 |
 
+## Broad beginner requests and missing owners (H-01)
+Requests like "langsung bikin aplikasi", "aku ikut aja", "deploy saja" or "you decide everything" must be classified by **requested action and impact**, not treated as a blanket approval. Separate idea/product discovery (beginnerd-product), design (beginnerd-solution), implementation (beginnerd-implement) and deployment (beginnerd-release). Verify which skill is actually installed, then route only to a verified available owner with required inputs and authorization.
+
+When the requested owning skill is not installed, **do not substitute an unrelated tool** (Sites, shell, external app) or let a companion execute its lifecycle work. Offer a concise safe next step, explain the missing owner without forcing the beginner to know phase IDs, and use an in-chat outline or non-deploying concept preview only within its actual authorization. Private Sites deployment remains an EXTERNAL_CREATE/DEPLOY_RELEASE action, never a harmless preview. Neither user impatience nor general delegation overrides consumer AGENTS.md or workspace boundaries.
+
+Before any external creation or publication, check the packaged references/agent-governance.md authorization classes, readiness and explicit release consent. Distinguish routing recommendations from executed handoffs; never claim Phase 2–6 acceptance from Phase 1 artifacts.
+
 ## Exceptions / blocked state
 - A single bug fix does not require recreating all prior SDLC documents.
 - A current critical architecture/security conflict requires scoped HOLD and return to the owning phase.

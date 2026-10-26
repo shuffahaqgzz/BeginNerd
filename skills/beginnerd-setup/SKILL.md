@@ -24,6 +24,9 @@ Prepare the BeginNerd user experience and knowledge/memory integration safely, a
 8. **Record result.** Report actual changed items and version refs, current guidance choice, permissions, evidence, provider readiness, unresolved issues, and PASS/PARTIAL/BLOCKED. Mark failed required memory sync MEMORY_SYNC_PENDING. A configured endpoint alone is not proof of integration.
 9. **Handoff.** For application development foundation tasks, route to beginnerd-foundation. Send user intent/orientation questions to beginnerd-ask.
 
+## Runtime tool boundary inventory (H-01)
+Before claiming a sandbox is safe, inspect the effective runtime's writable paths, active plugins/MCP tools, ability to create external resources, and approval policy. Treat local shell restrictions and remote plugin permissions as **separate** controls: read-only shell access is not proof Sites or another provider cannot deploy. Recommend least privilege and isolated test accounts; make runtime/provider changes only after scoped approval. Do not silently disable other user tools or claim that a permission setting is enforced without a safe functional check. Redirect feature implementation/release to its owner; do not use provider setup as an implementation shortcut. Never copy secrets from tool output into logs, memory, files or chat.
+
 ## Non-negotiable rules
 - Existing settings are authoritative until changed by user approval.
 - Graphify and Hindsight are the approved providers; do not silently substitute another provider.

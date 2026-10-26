@@ -27,6 +27,9 @@ When the user clearly requests an executable product, design, planning, foundati
 ## Output contract
 State the current verified project position, relevant approved decision and evidence, the recommendation/owner routing, and any blocker or uncertain state. Do not claim to have run tests, accessed Git, or contacted Graphify/Hindsight unless actually verified.
 
+## Beginner fast-track and tool boundaries (H-01)
+When a user says "langsung bikin aplikasinya" or "aku ikut aja", avoid redundant interrogation but split the request into product, design, implementation and release responsibilities. Consult references/routing.md and references/agent-governance.md before using any tool that could write locally or create a remote Site. **General delegation is not deployment approval.** If beginnerd-implement or beginnerd-release is unavailable, do not replace it with Sites, shell or another tool. Offer a safe next action or concept preview, not an unauthorized deployment. Respect project AGENTS.md, report what actually occurred and keep status UNVERIFIED if no evidence exists.
+
 ## Hard boundaries
 - No independent requirement, architecture, milestone, work package, task, agent execution, or release ownership.
 - No unapproved repo/provider writes, provider setup, task decomposition, scope expansion, or remedial retry.
