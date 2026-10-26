@@ -30,3 +30,18 @@ Audit dokumen dan naming existing terlebih dahulu. Jika dokumen approved yang se
 - Structured technical requirements → `assets/technical-requirements-template.md`
 
 Template adalah starter, bukan bukti acceptance. G1 status memerlukan kriteria di `references/g1-readiness.md`.
+
+## H-03 — Controlled persistence, readback and workspace integrity
+
+For any file write, check the actual consumer project instructions (for example AGENTS.md), inventory existing artifacts and select an explicitly authorized target. A private smoke directory is not automatically an application implementation workspace. User approval to persist a product document is not authorization to create application code, upload artifacts or publish a Site.
+
+After writing an artifact:
+1. **Read back the actual saved file**, not the proposed text in conversation.
+2. Check canonical naming and status, IDs and bidirectional references where present, approved/proposed separation, open decisions with owners, planned-vs-executed test language, and readiness evidence.
+3. Record precise path, file existence, stable content hash, readback timestamp and diff against prior artifact when available. A hash proves content at the observation time, not historical provenance.
+4. For workspace isolation, compare a scoped **before-and-after inventory with content hashes** of relevant files and paths (including untracked and ignored content as permitted). The fact that `git status --short` lists the same untracked directories does **not** establish that their contents did not change.
+5. If a baseline manifest is unavailable, state **UNVERIFIED** for unrelated-file preservation rather than asserting all other files unchanged.
+6. Keep material changes PROPOSED until separately approved; approval to save a document is not approval of its new feature proposals.
+7. Never copy secrets or private memory into test evidence. Save sanitized evidence only in an approved location.
+
+A static document checker can catch missing/duplicate IDs and broken links, but cannot establish that user approval, real test execution, deployment readiness or full filesystem isolation occurred. Report those dimensions separately.

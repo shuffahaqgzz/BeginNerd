@@ -10,6 +10,11 @@ Product requirement and MVP references: TBD.
 |---|---|---|---|---|---|
 | TECHNICAL-REQUIREMENTS-001 | REQUIREMENTS-001 | TBD | TBD (not yet executed) | TBD | DRAFT |
 
+## Verification Evidence & Deferred Decisions
+| Technical ID | Observable condition / threshold or TBD | Source / approval | Planned test (NOT EXECUTED) | Decision owner | Status |
+|---|---|---|---|---|---|
+| TECHNICAL-REQUIREMENTS-001 | TBD | PENDING | TBD | TBD | DRAFT |
+
 ## Domains to Assess (proportional)
 - Data classifications and storage/retention: TBD
 - Authentication, authorization, privacy & security needs: TBD
@@ -17,6 +22,8 @@ Product requirement and MVP references: TBD.
 - Integrations, API boundaries, interoperability: TBD
 - Environment, hosting, localization and costs: TBD
 - Existing reusable components, licensing, maintenance: TBD
+- Failure-state acceptance: invalid input, persistence failure, retry/duplicate, authorization, remote dependency, data recovery: TBD (when relevant)
+- Metrics with missing approval: TBD, decision owner and next checkpoint (do not invent numbers)
 
 ## Open Technical Decisions
 | Need | Context / constraints | Owner for final selection | Status |
