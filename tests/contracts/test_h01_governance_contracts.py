@@ -14,7 +14,7 @@ class H01GovernanceStaticTests(unittest.TestCase):
     def test_canonical_authorization_matrix_and_secrets(self):
         policy = content("docs/governance/AGENT-GOVERNANCE.md")
         for phrase in ("LOCAL_WRITE", "EXTERNAL_CREATE", "DEPLOY_RELEASE",
-                       "SECRET_ADMIN", "private", "general delegation"):
+                       "SECRET_ADMIN", "private", "delegation is not unlimited authorization"):
             self.assertIn(phrase.lower(), policy.lower())
         self.assertIn("never repeat its value", policy)
 
