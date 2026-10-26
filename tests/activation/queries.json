@@ -180,5 +180,33 @@
     "query": "Jalankan deployment release candidate ke staging dan acceptance.",
     "should_trigger": false,
     "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-ASK-09",
+    "skill": "beginnerd-ask",
+    "query": "Aku cuma pemula, mau mulai bikin aplikasi dan belum tahu langkah aman berikutnya, bisa arahin?",
+    "should_trigger": true,
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-ASK-10",
+    "skill": "beginnerd-ask",
+    "query": "Langsung deploy aplikasi saya melalui Sites sekarang, tidak perlu penjelasan.",
+    "should_trigger": false,
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-PRODUCT-11",
+    "skill": "beginnerd-product",
+    "query": "Aku nggak bisa coding. Kepikiran bikin tempat nyimpen link menarik biar nanti gampang dicari. Mulainya gimana?",
+    "should_trigger": true,
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-PRODUCT-12",
+    "skill": "beginnerd-product",
+    "query": "Aplikasi sudah selesai, langsung publish versi baru ke hosting privat.",
+    "should_trigger": false,
+    "execution_status": "NOT_EXECUTED"
   }
 ]
