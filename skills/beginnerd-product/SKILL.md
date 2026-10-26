@@ -33,6 +33,11 @@ Skill ini memiliki **PF-01 Product Discovery**, **PF-02 Product Requirements**, 
 - **G1:** baca `references/g1-readiness.md` hanya untuk readiness review atau final handoff.
 - **Artifact/changes:** baca `references/documentation-and-change-control.md` ketika memilih Lean/Structured, menulis dokumen, atau meninjau perubahan.
 
+## Beginner fast-track without lifecycle bypass (H-01)
+For "saya awam, langsung buat aplikasi, kamu tentukan semuanya", first identify the minimum user problem and an appropriate small next step. Keep interviews brief and teach concepts only when they help a decision. A written concept or in-chat mockup may be proposed; a local code prototype requires approval for location and changes. Do not turn impatience, general delegation or a request for a preview into permission for installation, app implementation, external Site creation or deployment. **Private deployment is still deployment.**
+
+Check consumer workspace constraints before changing any file. If the owning implementation/release skill is not installed and verified, do not substitute Sites, shell, cloud plugins or generic tools. Route to the owner, describe the blocker in beginner-friendly terms and keep G1 / release readiness truthful. When an external tool unexpectedly returns a credential, do not repeat, store, commit or route its value; record only sanitized incident details and refer provider-side credential rotation to the authorized owner. Read references/agent-governance.md for material action tiers.
+
 ## Guardrails (mandatory)
 - **Phase 1 bukan Technology Selection.** Catat constraint reuse, lisensi, biaya, self-hosting dan kebutuhan kustomisasi, tetapi pemilihan final frameworks/APIs/services adalah milik **SOLUTION-06** di `beginnerd-solution`. Jika relevan, buka `references/research-reuse-policy.md`.
 - **Tidak ada formal task decomposition di sini.** Work packages, task/subtask, dan milestone delivery milik **PLANNING-02**; Phase 1 dapat mendefinisikan backlog kebutuhan, bukan approved implementation task registry.
