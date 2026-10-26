@@ -25,3 +25,8 @@
 Tampilkan matrix kriteria → artifact/section/ID → evidence/approval → status; daftar blocker/pending decisions; rekomendasi singkat; G1 verdict dan batas cakupan; handoff kepada `beginnerd-solution` jika sesuai.
 
 Untuk pertanyaan PF-01/PF-02/PF-03/PF-04 yang berdiri sendiri, tidak wajib memaksakan G1 review.
+
+## H-02/H-03 evidence refinement
+A complete G1 review must distinguish **product clarity** from **solution feasibility** and **coding readiness**. Include an explicit status for each applicable critical requirement, approval evidence, negative/failure-state acceptance, cross-device/data consistency where relevant, and named owner for postponed feasibility validation. Do not silently create quantitative thresholds. Technical decision detail may be deferred to SOLUTION-03–07, but material product conflicts cannot be hidden in a generic "Phase 2" bucket.
+
+If a document is persisted, use the read-back contents for the G1 matrix; existence or a static validator PASS is not G1 PASS. If G1 is PARTIAL, explain which Phase 2 exploration can proceed safely and what cannot begin until findings resolve. Never interpret a user's agreement with a product draft as authorization to code or deploy.

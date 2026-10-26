@@ -46,7 +46,8 @@ class RepositoryContractsTests(unittest.TestCase):
             self.assertIn(workflow, skill)
         state = (ROOT / "docs" / "implementation" / "STATUS.md").read_text(encoding="utf-8")
         self.assertIn("beginnerd-product", state)
-        self.assertIn("NOT VERIFIED", state)
+        self.assertIn("Entire beginnerd-product operational acceptance", state)
+        self.assertIn("PARTIAL", state)
 
     def test_memory_and_recovery_limits_documented(self):
         memory = (ROOT / "docs/governance/MEMORY-KNOWLEDGE-CONTRACT.md").read_text(encoding="utf-8")

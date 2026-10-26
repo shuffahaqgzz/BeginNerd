@@ -25,6 +25,9 @@ Skill ini memiliki **PF-01 Product Discovery**, **PF-02 Product Requirements**, 
 6. **Validate.** Cocokkan requirement ID, acceptance criteria, MVP, technical requirements, risiko, open decisions dan status; jangan menyatakan G1 PASS hanya karena file ada.
 7. **Handoff.** Jika penilaian G1 diminta, baca `references/g1-readiness.md` dan berikan verdict berbasis evidence. Handoff hasil ke `beginnerd-solution` (Phase 2), bukan mengklaim Phase 2 sudah dilaksanakan.
 
+## H-02/H-03 hardening
+For PF-04, require traceable **critical technical constraints**, verifiable behavior and error paths with known evidence/status; never invent targets for availability, sync time, performance, retention or cost. Use `references/technical-requirements.md`; defer component selection to Phase 2. For file persistence, require scoped path approval, read-back of saved content and honest before/after workspace evidence per `references/documentation-and-change-control.md`. Never infer unchanged untracked files from identical `git status` output or upgrade G1 based on artifact existence.
+
 ## Workflow references (load on demand)
 - **PF-01:** baca `references/product-discovery.md` saat menggali masalah, users, konteks dan hasil yang diinginkan.
 - **PF-02:** baca `references/product-requirements.md` ketika mendefinisikan atau mengubah requirements dan acceptance criteria.

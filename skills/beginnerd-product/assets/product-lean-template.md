@@ -32,8 +32,15 @@
 | TECHNICAL-REQUIREMENTS-001 | REQUIREMENTS-001 | TBD | TBD | DRAFT |
 
 - Data, security/privacy, accessibility, integration, performance constraints: TBD
+- Critical user journey failure/negative cases (invalid input, retry, unavailable provider, duplicate, permission denial): TBD
+- Proposed quantitative measures and their owners/sources: TBD; do not invent targets
 - Existing/reusable assets, license, budget, hosting, customization constraints: TBD
 - Final tech selection: DEFER TO PHASE 2 SOLUTION-06
+
+### PF-04 Evidence & Ownership
+| Technical ID | Product ID | Observable measure or TBD | Source / approval | Planned check | Owner for unresolved decision | Status |
+|---|---|---|---|---|---|---|
+| TECHNICAL-REQUIREMENTS-001 | REQUIREMENTS-001 | TBD | PENDING | TBD (NOT EXECUTED) | TBD | DRAFT |
 
 ## Decisions, Assumptions & Changes
 | ID / ref | Decision or unresolved question | Owner / evidence | Status |

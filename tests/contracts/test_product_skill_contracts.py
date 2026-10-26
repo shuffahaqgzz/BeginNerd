@@ -94,8 +94,10 @@ class ProductSkillStaticTests(unittest.TestCase):
 
     def test_documentation_does_not_claim_runtime_product_pass(self):
         status = (ROOT / "docs" / "implementation" / "STATUS.md").read_text(encoding="utf-8")
-        self.assertIn("IMPLEMENTATION CANDIDATE", status)
-        self.assertIn("NOT VERIFIED", status)
+        self.assertIn("PR #4 beginnerd-product", status)
+        self.assertIn("MERGED", status)
+        self.assertIn("NOT EXECUTED", status)
+        self.assertIn("PARTIAL", status)
         contract = (ROOT / "docs" / "implementation" / "PHASE-1-PRODUCT-IMPLEMENTATION-CONTRACT.md").read_text(encoding="utf-8")
         self.assertIn("BN-DEC-009.1", contract)
         self.assertIn("NOT EXECUTED", contract)
