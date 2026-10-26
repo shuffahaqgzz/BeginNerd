@@ -8,7 +8,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 COMPANIONS = ("beginnerd-ask", "beginnerd-setup")
-LIFECYCLE = ("beginnerd-product", "beginnerd-solution", "beginnerd-plan",
+LIFECYCLE = ("beginnerd-solution", "beginnerd-plan",
              "beginnerd-foundation", "beginnerd-implement", "beginnerd-release")
 COUNTS = {"PF": 4, "SOLUTION": 8, "PLANNING": 4, "FOUNDATION": 5,
           "IMPLEMENT": 5, "RELEASE": 3, "OPS": 3}
@@ -23,6 +23,9 @@ REQUIRED = (
     "docs/governance/RESEARCH-REUSE-POLICY.md",
     "docs/governance/WORK-STRUCTURE-POLICY.md",
     "docs/implementation/STATUS.md",
+    "docs/implementation/PHASE-1-PRODUCT-IMPLEMENTATION-CONTRACT.md",
+    "skills/beginnerd-product/SKILL.md",
+    "skills/beginnerd-product/references/g1-readiness.md",
     "tests/behavioral/scenarios.json",
     "tests/activation/queries.json",
     "docs/engineering/SKILL-ENGINEERING-AND-DISTRIBUTION-STANDARD.md",
@@ -104,7 +107,7 @@ def main():
             print(" - " + item)
         return 1
     print("BeginNerd STATIC CONTRACT CHECK: PASS")
-    print("Validated repository files, 2 companion metadata, 6 pending boundaries,")
+    print("Validated repository files, 2 companion metadata, 1 product implementation, 5 pending boundaries,")
     print("32 workflow IDs and behavioral scenario definitions.")
     print("NOT VERIFIED: agent runtime execution, Graphify/Hindsight integration, E2E.")
     return 0

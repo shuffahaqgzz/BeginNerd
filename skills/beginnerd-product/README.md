@@ -1,7 +1,9 @@
 # beginnerd-product — Phase 1
 
-**Status:** DESIGN BOUNDARY ONLY / NOT IMPLEMENTED. This directory is not an installable lifecycle skill until SKILL.md, references, assets and acceptance validation exist.
+**Repository status:** INITIAL SKILL IMPLEMENTATION CANDIDATE; static/portability validation applies after CI runs; **runtime invocation NOT VERIFIED**. Directory contains an Agent Skills entry point and workflow references, unlike the five still-pending lifecycle skill directories.
 
-Owns PF-01 Product Discovery, PF-02 Product Requirements, PF-03 MVP Definition, and PF-04 Technical Requirements. Requires Explain Before Execute, adaptive documentation and G1 Product Baseline Readiness.
+Owns PF-01 Product Discovery, PF-02 Product Requirements, PF-03 MVP Definition, PF-04 Technical Requirements and G1 Product Baseline Readiness.
 
-Research/reuse considerations are collected as constraints here; material technology selection remains with SOLUTION-06 in Phase 2.
+Lean: `PRODUCT.md`. Structured: `PRODUCT-BRIEF.md`, `PRODUCT-REQUIREMENTS-DOC.md`, `MINIMUM-VIABLE-PRODUCT-SCOPE.md`, `TECHNICAL-REQUIREMENTS-DOC.md`. Refer to approved BN-DEC-009.1 and Product Foundation implementation contract; do not conflate design approval with runtime evidence.
+
+No final technology selection (SOLUTION-06), no formal task decomposition (PLANNING-02), no unauthorized write or provider activation.

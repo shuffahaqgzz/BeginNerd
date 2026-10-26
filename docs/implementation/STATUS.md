@@ -1,30 +1,31 @@
 # BeginNerd Repository Implementation Status
 
-**Updated:** 24 October 2026 WIB. Repository evidence and user-reported `srv-test01` V01–V02 assessment are distinct. This file records a snapshot, not live background monitoring.
+**Snapshot:** 24 October 2026 WIB. Design approval, repository source state, user-supplied runtime observations, and verification evidence must be distinguished.
 
-| Component | Latest grounded status |
+| Component | Current status and evidence |
 |---|---|
-| Six-phase / 32-workflow design | APPROVED — DESIGN |
-| Companion skill boundaries and contracts | APPROVED — DESIGN |
-| Repository bootstrap PR #1 | MERGED — `main` `3eb7d6990c2bea2999bd4f3c25923b2b352f8020` |
-| Static CI for merged baseline | PASS — 8 contract unit tests and post-merge validation |
-| V01–V02 at `srv-test01` | PARTIAL per Owner-supplied executor report; Codex CLI 0.164.0; installed Ask/Setup not found in inspected locations |
-| V02 installed-vs-starter diff | BLOCKED until actual installed copies exist |
-| Starter Ask/Setup source | PRESENT, portable packaging changes IN PR REVIEW, runtime NOT VERIFIED |
-| Six lifecycle `SKILL.md` | NOT IMPLEMENTED |
-| Graphify/Hindsight functional provider tests | NOT VERIFIED; preserve existing external registrations |
-| 22 behavioral tests & activation tests | NOT EXECUTED; activation cases are specifications only |
-| Skills CLI discovery/install/update | NOT EXECUTED from `srv-test01` |
-| Framework release & full E2E | NOT READY |
+| SDLC / 32 workflows design | APPROVED — DESIGN, not a declaration of runtime readiness |
+| PR #1 canonical bootstrap | MERGED — `3eb7d6990c2bea2999bd4f3c25923b2b352f8020` |
+| PR #3 Skill Engineering & Distribution | MERGED — `main` `955e57317f9060048b8378bba8772aa4f4b13aa0`; CI PASS |
+| Skills CLI discovery of companions | PASS per user report — `skills@1.7.4` found Ask/Setup (2 skills) |
+| Companion install/basic invocation | PASS for basic skill and reference access per user-provided `srv-test01` read-only reports; full behavioral tests not performed |
+| Graphify integration | PARTIAL — `graphifyy 0.9.41` CLI available, no verified project graph/retrieval/isolation |
+| Hindsight integration | PARTIAL — CLI 0.8.2 and healthy endpoint observed outside sandbox; retain→recall/namespace not verified |
+| Codex MCP exposure | UNVERIFIED / NOT EXPOSED in inspected session; no provider tool invocation |
+| Issue #2 companion/provider V01–V10 | OPEN — PARTIAL, do not close on source or health evidence |
+| `beginnerd-product` PF-01–PF-04 & G1 | IMPLEMENTATION CANDIDATE IN PR REVIEW; static CI verdict to be determined by PR run; runtime NOT VERIFIED |
+| Other five lifecycle skills | NOT IMPLEMENTED (README design boundaries only) |
+| Runtime activation/product behavioral tests | NOT EXECUTED |
+| Framework end-to-end / release | NOT READY |
 
-## Evidence references
-- [PR #1 merged](https://github.com/shuffahaqgzz/BeginNerd/pull/1) and [main commit](https://github.com/shuffahaqgzz/BeginNerd/commit/3eb7d6990c2bea2999bd4f3c25923b2b352f8020).
-- [Baseline post-merge CI](https://github.com/shuffahaqgzz/BeginNerd/actions/runs/39999038991) — user-reported PASS.
-- [Paket 01 Issue #2](https://github.com/shuffahaqgzz/BeginNerd/issues/2); V01–V02 executor report supplied by Owner in conversation, not stored as raw provider data in this public repository.
-- Packaging preparation and authoring standard are proposed on a separate PR; **do not claim this branch has merged or its CI passed until verified**.
+## Trusted references
+- [Canonical PR #3](https://github.com/shuffahaqgzz/BeginNerd/pull/3) and [post-merge CI](https://github.com/shuffahaqgzz/BeginNerd/actions/runs/40006813324) — static validation PASS for pre-Product source.
+- [Issue #2](https://github.com/shuffahaqgzz/BeginNerd/issues/2) is restricted to companion/provider integration and remains OPEN.
+- `docs/implementation/PHASE-1-PRODUCT-IMPLEMENTATION-CONTRACT.md` describes Phase 1 candidate work scope.
+- Latest sandbox observations came from Owner-supplied Codex reports. The public repository does not store private provider configuration, memory, or machine-specific logs.
 
-## Next handoff
-1. Review proposed standard, reference snapshots and isolated-copy CI. Reconcile actual installation target, preserving Hindsight and unrelated project registrations.
-2. On approved test environment, perform Skills CLI discovery without install, review scope and diff, then explicitly authorize controlled installation if suitable.
-3. Run activation triggers, 22 behavioral scenarios, and Graphify/Hindsight provider-native tests with per-step permission; preserve sanitized evidence.
-4. Keep Issue #2 open until actual execution evidence supports its verdict. Design approval and CI syntax PASS cannot establish runtime readiness.
+## Next checkpoint
+1. Verify static source and portable packaging of `beginnerd-product` using updated validator and generated snapshots.
+2. Review candidate PR and obtain approval before merge. Continue to keep five lifecycle directory boundaries noninstallable.
+3. Following merge, test three-skill CLI discovery; install/invoke `beginnerd-product` in isolated approved Codex project and execute activation/behavioral cases with evidence.
+4. Continue Graphify/Hindsight work under Issue #2 as separately scoped; no implicit provider config mutation, retain or namespace creation.

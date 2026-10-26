@@ -1,6 +1,6 @@
 # BeginNerd — Skill Engineering & Distribution Standard v1.0
 
-**Status:** PROPOSED IMPLEMENTATION STANDARD — PR REVIEW, bukan keputusan arsitektur baru maupun bukti runtime-ready. **Parent baseline:** BN-DEC-009, 8 skill target (2 companion + 6 lifecycle), 32 workflow. **Tracking:** Issue #2, Paket 01.
+**Status:** MERGED IMPLEMENTATION STANDARD v1.0 (PR #3); bukan keputusan arsitektur baru maupun bukti runtime-ready. **Parent baseline:** BN-DEC-009, 8 skill target (2 companion + 6 lifecycle), 32 workflow. **Tracking:** Issue #2, Paket 01.
 
 ## Hierarki acuan
 1. **Agent Skills Specification** — format dan metadata `SKILL.md`, path references, progressive disclosure: https://agentskills.io/specification
@@ -19,7 +19,7 @@
 ## 2. Kewenangan & invocation
 - `beginnerd-ask`: penjelasan, recovery verified context dan routing. Tidak mengubah scope/plan atau mengeksekusi tugas milik lifecycle.
 - `beginnerd-setup`: onboarding, preferences, existing-state inventory, setup terotorisasi, verifikasi provider. Tidak otomatis menulis konfigurasi ketika dipanggil, tidak menjadi `beginnerd-foundation`.
-- 6 lifecycle skills tetap belum installable sampai source/prosedur/workflows masing-masing dibangun dan diuji. *Jangan membuat file SKILL.md kosong agar terlihat memiliki 8 skill executable.*
+- `beginnerd-product` menjadi kandidat lifecycle skill pertama pada PR khusus Phase 1. Lima lifecycle skill lainnya belum implementable. *Jangan membuat SKILL.md kosong hanya agar delapan skill tampak tersedia.*
 - User-invoked / model-invoked dan vendor-specific metadata diputuskan berdasarkan runtime compatibility serta evaluation. Format standar netral terhadap harness.
 - Scoped authorization, No Overclaim, research/reuse-first, PLANNING-02-only formal decomposition dan maksimum dua remediasi terotorisasi tetap wajib.
 
@@ -45,13 +45,13 @@
 `DESIGNED`, `STATIC_PASS`, `DISCOVERY_VERIFIED`, `INSTALLED`, `RUNTIME_VERIFIED`, `PROVIDER_VERIFIED`, `RELEASE_READY` adalah **dimensi berbeda**, bukan urutan kelulusan otomatis. Untuk acceptance, gunakan PASS/PARTIAL/BLOCKED/UNVERIFIED berdasarkan evidence nyata. Jangan menutup Paket 01 hanya karena CI PASS.
 
 ## 5. Distribusi
-- **Tahap awal:** `npx skills@latest add shuffahaqgzz/BeginNerd --list`, lalu controlled install hanya untuk dua companion yang siap diujicoba. Tidak perlu `package.json` atau npm package khusus BeginNerd.
+- **Tahap awal:** `npx skills@latest add shuffahaqgzz/BeginNerd --list`, lalu controlled install hanya untuk dua companion yang sudah diuji discovery/basic invocation, kemudian kandidat product setelah merge dan instalasi yang disetujui. Tidak perlu `package.json` atau npm package khusus BeginNerd.
 - **Tahap berikut:** native plugin manifests dan release/versioning setelah portable install & runtime invocation terbukti, dengan approval Owner. Hindari plugin + skills CLI ganda pada runtime sama.
 - Jangan membuat `package.json`, marketplace manifest, symlink installer, auto-update, publikasi npm atau release tag hanya untuk mengklaim distribusi sebelum compatibility diuji.
 - Update/uninstall harus diuji bersama versi pinned, scope isolasi, idempotensi dan rollback, bukan mengasumsikan CLI selalu bekerja.
 
 ## 6. Exit criteria dari persiapan ke runtime validation
-- Dua standalone skill folders mempunyai resolvable references tanpa repository root.
+- Setiap skill yang diusulkan sebagai installable (dua companion + kandidat product) memiliki references yang resolvable tanpa repository root.
 - Validator contract dan isolated copies lulus di CI.
 - Activation cases nyata tersedia sebagai spesifikasi dengan label NOT_EXECUTED.
 - Source provenance, approval boundary, provider consent dan perbedaan status sudah terdokumentasi.
