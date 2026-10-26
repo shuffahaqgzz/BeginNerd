@@ -74,7 +74,7 @@ def validate(text):
     if len(status) != 1:
         issues.append("expected exactly one explicit G1: PASS/PARTIAL/BLOCKED/UNVERIFIED declaration")
     if re.search(r"\bAPPROVED\b", text, re.I) and not re.search(
-        r"persetujuan|disetujui|approval|approved by", text, re.I
+        r"bukti persetujuan|approved by|approval reference|approval evidence|persetujuan pengguna|disetujui pengguna", text, re.I
     ):
         issues.append("APPROVED label missing approval provenance narrative")
 

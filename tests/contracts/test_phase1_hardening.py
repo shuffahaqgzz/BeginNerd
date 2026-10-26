@@ -38,8 +38,8 @@ class Phase1HardeningContractTests(unittest.TestCase):
                                   "technical": 1, "g1": "PARTIAL"})
 
     def test_duplicate_and_orphaned_ids_are_rejected(self):
-        corrupt = SAMPLE.replace("| REQUIREMENTS-002 | Private data",
-                                 "| REQUIREMENTS-001 | Private data")
+        corrupt = SAMPLE.replace("| REQUIREMENTS-002 | Private data | ACCEPTANCE-CRITERIA-002 |",
+                                 "| REQUIREMENTS-001 | Private data | TBD |")
         issues, _ = validate(corrupt)
         self.assertTrue(any("duplicate req" in x for x in issues))
         self.assertTrue(any("not linked" in x for x in issues))
