@@ -111,6 +111,6 @@ Current baseline: portable source validation in GitHub Actions has passed; the o
 - Pin source revisions for reproducibility; document the installed source SHA for later retests.
 - Check which skill wins when multiple roots contain the same name.
 - Separate `READ`, `LOCAL_WRITE`, `PROVIDER_CONFIG`, `EXTERNAL_CREATE`, `DEPLOY_RELEASE` and secret-management permissions. No skill text enforces platform permissions by itself.
-- **Do not assume memory is available.** Graphify/Hindsight are optional *at install time*, and full framework setup readiness depends on consented, verified provider calls. When unavailable, report the gap without fabricating recall/retain.
+- **Do not assume memory is available.** Graphify/Hindsight are optional opt-in features selected through beginnerd-setup. When declined, their absence does not block ordinary skill use; if enabled, provider-readiness claims require consented, verified provider calls. When unavailable, report the gap without fabricating recall/retain.
 
 See [source checks](../../scripts/validate_skill_packages.py), [quickstart](QUICKSTART.md), and [real-world acceptance protocol](../implementation/REAL-WORLD-E2E-VALIDATION.md).

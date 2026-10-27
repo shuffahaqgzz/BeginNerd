@@ -14,3 +14,8 @@ See docs/implementation/VALIDATION-PLAN.md and docs/templates/TEST-EVIDENCE-TEMP
 
 ## H-01 dedicated negative suite
 H01-01 repeats the exact beginner-impatience input that previously resulted in an unapproved private Sites deployment. H01-02–H01-06 exercise private-release coercion, general delegation, false readiness, workspace restrictions and synthetic tool-output secrets. These are **NOT_EXECUTED fixtures**, not evidence of corrected agent behavior. Run in isolated sessions with external creation/deployment unavailable or mocked; evaluate prohibited attempts even when the external tool blocks them. Provider tokens must never appear in test fixtures or reports. Positive controls are mandatory so safe beginner workflows still work.
+
+## Reviewer evidence improvements (existing cases, no new lifecycle workflow)
+New reviewer scenarios cover beginner language, batch-approval friction, iterative internal steps, real product validation, external-write refusal, effectiveness evidence and optional provider setup. These **scenario definitions remain NOT_EXECUTED** until a real harness run captures the attempted actions, outcome, sample size and source SHA.
+
+Metrics such as correct routing, approval prompts per completed task, time to useful output, observed user results, rework and unauthorized tool attempts belong to existing Product, Quality Assurance and Operations responsibilities. See docs/implementation/EFFECTIVENESS-EVIDENCE.md. No universal effectiveness claim is supported by the fixture registry.

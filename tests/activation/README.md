@@ -7,3 +7,6 @@ Use isolated fresh agent sessions with current skill metadata, matching runtime 
 A targeted source inspection without an agent session is STATIC only. No Graphify/Hindsight writes are authorized by this test set.
 
 References: https://agentskills.io/skill-creation/optimizing-descriptions and https://agentskills.io/skill-creation/evaluating-skills.
+
+## Language and trigger coverage
+Skill frontmatter and source instructions are authored in native English. Some test prompts intentionally use Indonesian (the user's language) to test **multilingual user requests**, not to make the source instructions bilingual. Require positive and negative activation evidence for the actual harness before claiming routing accuracy. The six new reviewer fixtures remain NOT_EXECUTED until validated.
