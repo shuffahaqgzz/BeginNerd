@@ -28,10 +28,10 @@ class H01GovernanceStaticTests(unittest.TestCase):
     def test_portable_skills_cover_general_delegation_and_provider_boundary(self):
         for skill in ("beginnerd-ask", "beginnerd-product", "beginnerd-setup"):
             with self.subTest(skill=skill):
-                text = content(f"skills/{skill}/SKILL.md")
-                self.assertIn("Sites", text)
-                self.assertIn("approval", text.lower())
-        self.assertIn("remote plugin permissions", content("skills/beginnerd-setup/SKILL.md"))
+                text = content(f"skills/{skill}/SKILL.md").lower()
+                self.assertIn("permission", text)
+                self.assertIn("deploy", text)
+        self.assertIn("external plugin permissions", content("skills/beginnerd-setup/SKILL.md"))
 
     def test_canonical_reference_provenance_is_generated(self):
         policy = content("docs/governance/AGENT-GOVERNANCE.md")

@@ -14,8 +14,8 @@ This page preserves the decisions whose outcomes are explicitly supported by the
 | 009.3 | Planning & Control | Hybrid Modular; beginnerd-plan owns PLANNING-01–04; vertical slices default where appropriate |
 | 009.3B | Work structure addendum | Adaptive Work Structure Brainstorming belongs to PLANNING-02, not a new workflow |
 | 009.4 | Development Foundation | Hybrid Modular; beginnerd-foundation owns FOUNDATION-01–05 |
-| 009.5 | Implementation & QA | Hybrid Modular; beginnerd-implement owns IMPLEMENT-01–05; fourteen sub-decisions below |
-| 009.6 | Release & Operations | Hybrid Modular; beginnerd-release owns RELEASE-01–03 and OPS-01–03; six sub-decisions below |
+| 009.5 | Implementation & QA | Hybrid Modular; beginnerd-implement owns IMPLEMENTATION-01–05; fourteen sub-decisions below |
+| 009.6 | Release & Operations | Hybrid Modular; beginnerd-release owns RELEASE-01–03 and OPERATIONS-01–03; six sub-decisions below |
 
 ## Phase 5 — All 14 final decisions
 
@@ -53,7 +53,7 @@ Pre-execution: task registry, dependencies, authorization and acceptance. During
 | 6E | Adaptive Controlled Incident Response |
 | 6F | Adaptive Lifecycle Governance |
 
-Phase 6 ownership: RELEASE-01 release readiness/candidate; RELEASE-02 deployment planning/authorization; RELEASE-03 controlled deployment/acceptance; OPS-01 monitoring/handoff; OPS-02 incident/recovery; OPS-03 maintenance/lifecycle. Phase 6 adds no extra mandatory skill, workflow, or quality gate.
+Phase 6 ownership: RELEASE-01 release readiness/candidate; RELEASE-02 deployment planning/authorization; RELEASE-03 controlled deployment/acceptance; OPERATIONS-01 monitoring/handoff; OPERATIONS-02 incident/recovery; OPERATIONS-03 maintenance/lifecycle. Phase 6 adds no extra mandatory skill, workflow, or quality gate.
 
 ### Maintenance contract 6F
 Inventory actual dependencies and services → detect advisory/EOL/API/license/data/cost signals → research applicability and impact → recommend a best-fit action → determine owner and authorization → execute only approved actions → verify → preserve evidence. Material architecture change returns to Phase 2; code/formal tasks return to PLANNING-02 then Phase 5; production release remains Phase 6. Do not install upgrades or change provider solely due to novelty.

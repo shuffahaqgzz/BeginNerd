@@ -383,5 +383,47 @@
     "query": "Susun product requirements dan target persona.",
     "should_trigger": false,
     "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-REVIEW-PRODUCT-EN",
+    "skill": "beginnerd-product",
+    "query": "Help me interview users and test the main product hypothesis.",
+    "should_trigger": true,
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-REVIEW-PRODUCT-ID",
+    "skill": "beginnerd-product",
+    "query": "Bantu validasi masalah pengguna dulu sebelum bikin produk.",
+    "should_trigger": true,
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-REVIEW-PLAN-EN",
+    "skill": "beginnerd-plan",
+    "query": "Please update the approved formal work breakdown and dependencies.",
+    "should_trigger": true,
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-REVIEW-PLAN-ID",
+    "skill": "beginnerd-plan",
+    "query": "Tolong susun ulang task formal beserta dependensinya.",
+    "should_trigger": true,
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-REVIEW-SETUP-EN",
+    "skill": "beginnerd-setup",
+    "query": "Set up my guidance preferences without installing memory tools.",
+    "should_trigger": true,
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-REVIEW-SETUP-ID",
+    "skill": "beginnerd-setup",
+    "query": "Saya mau pakai BeginNerd tanpa Graphify atau Hindsight.",
+    "should_trigger": true,
+    "execution_status": "NOT_EXECUTED"
   }
 ]

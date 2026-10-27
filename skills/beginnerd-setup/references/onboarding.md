@@ -1,27 +1,24 @@
-# Setup Onboarding & Rerun
+# BeginNerd Setup — First Use and Reruns
 
-## First use — minimum conversational interview
-1. Establish project identifier, user goal, whether the project is new or existing, and permission to review existing non-sensitive configuration.
-2. Explain two guidance styles in plain language: **proactive guided building** (agent suggests next steps and teaches relevant concepts), or **recommendation-first** (agent waits for user goal and recommends only relevant options). Do not silently lock a preference when the user has not chosen.
-3. Explain project-scope memory: what decisions/checkpoints are recorded, where they are stored, and whether it is currently configured. Ask for explicit consent to activate or change persistent memory; no consent means no activation.
-4. Detect existing Graphify/Hindsight installs and project boundaries before considering new ones.
-5. Recommend Lean/Structured documentation mode based on project complexity; the application and work-structure decisions belong to owning lifecycle phases, not setup.
-6. Present a concise action summary and request approval for each material configuration change. Carry out only the authorized scope.
+## First-use conversation (short and contextual)
+1. Confirm project identity, user goal, current harness and permission for read-only inspection of existing settings.
+2. Explain two guidance styles: **proactive coaching** (suggest relevant next steps and teach just-in-time) or **recommendation-first** (respond mainly to the user's stated goal). Ask once, not on every session.
+3. Ask whether the user wants **optional** project knowledge and/or persistent memory: neither, Graphify, Hindsight, or both. Describe privacy, stored data, costs and what works with no provider. Do not preselect either tool.
+4. Inspect existing skills and provider registrations before suggesting install/updates. Reuse compatible setups.
+5. Recommend minimal Lean or Structured documentation depth when relevant, but leave feature priorities, architecture and formal tasks to the appropriate lifecycle owner.
+6. Group related material configuration requests. Obtain explicit provider/path/secret permissions for actual changes. No consent means NOT_ENABLED—not a setup failure.
 
-## Rerun rules
-- Read current guidance choice, scope, provider configuration and evidence.
-- Keep all valid existing settings unchanged unless user explicitly requests modifications.
-- Compare desired vs current; avoid duplicate install or duplicate provider registration.
-- Validate actual provider read/write functionality before claiming PASS.
-- For differences or incompatible settings, give an impact analysis and ask before replacing.
-- Record the state, not a false zero-gap result.
+## Rerun
+Preserve valid existing preferences and scoped installation. If the user has chosen neither provider, skip Graphify/Hindsight checks and keep setup usable. For a selected provider, verify native read/write/isolation after separately authorized configuration, report direct evidence and failures. Never claim a provider works merely because it has a config entry.
 
-## Status semantics
-- PASS: first-use/rerun behavior and all applicable critical integrations verified with evidence.
-- PARTIAL: local guidance/config ready but one required integration or confirmation not verified.
-- BLOCKED: cannot safely complete setup due to a critical condition.
-- MEMORY_SYNC_PENDING: attempted required retain/checkpoint not acknowledged.
-- NOT_ENABLED: user has chosen not to activate optional persistence at present; do not bypass consent.
+## Internal status
+- PASS: selected guidance and applicable approved setup functions verified.
+- PARTIAL: a chosen integration is not yet fully verified.
+- BLOCKED: a critical safety or permission condition prevents the selected action.
+- NOT_ENABLED: optional provider deliberately declined; no failure.
+- MEMORY_SYNC_PENDING: a required, approved Hindsight retain could not be confirmed.
+
+Explain these outcomes in normal user language; do not show raw technical status codes unless asked.
 
 ## Handoff
-The output should include chosen guidance preference, active project ID, current integration states (installed/verified/blocked), last checkpoint reference if confirmed, approved changes performed, pending approvals, and the next routed skill.
+State the chosen guidance style, project scope, optional integration state, authorized changes and next relevant skill. Do not create application scaffolds here.

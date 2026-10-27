@@ -30,7 +30,7 @@ The above `references/...` paths are relative to `skills/beginnerd-product/`. Ph
 | Contract / finding | Source implementation | Verification | Current evidence disposition |
 |---|---|---|---|
 | BN-H01-001 / BN-H01-002 lifecycle/release permission | PR #5, canonical agent governance + Ask/Product/Setup | H01-01..06 specifications | H01-01 retest BEHAVIORAL PASS on user-provided trace; H01-02..06 NOT EXECUTED |
-| H-02 PF-04 complete evidence and error states | Product PF-04 reference and Lean/Structured templates (PR #6) | tests/contracts/test_phase1_hardening.py, H02-01..03 | STATIC CI pending PR-specific source acceptance; runtime NOT EXECUTED |
+| H-02 PRODUCT-FOUNDATION-04 complete evidence and error states | Product PRODUCT-FOUNDATION-04 reference and Lean/Structured templates (PR #6) | tests/contracts/test_phase1_hardening.py, H02-01..03 | STATIC CI pending PR-specific source acceptance; runtime NOT EXECUTED |
 | H-03 scoped file write/readback | Product documentation-and-change-control reference; scripts/validate_phase1_artifact.py | H03-01/H03-03 and synthetic static fixtures | B-03 PASS QUALIFIED; full runtime regression NOT EXECUTED |
 | H-03 workspace isolation evidence | scripts/audit_workspace_manifest.py | H03-02 and before/after manifest synthetic fixture | STATIC validation only; actual before/after in consumer workspace UNVERIFIED |
 | BN-H01-004 external tool credential | Provider-side Sites operations, NOT BeginNerd source | Sanitized provider remediation evidence (unavailable) | EXTERNAL / OPEN; do not echo secrets |

@@ -1,35 +1,28 @@
-# G1 — Product Baseline Readiness Contract
+# Product Baseline Readiness — Internal G1 Review
 
-**Trigger:** User meminta seluruh Product Foundation ditinjau atau siap handoff ke Phase 2. G1 adalah product readiness (design), bukan software implementation atau release gate.
+**When:** The user requests a full Product Foundation readiness review or Phase 2 handoff. A single discovery/requirement question does not trigger an entire phase gate.
 
-## Evaluate against actual artifacts/evidence
-- Product problem, tujuan, stakeholders/target users dan outcomes cukup jelas.
-- Requirements kritis memiliki deskripsi, prioritas, stable IDs dan acceptance criteria.
-- MVP scope menyebutkan apa yang termasuk, ditunda, dan dikecualikan, selaras dengan requirements.
-- Technical requirements dan constraints relevan telah disusun dengan links yang sesuai; gap yang berdampak dicatat.
-- Pilihan material dimengerti dan **secara eksplisit disetujui user**; ada decision/approval reference (bukan sekadar interpretasi agent).
-- Artefak Lean atau Structured memiliki satu canonical sumber per keputusan dan tidak kontradiktif.
-- Risiko, asumsi, blocker, deferred scope, serta ketidakpastian tetap terlihat dan memiliki owner/next review bila perlu.
-- Tidak ada critical unresolved blocker yang membuat desain produk tidak layak dilanjutkan.
+## Evidence criteria
+1. The product problem, target people, outcomes and constraints are explicit and traceable to the source available.
+2. Critical requirements have stable IDs, priorities and observable acceptance; missing user evidence is labeled **hypothesis**, not fact.
+3. The minimum viable product identifies essential, deferred and excluded scope, including the riskiest assumption and proportionate learning/measurement plan.
+4. Product-level technical requirements cover relevant reliability, data, privacy, access and cost constraints, with critical gaps assigned an owner.
+5. Material product choices have explicit informed approval; there is one current canonical source per decision, not conflicting documents.
+6. Risks, deferred hypotheses, unknowns and follow-up checkpoints remain visible.
+7. No unresolved *critical* contradiction makes the approved product baseline unusable for the next design step.
 
-## Verdict
-| Status | Meaning | Handoff |
+## Distinguish product readiness from market evidence
+Product Baseline Readiness can PASS for a clearly defined, approved design-ready product **even when market hypotheses are still to be tested**, provided those uncertainties and next validation steps are explicit and do not disguise a critical missing product decision. Never claim customer validation, product-market fit or experiment success without real evidence.
+
+| Internal verdict | Interpretation | Handoff |
 |---|---|---|
-| `PASS` | Semua kriteria relevan terpenuhi, evidence terhubung, keputusan material approved, tidak ada critical blockers | Product baseline siap digunakan Phase 2 |
-| `PARTIAL` | Sebagian produk valid, tetapi approval/gap noncritical masih perlu penyelesaian | Jelaskan unblocked work dan gaps; jangan klaim baseline penuh APPROVED |
-| `BLOCKED` | Critical gaps, keputusan material yang bertentangan atau high-risk blocker belum ditangani | Tahan handoff pada scope terdampak sampai ditinjau |
+| PASS | Relevant product scope/decisions documented and supported, no blocking contradiction | Solution design may use the approved baseline |
+| PARTIAL | Some scope usable, with open noncritical material choices or evidence gaps | State exactly which design exploration can proceed safely |
+| BLOCKED | Critical product ambiguity, contradiction or unmitigated risk | Hold affected scope until owner review |
 
-**Tidak boleh `PASS` karena template terisi atau dokumen ada.** Jika evidence tidak tersedia, tandai `UNVERIFIED` pada kriteria dan beri verdict agregat yang mencerminkan gap; jangan mengaku test dilakukan.
+No template, document existence or static validator produces PASS by itself. A product-only approval does not authorize coding, provider installation or deployment.
 
-## Output review
-Tampilkan matrix kriteria → artifact/section/ID → evidence/approval → status; daftar blocker/pending decisions; rekomendasi singkat; G1 verdict dan batas cakupan; handoff kepada `beginnerd-solution` jika sesuai.
+## Review output
+Provide criteria-to-requirement/evidence/status mapping for technical records; for novice conversation, summarize what is clear, what remains uncertain and the one practical next step. Use references/documentation-and-change-control.md when artifacts are persisted and verify real read-back. Distinguish Product Baseline, Solution Feasibility and Release / Operations Readiness—none implies the others.
 
-Untuk pertanyaan PF-01/PF-02/PF-03/PF-04 yang berdiri sendiri, tidak wajib memaksakan G1 review.
-
-## H-02/H-03 evidence refinement
-A complete G1 review must distinguish **product clarity** from **solution feasibility** and **coding readiness**. Include an explicit status for each applicable critical requirement, approval evidence, negative/failure-state acceptance, cross-device/data consistency where relevant, and named owner for postponed feasibility validation. Do not silently create quantitative thresholds. Technical decision detail may be deferred to SOLUTION-03–07, but material product conflicts cannot be hidden in a generic "Phase 2" bucket.
-
-If a document is persisted, use the read-back contents for the G1 matrix; existence or a static validator PASS is not G1 PASS. If G1 is PARTIAL, explain which Phase 2 exploration can proceed safely and what cannot begin until findings resolve. Never interpret a user's agreement with a product draft as authorization to code or deploy.
-
-### H02-03 three-readiness separation
-An absolute user assurance never overrides evidence. Show **G1 Product Baseline** (product clarity/acceptance/approval), **G2 Solution Feasibility** (Phase 2 design and research), and **Release / Operations Readiness** (Phase 5–6 runtime evidence) separately. Turn material unknowns into PROPOSED observable constraints with planned check, source and Owner. Do not convert a gap description into G1 PASS.
+If optional memory is disabled, the check uses canonical project evidence normally; absence of a provider is not a product blocker.

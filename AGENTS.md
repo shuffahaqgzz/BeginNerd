@@ -36,3 +36,10 @@ Preserve current status, source refs, authorization, requirement/task/test IDs, 
 
 ## Git contribution
 Use focused branches and PRs. Do not push directly to main after bootstrap, merge PRs, change repository settings, publish releases, or alter CI permissions without appropriate authorization. Never commit credentials or private knowledge/memory.
+
+## Current reviewer-approved guidance
+- All runtime instructions and canonical source documents use native English, while user-facing explanations follow the user's chosen language and avoid internal identifiers unless requested.
+- Formal workflow IDs use full words; see docs/workflows/WORKFLOW-ID-MIGRATION.md for compatibility with previous IDs.
+- Routine technical steps within authorized tasks do not require fresh approval or PLANNING-02 replanning. Only material scope/formal-task changes do.
+- Graphify and Hindsight are opt-in choices made during beginnerd-setup; absence when declined is not a framework blocker.
+- Source guardrails and offline validators are not a substitute for harness-side permission controls. Never claim permission-enforcement PASS from a passing static unit test.

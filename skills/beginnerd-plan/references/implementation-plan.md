@@ -8,7 +8,7 @@
 4. For each task ID record objective, parent/milestone, REQUIREMENTS IDs, dependencies, approved scope, exclusions, acceptance, verification plan, owner, status and authorization reference.
 5. Detect dependency cycles, missing requirements/approval, oversized work and unrealistic concurrency; recommend return-to-user decision.
 6. Obtain Work Structure Agreement and material approval before locking formal task registry. Executor cannot re-decompose, even via agent delegation.
-7. Changes later require HOLD → impact analysis → PLANNING-02 controlled replanning with historical identity and dependency preservation.
+7. During execution, internal technical steps or additional debugging within an approved task are allowed without creating formal subtasks. A material change to product scope, acceptance, architecture or the formal dependency graph requires a scoped HOLD → impact analysis → PLANNING-02 controlled replanning and Owner approval. Preserve task identity and allow unrelated authorized work to continue.
 
 **Canonical output:** IMPLEMENTATION-PLAN.md or Lean DEVELOPMENT-PLAN.md section plus approved task registry.
 **Completion criteria:** Each approved task has Ready definition, explicit dependencies and measurable Done criteria; no authorization to execute implied.

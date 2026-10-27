@@ -1,21 +1,26 @@
-# PRODUCT-BRIEF — [Nama Produk]
+# PRODUCT-BRIEF — [Product Name]
 
 **Status:** DRAFT · **Version:** TBD · **Owner:** TBD · **Approval:** PENDING
 
-## Problem & Context
-Masalah nyata dan situasi pengguna: TBD.
+## Problem and Context
+Real user situation, current workaround and pain: TBD.
 
-## Target Users & Stakeholders
-Aktor, kebutuhan serta konteks penggunaan: TBD.
+## Target Users and Jobs-to-be-Done (When Useful)
+User segment, triggers, desired progress and alternatives: TBD.
 
-## Desired Outcomes
-Outcome, indikator keberhasilan dan asumsi yang harus dibuktikan: TBD.
+## Evidence Versus Assumptions
+| Claim / hypothesis | Source or observed example | Confidence and limitation | Next check |
+|---|---|---|---|
+| TBD | UNVERIFIED | TBD | PLANNED |
 
-## Scope & Constraints
-Batasan target, budget, region/language, channel/platform, existing assets, licensing, self-hosting, customization: TBD.
+## Desired Outcomes and Small Validation Step
+Observable outcome, proposed interview/experiment, success signal, participant/privacy constraints and Owner decision: TBD / PENDING.
 
-## Risks / Open Questions
-TBD — jangan menganggap asumsi sebagai fakta.
+## Scope and Constraints
+Budget, region/language, channel/platform, existing assets, licenses, hosting/customization and sensitive data: TBD.
 
-## Decision & Next Handoff
-User approval references: PENDING. PF-02 consumes approved/draft findings with labeled assumptions.
+## Risks and Next Decision
+TBD. Do not invent customer interviews or assume the idea is validated.
+
+## Handoff
+PRODUCT-FOUNDATION-02 may refine the documented findings with clearly labeled assumptions.

@@ -1,4 +1,4 @@
-# IMPLEMENT-03 — Risk-Based QA
+# IMPLEMENTATION-03 — Risk-Based QA
 
 **Input:** Approved Task Registry + exact task authorization + relevant current repo/environment and acceptance evidence.
 ## Procedure

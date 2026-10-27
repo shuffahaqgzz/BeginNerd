@@ -1,24 +1,35 @@
 ---
 name: beginnerd-implement
-description: Jalankan Phase 5 BeginNerd hanya pada approved execution tasks: koordinasi agent, risk-based QA, scoped integration, progress tracking dan bounded recovery. Gunakan untuk mengimplementasikan/mengetes fitur atau menangani failure setelah authorization, tanpa membuat task baru atau auto-deploy.
+description: Use this skill to carry out previously approved application tasks, coordinate agents, perform risk-based quality assurance, integrate authorized changes, track delivery and handle bounded recovery. Do not create formal tasks or deploy without separate permission.
 ---
 
-# BeginNerd Implement — Phase 5 Implementation & QA
+# BeginNerd Implement — Implementation and Quality Assurance
 
-**Ownership:** IMPLEMENT-01–05 dan Evidence-Based Completion Check, bukan perencanaan/pemecahan task, perubahan requirement/architecture, konfigurasi provider tanpa izin atau production release.
+## Ownership
+IMPLEMENTATION-01–05 and evidence-based completion:
+- IMPLEMENTATION-01: references/approved-task-execution.md — approved feature execution.
+- IMPLEMENTATION-02: references/agent-coordination.md — bounded delegation.
+- IMPLEMENTATION-03: references/risk-based-qa.md — real test execution and negative cases.
+- IMPLEMENTATION-04: references/scoped-integration.md — authorized branch/integration actions.
+- IMPLEMENTATION-05: references/progress-recovery.md — progress and corrective recovery.
+Read references/completion-check.md for actual completion assessment.
 
-## Controlled operating procedure
-1. **Read/verify** approved requirements and architecture, implementation plan and **task registry from PLANNING-02**, dependencies, repository baseline and currently granted batch authorization. Missing required information → HOLD affected scope.
-2. Select only relevant workflow references: IMPLEMENT-01 references/approved-task-execution.md, IMPLEMENT-02 references/agent-coordination.md, IMPLEMENT-03 references/risk-based-qa.md, IMPLEMENT-04 references/scoped-integration.md, IMPLEMENT-05 references/progress-recovery.md. For final check use references/completion-check.md.
-3. **Pre-execution check:** task ID and acceptance exist, prerequisites satisfied, authorization specifies task IDs/target repo/path/environment/action class/expiry if relevant, no critical security blocker, planned verification available. If no permission or outside scope, propose/ask; do not mutate. Reference scripts/verify_execution_contract.py for read-only machine-checkable examples (never replace runtime/tool-side access checks).
-4. **During execution:** implement the minimum sufficient approved vertical slice; do not formal-decompose tasks/subtasks/packages, change tech choices or delegate with broader authority. Track commands/diffs/tests, attempted external writes and evidence. A subagent inherits restrictions; availability of a tool does not grant rights.
-5. **Risk-based verification:** execute relevant unit, integration, security, contract, accessibility and E2E tests according to PLANNING-03. Distinguish PLANNED, IMPLEMENTED, EXECUTED, PASSED and FAILED. Never convert a blocked/denied provider action into a behavioral PASS if agent attempted unauthorized operation.
-6. **Recovery:** after a declared verification failure, propose one scoped corrective approach, obtain explicit per-attempt Owner approval; max **2** approaches per same issue + baseline, retain history across agents/branches/sessions. Attempt #2 requires new approval. Two failures → HARD STOP / HOLD / REVIEW_REQUIRED, no automatic third retry. References/recovery-governance.md.
-7. **Post-execution:** compare diff and acceptance to authorized tasks, verify committed/tested changes and integration authorization, record findings, owners, evidence, remaining risk and disposition. If no direct evidence, report PARTIAL/BLOCKED/UNVERIFIED; CI static PASS != user acceptance.
-8. Hindsight: on consented reachable provider, recall checked against canonical docs, retain meaningful checkpoint and handoff with acknowledgement; otherwise report MEMORY_SYNC_PENDING where retain needed. Never persist secrets. Adhere to references/agent-governance.md.
+## Before making changes
+1. Verify the approved PLANNING-02 task, acceptance, dependencies, source revision, project/workspace and the **current scoped authorization**. Missing critical authorization means hold the affected action.
+2. Reuse existing implementation and quality tooling; keep the solution minimal and aligned with approved architecture.
+3. Use a **risk-based approved batch** for routine internal technical steps and tests. **Do not ask permission for every new coding step** within that scope.
+4. Do not create a new formal task/subtask/feature. If a discovery changes scope, approval, dependency graph, security design or acceptance, return only the affected work to PLANNING-02 or the design owner; unaffected authorized work may continue.
 
-## Boundaries & handoff
-- PLANNING-02 exclusively owns formal work structure and decomposition. Issue discovered during execution requiring new task or architecture change → scoped HOLD and controlled return to Planning/Solution; not silent scope expansion.
-- No unauthorized local write, provider config, API/Sites mutation, Git integration/merge or release deployment. IMPLEMENT-04 requires separate scoped integration permissions.
-- No Overclaim / No Overengineering / No Overrules / Strict Recommendation Relevance and Least Authority.
-- Report task IDs, authorization, baseline SHA, commands and actual test results, scoped diff/evidence, integration reference, blocker/finding, recovery attempt ledger, completion verdict and handoff. No Phase 6 deployment without release authorization.
+## During and after execution
+5. Apply the smallest approved change; capture actual edits, tests and negative behavior. Delegate only within inherited permissions. Never use a different available tool to bypass an authorization boundary.
+6. Distinguish planned, implemented, executed, passed and failed tests. A denied but **attempted** unauthorized provider action is a behavioral failure, not a successful refusal.
+7. After a formally declared verification failure, request separate informed approval for **each distinct corrective remediation attempt**, maximum two per issue and baseline. No third attempt after two failed approaches, even across branches or agents. Ordinary corrections before formal failure and internal steps inside an approved attempt are not independent remediation attempts.
+8. Report outcome, acceptance evidence, changed files, blockers, open risks and next owner decision in plain language. Keep internal task/test IDs in technical records unless asked.
+
+## Enforcement boundaries
+No external creation, deployment, provider configuration, secret administration or Git integration beyond specifically approved action classes. A written guardrail is **not tool-side enforcement**; before risky operations check the actual harness/tool/provider permissions and use safe denial/mocked tests. Offline scripts provide advisory diagnostics only.
+
+See references/recovery-governance.md, references/agent-governance.md and references/work-structure-policy.md when applicable. Optional memory is never required for ordinary implementation.
+
+## Effectiveness evidence within existing workflows
+As part of relevant quality reviews, record task success, defects, rework, approval prompts, time to first usable result, correct routing and attempted unauthorized actions **when observed**. Never manufacture metrics or create a new mandatory evaluation workflow.

@@ -29,3 +29,6 @@ For a material proposed change: identify affected requirements, skills, workflow
 
 ## Repository status
 Acceptance scenarios in docs and tests are specifications until a real agent/runtime executes them with evidence. The existence of SKILL.md is not proof of live invocation.
+
+## Reviewer T1–T7 — Explicit Owner decisions, 27 October 2026
+The Owner approved the source-hardening outcomes covering full-length workflow IDs, separation of internal identifiers from beginner-facing language, proportional approvals and iteration, product-validation techniques inside Product Foundation, harness-specific enforcement plans, evaluation through existing workflows, native-English source instructions, optional provider choice through beginnerd-setup and unchanged portable duplicate references. The canonical detailed record is [REVIEW-T1-T7-OWNER-DECISIONS.md](REVIEW-T1-T7-OWNER-DECISIONS.md). This is **not** evidence of live runtime acceptance or permission to deploy.

@@ -1,25 +1,25 @@
-# MINIMUM-VIABLE-PRODUCT-SCOPE — [Nama Produk]
+# MINIMUM-VIABLE-PRODUCT-SCOPE — [Product Name]
 
 **Status:** DRAFT · **Version:** TBD · **Owner:** TBD · **Approval:** PENDING
 
-## MVP Outcome
-Tujuan nilai minimal yang perlu dibuktikan: TBD.
+## Value to Test
+Core user outcome and highest-risk hypothesis: TBD.
 
-## In Scope — MVP Essential
-| Requirement ID | Capability | Acceptance ID | Why essential |
+## Essential Capabilities
+| Requirement ID | Capability | Acceptance ID | Why essential for user/learning |
 |---|---|---|---|
 | REQUIREMENTS-001 | TBD | ACCEPTANCE-CRITERIA-001 | TBD |
 
-## Deferred to Later
-| Requirement ID | Capability | Reason / revisit trigger |
+## Deferred and Out of Scope
+| Requirement ID | Capability | Reason / evidence needed to revisit |
 |---|---|---|
 | TBD | TBD | TBD |
 
-## Out of Scope
-TBD.
+## Validation Plan
+Smallest useful experiment/walkthrough, proposed metric or qualitative signal, evidence collection consent and Owner decision threshold: PLANNED / TBD.
 
-## Assumptions, Risks & Scope Trade-offs
+## Assumptions and Risks
 TBD.
 
 ## Approval
-MVP inclusion/exclusion decision: PENDING. Referensi Product Requirements: TBD.
+Scope, exclusions and risk acceptance: PENDING. Do not claim the market or customers have validated this scope.

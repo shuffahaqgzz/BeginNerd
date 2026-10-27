@@ -1,23 +1,23 @@
-# PRODUCT-REQUIREMENTS-DOC — [Nama Produk]
+# PRODUCT-REQUIREMENTS-DOC — [Product Name]
 
 **Status:** DRAFT · **Version:** TBD · **Owner:** TBD · **Approval:** PENDING
 
-## Product Goal / Context
-Product Brief reference: TBD.
+## Product Goal and Evidence
+Product Brief source and customer evidence versus untested assumptions: TBD.
 
 ## Requirements
-| ID | User / actor | Requirement / value | Priority | Source / evidence | Acceptance ID | Status |
+| ID | User / actor | Product need and value | Priority | Source / evidence | Acceptance ID | Status |
 |---|---|---|---|---|---|---|
 | REQUIREMENTS-001 | TBD | TBD | TBD | TBD | ACCEPTANCE-CRITERIA-001 | DRAFT |
 
 ## Acceptance Criteria
-- **ACCEPTANCE-CRITERIA-001** (REQUIREMENTS-001): Given/When/Then atau kriteria observasi yang tepat; skenario gagal bila relevan.
+- ACCEPTANCE-CRITERIA-001 (REQUIREMENTS-001): observable behavior in Given/When/Then or another suitable form, including negative paths when relevant — TBD.
 
-## Data & Access Constraints
-TBD — high-level needs only; detailed security design belongs to Phase 2.
+## Data, Access and Constraints
+Privacy, roles, retention, budget/hosting and existing components: TBD; detailed security design belongs to Solution.
 
-## Assumptions, Exclusions, Dependencies
-TBD.
+## Hypotheses, Exclusions and Dependencies
+TBD. Separate assumed value from observed user behavior.
 
-## Decision & Change Record
-Owner approval refs: PENDING. Product requirements tidak otomatis menjadi task implementasi.
+## Owner Decision and Change Record
+Approval reference: PENDING. Product requirements do not authorize implementation or deployment.

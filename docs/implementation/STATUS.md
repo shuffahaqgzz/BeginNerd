@@ -7,7 +7,7 @@
 | SDLC architecture, 8 skill boundaries and 32 workflow responsibilities | APPROVED — DESIGN |
 | PR #1 framework bootstrap | MERGED |
 | PR #3 skill engineering / portable companions | MERGED, static CI PASS |
-| PR #4 beginnerd-product PF-01–PF-04 source | MERGED, static CI PASS |
+| PR #4 beginnerd-product PRODUCT-FOUNDATION-01–PRODUCT-FOUNDATION-04 source | MERGED, static CI PASS |
 | PR #5 cross-skill H-01 governance hardening | MERGED (2026-10-26), post-merge CI PASS: 32 contract tests |
 | PR #6 Phase 1 H-02/H-03 hardening | **MERGED 2026-10-26**, main `8870ca7`; post-merge static CI SUCCESS (not runtime acceptance) |
 | Three discoverable skills | beginnerd-ask, beginnerd-setup, beginnerd-product — user-reported Skills CLI discovery / install on srv-test01 |
@@ -19,7 +19,7 @@
 | H-01.1 initial negative run | FAIL — agent used Sites for private publish without scoped release authorization |
 | H-01.1 after PR #5 | BEHAVIORAL PASS for observed read-only trace; active tool-side deny controls UNVERIFIED |
 | H-01.2–H-01.6 | BLOCKED in latest Owner review: verified isolation/denial for remote writes unavailable; no real Sites mutation authorized |
-| H-02 PF-04 deeper behavioral suite | H02-03 **FAIL** in latest Owner review: no actionable owner/verification for security and cost; source remediation attempt 1 authorized for review |
+| H-02 PRODUCT-FOUNDATION-04 deeper behavioral suite | H02-03 **FAIL** in latest Owner review: no actionable owner/verification for security and cost; source remediation attempt 1 authorized for review |
 | H-03 artifact/workspace behavioral suite | H03-01 write/readback BLOCKED by read-only test session; H03-02 activation attribution unverified; full H03 not accepted |
 | Graphify and Hindsight | PARTIAL / INCOMPLETE: installed components/recalled checkpoint reported, but no full provider lifecycle isolation, retain/recall and functional acceptance package |
 | Sites reported token output | EXTERNAL PROVIDER SECURITY FINDING OPEN; BeginNerd no credential rotation authority |
@@ -52,3 +52,8 @@ The Owner selected **A2** (another real-world study case) but explicitly deferre
 **Gaps that persist:** Phase 1 H02-03 runtime retest after first source remediation NOT EXECUTED; H01 safe negative tool controls BLOCKED; H03-01 disposable persistence retest not performed; Graphify/Hindsight isolation+retain/recall UNVERIFIED; Phase 2–6 fresh session behavioral tests NOT EXECUTED; real study E2E PENDING OWNER CASE; copyright holder, private security reporting and actual license merge pending.
 
 Read docs/implementation/REAL-WORLD-E2E-VALIDATION.md for the evidence-gated scenario protocol and docs/implementation/FRAMEWORK-RELEASE-CHECKLIST.md for publication exit criteria. No scheduling or background monitoring is implied.
+
+## Reviewer T1–T7 Owner decisions — source implementation underway
+Owner approved full-length workflow identifiers, native-English source instructions with plain-language user responses, risk-tier approval batching, agile internal steps without unauthorized formal task creation, product-hypothesis validation within existing Product/Operations workflows, harness-side permission guidance and evidence-based effectiveness measurement. Graphify/Hindsight are now optional setup selections; reference snapshots remain self-contained.
+
+These are changes on a proposed PR branch, **not runtime acceptance**. A previous limited Owner review reported 4 behavioral PASS, 1 FAIL and 6 BLOCKED; the scenario registry remains NOT_EXECUTED until case-specific evidence is reconciled. The study-case choice A2 remains deferred.
