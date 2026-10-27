@@ -26,7 +26,7 @@
 ## 3. Packaging portability
 - Instalasi `skills CLI` dapat menyalin **satu direktori skill**, tanpa `docs/` canonical root. Oleh karena itu setiap companion harus memuat minimum references yang dibutuhkan secara **self-contained**.
 - Source of truth adalah `docs/governance/AGENT-GOVERNANCE.md`, `docs/governance/MEMORY-KNOWLEDGE-CONTRACT.md`, dan `docs/workflows/WORKFLOW-REGISTRY.md`.
-- `scripts/build_portable_references.py` menghasilkan 5 file snapshot lokal dalam skill folders dari ketiga canonical docs dengan Git blob provenance. Source docs tidak digandakan secara manual sebagai aturan baru.
+- scripts/build_portable_references.py kini mereplikasi **6 sumber canonical menjadi 38 reference snapshots** pada delapan skill packages, dengan Git blob SHA provenance dan pemeriksaan stale snapshot. Source docs tetap authoritative, bukan salinan mandiri dengan aturan baru.
 - Gunakan `python3 scripts/build_portable_references.py --write` setelah canonical docs berubah, review diff, dan commit bersama. CI menjalankan `--check` agar snapshot stale langsung gagal.
 - Pengguna yang menginstal individual skill menggunakan snapshot terpasang pada versinya. Pembaruan sumber canonical hanya berlaku setelah skill diperbarui. Snapshot bukan bukti bahwa repository saat runtime selalu tersedia.
 
