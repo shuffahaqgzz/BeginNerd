@@ -99,4 +99,3 @@ Lihat [status implementasi](docs/implementation/STATUS.md) dan [rencana validasi
 
 BeginNerd adalah open source dengan [MIT License](LICENSE). Kalau mau bantu memperbaiki skill, contoh, atau dokumentasi, lihat [Contributing](CONTRIBUTING.md). Untuk masalah keamanan, baca [Security Policy](SECURITY.md).
 
-**Start small. Build something. Learn along the way.**
