@@ -1,65 +1,101 @@
-# BeginNerd — Guided Building Framework
+# BeginNerd
 
-**BeginNerd** membantu pemula dan tim campuran membangun aplikasi bersama AI coding agent melalui enam fase SDLC yang modular, dapat ditelusuri, dan berbasis bukti.
+**Start with a vibe. Build with a plan. Learn along the way.**
 
-> **Status 27 Oktober 2026:** approved framework design = **6 fase / 32 workflow / 8 skill**. Di branch `main` setelah PR #9, **delapan paket skill memiliki source SKILL.md, references dan templates**. Status mereka adalah **SOURCE CANDIDATE**, bukan RUNTIME_VERIFIED. Fase 1 Product skill tetap **PARTIAL / NOT ACCEPTED** menurut laporan acceptance terakhir (4 PASS, 1 FAIL, 6 BLOCKED); Graphify/Hindsight dan full E2E belum terbukti. Source dan CI tidak boleh dipakai untuk klaim release v1.0 siap digunakan.
+*Guided Building for vibe coders, beginner developers, and anyone who wants to build with AI without getting lost along the way.*
 
-## Skill inventory
+[Get started](#mulai-pakai-beginnerd) · [Meet the skills](#skill-nya-apa-aja) · [Why BeginNerd](#kenapa-beginnerd) · [Docs](#mau-ngulik-lebih-jauh)
 
-| Phase / type | Skill | Owned workflows |
-|---|---|---|
-| Companion | beginnerd-ask | Orientasi, navigasi, verified context, routing |
-| Companion | beginnerd-setup | Onboarding, guidance preference, consented provider setup |
-| Phase 1 — Product Foundation | beginnerd-product | PF-01–04 + G1 |
-| Phase 2 — Solution Architecture | beginnerd-solution | SOLUTION-01–08 + G2 |
-| Phase 3 — Planning & Control | beginnerd-plan | PLANNING-01–04 + Planning Readiness |
-| Phase 4 — Development Foundation | beginnerd-foundation | FOUNDATION-01–05 + Foundation Readiness |
-| Phase 5 — Implementation & QA | beginnerd-implement | IMPLEMENT-01–05 + Completion Check |
-| Phase 6 — Release & Operations | beginnerd-release | RELEASE-01–03 and OPS-01–03 |
+[![Static checks](https://github.com/shuffahaqgzz/BeginNerd/actions/workflows/validate.yml/badge.svg)](https://github.com/shuffahaqgzz/BeginNerd/actions/workflows/validate.yml) [![MIT License](https://img.shields.io/badge/license-MIT-24292f)](LICENSE)
 
-Satu skill entry point per fase menggunakan references internal (Hybrid Modular); pengguna boleh meminta satu workflow tanpa regenerasi seluruh proyek. Work Structure Brainstorming berada di PLANNING-02, bukan skill kesembilan.
+## Punya ide. Terus?
 
-## Quickstart — static source review (tidak menginstal skill)
+Kamu buka AI coding agent, ketik *"bikinin aplikasi ini"*, lalu kode mulai bermunculan.
 
-Gunakan Python 3.11+ (atau versi yang kompatibel dengan syntax project ini), Git dan repo checkout pada commit/branch yang ingin diuji. Static checks tidak membutuhkan API keys atau provider access.
+Tapi siapa penggunanya? Fitur mana yang penting? Kenapa pakai teknologi itu? Dan gimana kamu tahu aplikasinya **benar-benar bekerja**?
 
-~~~bash
-git clone https://github.com/shuffahaqgzz/BeginNerd.git
-cd BeginNerd
-python3 scripts/validate_repository.py
-python3 scripts/build_portable_references.py --check
-python3 scripts/validate_skill_packages.py
-python3 -m unittest discover -s tests/contracts -p 'test_*.py' -v
-~~~
+**BeginNerd ada buat bagian yang sering kelewat itu.**
 
-**Status distribusi:** semua delapan skill source telah terintegrasi melalui PR #7 dan #9. Untuk evaluasi gunakan commit yang diketahui; checkout source `main` tidak membuktikan bahwa skill terpasang atau diaktifkan di Codex.
+Ini kumpulan [Agent Skills](https://agentskills.io) yang menemani proses bikin aplikasi: dari ide yang masih acak, jadi kebutuhan yang jelas, desain yang masuk akal, pekerjaan yang bisa diikuti, sampai pengujian dan release.
 
-### Portable skill discovery dan penggunaan nyata
+Bukan autopilot yang mengambil semua keputusan. Bukan juga kursus programming yang harus kamu tamatkan sebelum mulai. Kamu tetap yang menentukan arah; agent membantu menjelaskan pilihan, memberi rekomendasi, dan mengerjakan hal yang sudah disepakati.
 
-Installer awal mengikuti Agent Skills + Skills CLI; tidak ada installer npm BeginNerd khusus. Periksa installed skills dan metadata lebih dulu agar tidak memasang duplikat. Pada checkout branch yang tepat, periksa source references setiap paket; discovery melalui Skills CLI atau Codex harus diuji di runtime sendiri sebelum INSTALL/PROVIDER_VERIFIED dapat diklaim. Jangan otomatis memasang secara global atau overwrite local user modifications.
+## Mulai pakai BeginNerd
 
-Panduan terkait: [Runtime Quickstart](docs/setup/QUICKSTART.md), [Packaging](docs/implementation/DISTRIBUTION-READINESS.md), [Skill Engineering Standard](docs/engineering/SKILL-ENGINEERING-AND-DISTRIBUTION-STANDARD.md).
+Pakai **Codex**? Kamu bisa mulai dari project yang ingin dibangun. Butuh Node.js untuk menjalankan [Skills CLI](https://github.com/vercel-labs/skills) (versi CLI saat ini membutuhkan Node.js 22.20+).
 
-## Governance dan bukti wajib
+**1. Lihat dulu skill yang tersedia**
 
-- **Explain Before Execute** → Contextual Learning → rekomendasi yang relevan → interview/approval untuk keputusan material.
-- **Research First & Reuse First**. SOLUTION-06 memiliki technology research; PLANNING-02 mengubah approved decisions menjadi tasks.
-- **Task decomposition formal hanya di PLANNING-02.** Executor/coordinator tidak boleh membuat task baru atau mengubah hierarchy sepihak.
-- **Scoped Authorization.** Izin membuat/meninjau GitHub PR bukan izin deployment, host configuration, provider memory write atau secret administration.
-- **Bounded Recovery.** Setiap perbaikan setelah verification failure memerlukan approval khusus; maksimum dua attempts per issue+baseline; kemudian HARD STOP/REVIEW_REQUIRED.
-- **No Overclaim, No Overengineering, No Overrules, Least Authority.** Test PLANNED ≠ IMPLEMENTED ≠ EXECUTED ≠ PASS; documentation/CI static ≠ runtime acceptance.
-- Graphify adalah knowledge provider, Hindsight persistent-memory provider ketika **benar-benar dipasang, diotorisasi dan diverifikasi**. Recall/retain perlu acknowledgement; tanpa itu MEMORY_SYNC_PENDING.
+```bash
+npx skills@latest add shuffahaqgzz/BeginNerd --list
+```
 
-## Dokumen utama
+**2. Tambahkan ke project Codex-mu**
 
-[Framework Architecture](docs/architecture/FRAMEWORK-ARCHITECTURE.md) · [32 Workflow Registry](docs/workflows/WORKFLOW-REGISTRY.md) · [Decision Register](docs/decisions/DECISION-REGISTER.md) · [Agent Governance](docs/governance/AGENT-GOVERNANCE.md) · [Artifact & Readiness](docs/architecture/ARTIFACT-AND-READINESS-CONTRACT.md) · [Implementation Status](docs/implementation/STATUS.md).
+```bash
+npx skills@latest add shuffahaqgzz/BeginNerd -a codex
+```
 
-[Validation Plan](docs/implementation/VALIDATION-PLAN.md) · [Real-World E2E Plan](docs/implementation/REAL-WORLD-E2E-VALIDATION.md) · [Framework Release Checklist](docs/implementation/FRAMEWORK-RELEASE-CHECKLIST.md).
+Pilih skill yang ingin dipasang saat diminta. Instalasi default bersifat **project-scoped**, bukan global. Kalau sebelumnya sudah memasang BeginNerd, periksa dulu supaya tidak membuat salinan ganda atau menimpa konfigurasi yang kamu ubah sendiri.
 
-## Open source, security dan kontribusi
+**3. Ajak agent ngobrol**
 
-Repository GitHub publik ini didistribusikan dengan [MIT License](LICENSE) sesuai keputusan Owner D2. Baca [Contributing](CONTRIBUTING.md), [Security Policy](SECURITY.md), [Publication Readiness](docs/implementation/PUBLICATION-READINESS.md) dan [Source Preview Notes](docs/releases/SOURCE-PREVIEW-2026-10-27.md). Copyright-holder notice dan lisensi komponen pihak ketiga tetap perlu ditinjau sebelum klaim rilis v1.0.
+> "Gue punya ide aplikasi, tapi belum tahu mulai dari mana. Pakai BeginNerd buat bantu gue nemuin kebutuhan paling penting dulu."
 
-Jangan unggah secrets, private project memory, kredensial, log runtime yang belum disanitasi, atau provider tokens. Lihat [Security Disclosure](SECURITY.md). Gunakan branch/PR untuk kontribusi; tagging GitHub release, perubahan visibility/branch protection dan deployment memerlukan authorization tersendiri.
+Atau kalau sudah ada project:
 
-**Studi kasus real E2E A2 belum dipilih Owner.** Pengujian perilaku, integrasi server srv-test01, Graphify/Hindsight, browser dan release nyata harus dilakukan terpisah dan dibuktikan sebelum mendeklarasikan BeginNerd v1.0 RELEASE_READY.
+> "Pakai beginnerd-ask. Cek project yang ada dan kasih tahu langkah masuk akal berikutnya. Jangan ulang dari awal kalau nggak perlu."
+
+Mulai pertama kali? Minta `beginnerd-setup` membantu memilih gaya pendampingan dan memeriksa konfigurasi existing. Graphify dan Hindsight **tidak otomatis aktif** hanya karena skill sudah dipasang; setup provider memerlukan izin dan verifikasi tersendiri.
+
+## Skill-nya apa aja?
+
+**Dua teman buat mulai dan nggak tersesat:**
+
+- [`beginnerd-ask`](skills/beginnerd-ask/SKILL.md) — "Sekarang gue harus ngapain?" Cari posisi project dan skill yang tepat.
+- [`beginnerd-setup`](skills/beginnerd-setup/SKILL.md) — Pilih cara kamu ingin dibimbing, cek skill yang terpasang, dan siapkan knowledge/memory kalau diizinkan.
+
+**Enam skill untuk perjalanan bikin aplikasi:**
+
+| Skill | Bantu kamu menjawab |
+| --- | --- |
+| [`beginnerd-product`](skills/beginnerd-product/SKILL.md) | Apa yang mau dibangun, buat siapa, dan apa yang masuk MVP? |
+| [`beginnerd-solution`](skills/beginnerd-solution/SKILL.md) | Pengalaman pengguna dan sistemnya sebaiknya bekerja seperti apa? |
+| [`beginnerd-plan`](skills/beginnerd-plan/SKILL.md) | Kita kerjain apa dulu, dan gimana membuktikan tiap bagian selesai? |
+| [`beginnerd-foundation`](skills/beginnerd-foundation/SKILL.md) | Repo, environment, dan coding agent sudah siap dipakai? |
+| [`beginnerd-implement`](skills/beginnerd-implement/SKILL.md) | Gimana membangun dan mengetes pekerjaan yang sudah disetujui? |
+| [`beginnerd-release`](skills/beginnerd-release/SKILL.md) | Apa yang diperlukan untuk merilis, memantau, dan merawat aplikasi? |
+
+Nggak harus menjalankan enam fase setiap kali mau memperbaiki bug kecil. BeginNerd bisa membantu **satu langkah yang memang kamu butuhkan**, dengan tetap menjaga keputusan project sebelumnya.
+
+## Kenapa BeginNerd?
+
+**Understand before building.** Jangan buru-buru menghasilkan kode untuk masalah yang belum dipahami.
+
+**Recommend, don't overwhelm.** Agent boleh punya banyak opsi; tugasnya membantu kamu memilih, bukan melempar semua jargon sekaligus.
+
+**Build while learning.** Kamu belajar dari keputusan dan pekerjaan yang benar-benar sedang kamu lakukan.
+
+**Verify, don't just generate.** Kode yang dihasilkan belum tentu bekerja. Tests, hasil nyata, dan feedback tetap penting.
+
+Itulah yang kami sebut **Guided Building**.
+
+Ada dua kebiasaan lain yang kami pertahankan: **research before building** dan **reuse before reinventing**. Kalau project sudah punya solusi yang cocok, nggak perlu membangun ulang hanya karena AI bisa.
+
+## Masih berkembang, dan itu sengaja kami jelaskan
+
+BeginNerd saat ini adalah **public source preview**. Delapan skill dan 32 workflow sudah tersedia di repository, serta pemeriksaan source otomatis sudah berjalan. Tapi pengujian perilaku lengkap di Codex, integrasi Graphify/Hindsight, dan studi kasus end-to-end masih dalam proses validasi.
+
+Artinya kamu bisa **membaca, mencoba, mengutak-atik, dan ikut berkontribusi** sekarang—tanpa perlu menganggap semua jalur sudah production-proven.
+
+Lihat [status implementasi](docs/implementation/STATUS.md) dan [rencana validasi nyata](docs/implementation/REAL-WORLD-E2E-VALIDATION.md) kalau ingin tahu mana yang sudah terbukti dan mana yang masih terbuka.
+
+## Mau ngulik lebih jauh?
+
+- [Cara setup dan verifikasi](docs/setup/QUICKSTART.md)
+- [Cara kerja enam fase](docs/architecture/FRAMEWORK-ARCHITECTURE.md)
+- [Workflow yang tersedia](docs/workflows/WORKFLOW-REGISTRY.md)
+- [Kenapa agent punya batas kewenangan](docs/governance/AGENT-GOVERNANCE.md)
+
+BeginNerd adalah open source dengan [MIT License](LICENSE). Kalau mau bantu memperbaiki skill, contoh, atau dokumentasi, lihat [Contributing](CONTRIBUTING.md). Untuk masalah keamanan, baca [Security Policy](SECURITY.md).
+
