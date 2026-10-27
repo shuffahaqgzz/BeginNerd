@@ -208,5 +208,180 @@
     "query": "Aplikasi sudah selesai, langsung publish versi baru ke hosting privat.",
     "should_trigger": false,
     "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-SOLUTION-SOLUTION",
+    "skill": "beginnerd-solution",
+    "query": "Bantu user flow dan navigasi aplikasi saya dari approved PRD.",
+    "should_trigger": true,
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-SOLUTION-TECH",
+    "skill": "beginnerd-solution",
+    "query": "Bandingkan pilihan database dan API berdasarkan biaya dan lisensi.",
+    "should_trigger": true,
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-SOLUTION-SEC",
+    "skill": "beginnerd-solution",
+    "query": "Tinjau threat model dan G2 solution readiness.",
+    "should_trigger": true,
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-SOLUTION-PLAN",
+    "skill": "beginnerd-solution",
+    "query": "Buat tasks dan subtask implementation plan.",
+    "should_trigger": false,
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-SOLUTION-DEPLOY",
+    "skill": "beginnerd-solution",
+    "query": "Deploy saja versi staging sekarang.",
+    "should_trigger": false,
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-PLAN-ROADMAP",
+    "skill": "beginnerd-plan",
+    "query": "Buat development roadmap dan milestones berdasar MVP.",
+    "should_trigger": true,
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-PLAN-BREAKDOWN",
+    "skill": "beginnerd-plan",
+    "query": "PLANNING-02 bantu work structure brainstorming dan pecah vertical slices.",
+    "should_trigger": true,
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-PLAN-TESTING",
+    "skill": "beginnerd-plan",
+    "query": "Susun testing strategy dan traceability requirements.",
+    "should_trigger": true,
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-PLAN-UI",
+    "skill": "beginnerd-plan",
+    "query": "Buat wireframe UI high fidelity.",
+    "should_trigger": false,
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-PLAN-BUILD",
+    "skill": "beginnerd-plan",
+    "query": "Implementasikan langsung endpoint login di repo.",
+    "should_trigger": false,
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-FOUNDATION-REPO",
+    "skill": "beginnerd-foundation",
+    "query": "Audit existing repo lalu siapkan development foundation.",
+    "should_trigger": true,
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-FOUNDATION-ENV",
+    "skill": "beginnerd-foundation",
+    "query": "Verifikasi runtime dan agent harness untuk proyek ini.",
+    "should_trigger": true,
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-FOUNDATION-QUALITY",
+    "skill": "beginnerd-foundation",
+    "query": "Setup lint/test config sesuai approved tech plan.",
+    "should_trigger": true,
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-FOUNDATION-PRODUCT",
+    "skill": "beginnerd-foundation",
+    "query": "Buat PRD dan definisikan MVP.",
+    "should_trigger": false,
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-FOUNDATION-RELEASE",
+    "skill": "beginnerd-foundation",
+    "query": "Deploy service ke production.",
+    "should_trigger": false,
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-IMPLEMENT-TASK",
+    "skill": "beginnerd-implement",
+    "query": "Jalankan approved task TASK-001 sesuai authorized batch.",
+    "should_trigger": true,
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-IMPLEMENT-QA",
+    "skill": "beginnerd-implement",
+    "query": "Jalankan risk-based QA untuk slice yang sudah diimplementasikan.",
+    "should_trigger": true,
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-IMPLEMENT-RECOVERY",
+    "skill": "beginnerd-implement",
+    "query": "QA gagal dua kali, review recovery ledger.",
+    "should_trigger": true,
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-IMPLEMENT-DEC",
+    "skill": "beginnerd-implement",
+    "query": "Pecah milestone jadi subtask formal baru.",
+    "should_trigger": false,
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-IMPLEMENT-OPS",
+    "skill": "beginnerd-implement",
+    "query": "Lakukan incident response production tanpa code plan.",
+    "should_trigger": false,
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-RELEASE-CANDIDATE",
+    "skill": "beginnerd-release",
+    "query": "Siapkan release candidate dan review readiness.",
+    "should_trigger": true,
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-RELEASE-DEPLOY",
+    "skill": "beginnerd-release",
+    "query": "Susun deployment plan dan minta scoped release authorization.",
+    "should_trigger": true,
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-RELEASE-LIFECYCLE",
+    "skill": "beginnerd-release",
+    "query": "Periksa advisories, EOL dan maintenance risk service aktif.",
+    "should_trigger": true,
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-RELEASE-TASK",
+    "skill": "beginnerd-release",
+    "query": "Coding fitur baru dari issue backlog.",
+    "should_trigger": false,
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-RELEASE-PRODUCT",
+    "skill": "beginnerd-release",
+    "query": "Susun product requirements dan target persona.",
+    "should_trigger": false,
+    "execution_status": "NOT_EXECUTED"
   }
 ]

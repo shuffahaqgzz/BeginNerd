@@ -10,26 +10,28 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+# All eight skill packages are self-contained after distribution.
+LIFECYCLE = ("beginnerd-solution", "beginnerd-plan", "beginnerd-foundation",
+             "beginnerd-implement", "beginnerd-release")
+ALL_SKILLS = ("beginnerd-ask", "beginnerd-setup", "beginnerd-product", *LIFECYCLE)
 SOURCES = {
-    "docs/governance/AGENT-GOVERNANCE.md": (
-        "skills/beginnerd-ask/references/agent-governance.md",
-        "skills/beginnerd-setup/references/agent-governance.md",
-        "skills/beginnerd-product/references/agent-governance.md",
-    ),
-    "docs/governance/MEMORY-KNOWLEDGE-CONTRACT.md": (
-        "skills/beginnerd-ask/references/memory-knowledge-contract.md",
-        "skills/beginnerd-setup/references/memory-knowledge-contract.md",
-        "skills/beginnerd-product/references/memory-knowledge-contract.md",
-    ),
-    "docs/workflows/WORKFLOW-REGISTRY.md": (
-        "skills/beginnerd-ask/references/workflow-registry.md",
-    ),
-    "docs/governance/RESEARCH-REUSE-POLICY.md": (
-        "skills/beginnerd-product/references/research-reuse-policy.md",
-    ),
-    "docs/architecture/ARTIFACT-AND-READINESS-CONTRACT.md": (
-        "skills/beginnerd-product/references/artifact-readiness-contract.md",
-    ),
+    "docs/governance/AGENT-GOVERNANCE.md":
+        tuple(f"skills/{s}/references/agent-governance.md" for s in ALL_SKILLS),
+    "docs/governance/MEMORY-KNOWLEDGE-CONTRACT.md":
+        tuple(f"skills/{s}/references/memory-knowledge-contract.md" for s in ALL_SKILLS),
+    "docs/workflows/WORKFLOW-REGISTRY.md":
+        tuple(f"skills/{s}/references/workflow-registry.md"
+              for s in ("beginnerd-ask", *LIFECYCLE)),
+    "docs/governance/RESEARCH-REUSE-POLICY.md":
+        tuple(f"skills/{s}/references/research-reuse-policy.md"
+              for s in ("beginnerd-product", *LIFECYCLE)),
+    "docs/architecture/ARTIFACT-AND-READINESS-CONTRACT.md":
+        tuple(f"skills/{s}/references/artifact-readiness-contract.md"
+              for s in ("beginnerd-product", *LIFECYCLE)),
+    "docs/governance/WORK-STRUCTURE-POLICY.md":
+        tuple(f"skills/{s}/references/work-structure-policy.md"
+              for s in ("beginnerd-plan", "beginnerd-foundation",
+                        "beginnerd-implement", "beginnerd-release")),
 }
 
 

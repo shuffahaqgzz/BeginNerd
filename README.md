@@ -1,61 +1,65 @@
-# BeginNerd
+# BeginNerd — Guided Building Framework
 
-**BeginNerd** adalah framework **Guided Building** untuk membantu pengguna pemula dan tim campuran merencanakan, membangun, menguji, merilis, dan memelihara aplikasi bersama AI coding agent.
+**BeginNerd** membantu pemula dan tim campuran membangun aplikasi bersama AI coding agent melalui enam fase SDLC yang modular, dapat ditelusuri, dan berbasis bukti.
 
-> **Status: FOUNDATION MERGED; PHASE 1 RUNTIME ACCEPTANCE PARTIAL.** Desain enam fase dan 32 workflow disetujui. Tiga source skills (`beginnerd-ask`, `beginnerd-setup`, `beginnerd-product`) sudah masuk `main` setelah PR #6 merged pada 26 Oktober 2026. Evaluasi runtime terakhir yang dilaporkan Owner: 4 PASS, 1 FAIL, 6 BLOCKED; bukan full Phase 1 PASS. Graphify/Hindsight belum terverifikasi E2E; lima lifecycle skills lainnya belum installable.
+> **Status 27 Oktober 2026:** approved framework design = **6 fases / 32 workflows / 8 skills**. Pada branch implementasi ini, **delapan paket skill memiliki source SKILL.md, references dan templates**. Status mereka adalah **SOURCE CANDIDATE**, bukan RUNTIME_VERIFIED. Fase 1 Product skill tetap **PARTIAL / NOT ACCEPTED** menurut laporan acceptance terakhir (4 PASS, 1 FAIL, 6 BLOCKED); Graphify/Hindsight dan full E2E belum terbukti. Source dan CI tidak boleh dipakai untuk klaim release v1.0 siap digunakan.
 
-## Arsitektur target
+## Skill inventory
 
-| Jenis | Skill | Tanggung jawab |
+| Phase / type | Skill | Owned workflows |
 |---|---|---|
-| Companion | beginnerd-ask | Menjelaskan, memulihkan dan memverifikasi konteks, mengarahkan ke workflow yang tepat |
-| Companion | beginnerd-setup | First-use onboarding, pilihan guidance, konfigurasi terotorisasi Graphify/Hindsight |
-| Phase 1 | beginnerd-product | Product Foundation (4 workflows) |
-| Phase 2 | beginnerd-solution | UX & Solution Architecture (8 workflows) |
-| Phase 3 | beginnerd-plan | Planning & Control (4 workflows) |
-| Phase 4 | beginnerd-foundation | Development Foundation (5 workflows) |
-| Phase 5 | beginnerd-implement | Implementation & QA (5 workflows) |
-| Phase 6 | beginnerd-release | Release & Operations (6 workflows) |
+| Companion | beginnerd-ask | Orientasi, navigasi, verified context, routing |
+| Companion | beginnerd-setup | Onboarding, guidance preference, consented provider setup |
+| Phase 1 — Product Foundation | beginnerd-product | PF-01–04 + G1 |
+| Phase 2 — Solution Architecture | beginnerd-solution | SOLUTION-01–08 + G2 |
+| Phase 3 — Planning & Control | beginnerd-plan | PLANNING-01–04 + Planning Readiness |
+| Phase 4 — Development Foundation | beginnerd-foundation | FOUNDATION-01–05 + Foundation Readiness |
+| Phase 5 — Implementation & QA | beginnerd-implement | IMPLEMENT-01–05 + Completion Check |
+| Phase 6 — Release & Operations | beginnerd-release | RELEASE-01–03 and OPS-01–03 |
 
-Delapan nama skill adalah target framework; direktori lifecycle sengaja hanya berisi kontrak boundary sampai implementasi benar-benar dilakukan dan diuji.
+Satu skill entry point per fase menggunakan references internal (Hybrid Modular); pengguna boleh meminta satu workflow tanpa regenerasi seluruh proyek. Work Structure Brainstorming berada di PLANNING-02, bukan skill kesembilan.
 
-## Dokumentasi canonical
+## Quickstart — static source review (tidak menginstal skill)
 
-- [Arsitektur framework](docs/architecture/FRAMEWORK-ARCHITECTURE.md) — enam fase dan quality/readiness checks.
-- [Artifact & readiness contract](docs/architecture/ARTIFACT-AND-READINESS-CONTRACT.md) — dokumen, keterlacakan dan bukti fase.
-- [Workflow registry](docs/workflows/WORKFLOW-REGISTRY.md) — 32 IDs, owner dan tanggung jawab.
-- [Decision register](docs/decisions/DECISION-REGISTER.md) dan [detail keputusan BN-DEC-009](docs/decisions/BN-DEC-009-APPROVED-DETAILS.md) — approved design serta provenance gaps.
-- [Agent governance](docs/governance/AGENT-GOVERNANCE.md) — approval, no-overclaim, batas remediasi.
-- [Memory & knowledge](docs/governance/MEMORY-KNOWLEDGE-CONTRACT.md) — Graphify, Hindsight, session continuity.
-- [Research & reuse](docs/governance/RESEARCH-REUSE-POLICY.md) dan [work structure](docs/governance/WORK-STRUCTURE-POLICY.md).
-- [Implementation status](docs/implementation/STATUS.md), [validation plan](docs/implementation/VALIDATION-PLAN.md), dan [Phase 1 product implementation contract](docs/implementation/PHASE-1-PRODUCT-IMPLEMENTATION-CONTRACT.md).
-- [Skills inventory](skills/README.md) dan [runtime quickstart](docs/setup/QUICKSTART.md).
+Gunakan Python 3.11+ (atau versi yang kompatibel dengan syntax project ini), Git dan repo checkout pada commit/branch yang ingin diuji. Static checks tidak membutuhkan API keys atau provider access.
 
-## Verifikasi repository dan packaging
-
-Untuk memeriksa baseline dari `main` atau branch PR yang ditinjau:
-
-```bash
+~~~bash
 git clone https://github.com/shuffahaqgzz/BeginNerd.git
 cd BeginNerd
 python3 scripts/validate_repository.py
 python3 scripts/build_portable_references.py --check
 python3 scripts/validate_skill_packages.py
 python3 -m unittest discover -s tests/contracts -p 'test_*.py' -v
-```
+~~~
 
-Target distribusi source di `main` adalah tiga skill (`beginnerd-ask`, `beginnerd-setup`, `beginnerd-product`) setelah PR #6 merged. Source installable ≠ runtime-verified. Lima lifecycle skills berikutnya masih berupa kontrak desain. [Skill Engineering Standard](docs/engineering/SKILL-ENGINEERING-AND-DISTRIBUTION-STANDARD.md) dan [Distribution Readiness](docs/implementation/DISTRIBUTION-READINESS.md) menerangkan batas validasi, installation scope, serta persyaratan izin.
+**Catatan branch:** sampai Draft PR source Fase 2–6 di-review dan merge, checkout default main belum memiliki kelima SKILL.md baru. Sumber yang sedang ditinjau berada di branch feat/phase2-6-portable-skills-20261027; PR #7 untuk H02-03 adalah base perubahan ini.
 
-Validator memeriksa kontrak statis, snapshots dan inventaris; penggunaan pada runtime tetap memerlukan pengujian. Discovery tiga skill melalui Skills CLI harus diverifikasi setelah commit target terintegrasi; dua companion sudah berhasil discovery dan basic invocation menurut laporan pengguna. Skenario di [tests/behavioral/scenarios.json](tests/behavioral/scenarios.json) serta [activation queries](tests/activation/queries.json) adalah **spesifikasi**, bukan hasil eksekusi agent. CI hijau tidak membuktikan kemampuan routing runtime atau Graphify/Hindsight yang benar-benar berfungsi.
+### Portable skill discovery dan penggunaan nyata
 
-## Prinsip
+Installer awal mengikuti Agent Skills + Skills CLI; tidak ada installer npm BeginNerd khusus. Periksa installed skills dan metadata lebih dulu agar tidak memasang duplikat. Pada checkout branch yang tepat, periksa source references setiap paket; discovery melalui Skills CLI atau Codex harus diuji di runtime sendiri sebelum INSTALL/PROVIDER_VERIFIED dapat diklaim. Jangan otomatis memasang secara global atau overwrite local user modifications.
 
-Explain Before Execute · Contextual Learning · Research Before Build · Reuse Before Reinvent · Explain → Interview → Approve → Record · Evidence-Based Completion · No Overclaim · No Overengineering · No Overrules · Scoped Authorization.
+Panduan terkait: [Runtime Quickstart](docs/setup/QUICKSTART.md), [Packaging](docs/implementation/DISTRIBUTION-READINESS.md), [Skill Engineering Standard](docs/engineering/SKILL-ENGINEERING-AND-DISTRIBUTION-STANDARD.md).
 
-Pembagian task formal hanya melalui Planning (PLANNING-02). Remediasi setelah verification failure memerlukan approval eksplisit per upaya, maksimal dua upaya untuk masalah/baseline yang sama, lalu HARD STOP jika masih gagal.
+## Governance dan bukti wajib
 
-## Governance, privasi, dan lisensi
+- **Explain Before Execute** → Contextual Learning → rekomendasi yang relevan → interview/approval untuk keputusan material.
+- **Research First & Reuse First**. SOLUTION-06 memiliki technology research; PLANNING-02 mengubah approved decisions menjadi tasks.
+- **Task decomposition formal hanya di PLANNING-02.** Executor/coordinator tidak boleh membuat task baru atau mengubah hierarchy sepihak.
+- **Scoped Authorization.** Izin membuat/meninjau GitHub PR bukan izin deployment, host configuration, provider memory write atau secret administration.
+- **Bounded Recovery.** Setiap perbaikan setelah verification failure memerlukan approval khusus; maksimum dua attempts per issue+baseline; kemudian HARD STOP/REVIEW_REQUIRED.
+- **No Overclaim, No Overengineering, No Overrules, Least Authority.** Test PLANNED ≠ IMPLEMENTED ≠ EXECUTED ≠ PASS; documentation/CI static ≠ runtime acceptance.
+- Graphify adalah knowledge provider, Hindsight persistent-memory provider ketika **benar-benar dipasang, diotorisasi dan diverifikasi**. Recall/retain perlu acknowledgement; tanpa itu MEMORY_SYNC_PENDING.
 
-Gunakan branch dan Pull Request; jangan menganggap persetujuan desain sebagai izin deployment. Rahasia, konfigurasi privat, dan memory aktual tidak boleh masuk repository public. Knowledge Provider **Graphify** dan Memory Provider **Hindsight** harus diverifikasi secara nyata dan mengikuti izin user serta scope proyek.
+## Dokumen utama
 
-Lisensi belum ditetapkan pemilik; jangan mengasumsikan repository public berarti seluruh kode dapat digunakan ulang tanpa syarat.
+[Framework Architecture](docs/architecture/FRAMEWORK-ARCHITECTURE.md) · [32 Workflow Registry](docs/workflows/WORKFLOW-REGISTRY.md) · [Decision Register](docs/decisions/DECISION-REGISTER.md) · [Agent Governance](docs/governance/AGENT-GOVERNANCE.md) · [Artifact & Readiness](docs/architecture/ARTIFACT-AND-READINESS-CONTRACT.md) · [Implementation Status](docs/implementation/STATUS.md).
+
+[Validation Plan](docs/implementation/VALIDATION-PLAN.md) · [Real-World E2E Plan](docs/implementation/REAL-WORLD-E2E-VALIDATION.md) · [Framework Release Checklist](docs/implementation/FRAMEWORK-RELEASE-CHECKLIST.md).
+
+## Open source, security dan kontribusi
+
+Repository GitHub telah publik. Owner memilih **MIT License (D2, 27 Oktober 2026)**; LICENSE dan CONTRIBUTING.md sedang diusulkan dalam [PR #8](https://github.com/shuffahaqgzz/BeginNerd/pull/8), **belum otomatis menjadi bagian branch ini/main**. Jangan menyatakan lisensi terpasang sebelum PR merge dan copyright/third-party review selesai.
+
+Jangan unggah secrets, private project memory, kredensial, log runtime yang belum disanitasi, atau provider tokens. Lihat [Security Disclosure](SECURITY.md). Gunakan branch/PR untuk kontribusi; tagging GitHub release, perubahan visibility/branch protection dan deployment memerlukan authorization tersendiri.
+
+**Studi kasus real E2E A2 belum dipilih Owner.** Pengujian perilaku, integrasi server srv-test01, Graphify/Hindsight, browser dan release nyata harus dilakukan terpisah dan dibuktikan sebelum mendeklarasikan BeginNerd v1.0 RELEASE_READY.

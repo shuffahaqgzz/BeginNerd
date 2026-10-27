@@ -64,8 +64,8 @@ def validate():
         folder = ROOT / "skills" / name
         if not (folder / "README.md").is_file():
             errors.append("missing lifecycle boundary: " + name)
-        if (folder / "SKILL.md").exists():
-            errors.append("unexpected lifecycle SKILL.md: requires implementation review for " + name)
+        if not (folder / "SKILL.md").is_file():
+            errors.append("missing lifecycle SKILL.md source candidate: " + name)
 
     reg = ROOT / "docs/workflows/WORKFLOW-REGISTRY.md"
     if reg.is_file():
@@ -107,7 +107,7 @@ def main():
             print(" - " + item)
         return 1
     print("BeginNerd STATIC CONTRACT CHECK: PASS")
-    print("Validated repository files, 2 companion metadata, 1 product implementation, 5 pending boundaries,")
+    print("Validated repository files, 8 source skill packages (6 lifecycle and 2 companion),")
     print("32 workflow IDs and behavioral scenario definitions.")
     print("NOT VERIFIED: agent runtime execution, Graphify/Hindsight integration, E2E.")
     return 0

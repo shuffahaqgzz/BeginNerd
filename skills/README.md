@@ -1,20 +1,20 @@
-# BeginNerd Skills Inventory
+# BeginNerd Skill Source Inventory
 
-Target: eight skills — two cross-phase companions plus six lifecycle skills covering exactly 32 workflow responsibilities.
+**Approved design:** 8 skills (2 companions + 6 lifecycle) / 32 workflows. Semua 8 direktori memiliki SKILL.md pada branch source kandidat ini, namun keberadaan file bukan kelulusan runtime.
 
-| Skill | Type | Repository state |
-|---|---|---|
-| beginnerd-ask | Companion | Source installed; basic invocation reported on srv-test01; broader behavior unverified |
-| beginnerd-setup | Companion | Source installed; read-only assessment reported on srv-test01; provider integration partial |
-| beginnerd-product | Lifecycle Phase 1 | Source SKILL.md + PF references merged in PR #4/#6; runtime PARTIAL, NOT ACCEPTED |
-| beginnerd-solution | Lifecycle Phase 2 | Design boundary only; implementation pending |
-| beginnerd-plan | Lifecycle Phase 3 | Design boundary only; implementation pending |
-| beginnerd-foundation | Lifecycle Phase 4 | Design boundary only; implementation pending |
-| beginnerd-implement | Lifecycle Phase 5 | Design boundary only; implementation pending |
-| beginnerd-release | Lifecycle Phase 6 | Design boundary only; implementation pending |
+| Skill | Phase | Source status | Runtime status |
+|---|---|---|---|
+| beginnerd-ask | Companion navigation | Packaged | Basic invoked (Owner report); full acceptance UNVERIFIED |
+| beginnerd-setup | Companion onboarding | Packaged | PARTIAL; Graphify/Hindsight not provider-verified |
+| beginnerd-product | Phase 1 (PF-01–04) | Packaged (PR #4/#6) | PARTIAL / NOT ACCEPTED, H02-03 remediation in PR #7 |
+| beginnerd-solution | Phase 2 (SOLUTION-01–08) | SOURCE CANDIDATE | NOT EXECUTED in Codex |
+| beginnerd-plan | Phase 3 (PLANNING-01–04) | SOURCE CANDIDATE | NOT EXECUTED in Codex |
+| beginnerd-foundation | Phase 4 (FOUNDATION-01–05) | SOURCE CANDIDATE | NOT EXECUTED on actual host |
+| beginnerd-implement | Phase 5 (IMPLEMENT-01–05) | SOURCE CANDIDATE | NOT EXECUTED on actual app |
+| beginnerd-release | Phase 6 (RELEASE-01–03/OPS-01–03) | SOURCE CANDIDATE | NOT EXECUTED against actual provider |
 
-The two companion skills and product candidate bundle **generated snapshots** of relevant canonical governance, knowledge/memory, and/or readiness contracts under `references/`. Run `python3 scripts/build_portable_references.py --check` to detect drift. See `docs/engineering/SKILL-ENGINEERING-AND-DISTRIBUTION-STANDARD.md`.
+Portable packages have local canonical-reference snapshots under references/. Use the generated snapshot parity script to catch drift. Five lifecycle candidates cannot be called VERIFIED merely because their source is present or static CI passes.
 
-Five lifecycle directories are still **NOT IMPLEMENTED**; do not count them as installable. Having a `SKILL.md` in `beginnerd-product` proves source availability, not runtime validation.
+The script examples inside beginnerd-implement and beginnerd-release perform **read-only advisory JSON checks**. They do not replace real tool-side authorization/sandbox, actual QA, deployment, or incident controls.
 
-If actual installed ask/setup files exist outside this repository, treat the starter definitions here as candidates to reconcile, not exact copies. Keep configuration and modifications made by the user.
+Do not use global installation or provider configuration without scoped approval. See distribution-readiness and validation plan. If installed copies have custom modifications, reconcile before overwrite.
