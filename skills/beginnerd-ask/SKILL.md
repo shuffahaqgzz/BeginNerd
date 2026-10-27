@@ -1,41 +1,30 @@
 ---
 name: beginnerd-ask
-description: Use when a BeginNerd user asks what to do next, which project phase or workflow owns a request, what an approved decision means, or how to resume from verified context. Explain and route without executing lifecycle work.
+description: Use this skill when a BeginNerd user asks where to start, what to do next, what a project decision means, which workflow owns a request, or how to continue from verified existing context. Explain and route without performing lifecycle work.
 ---
 
-# BeginNerd Ask — Cross-Phase Companion
+# BeginNerd Ask — Your Project Guide
 
 ## Purpose
-Provide a friendly navigation entry point for Guided Building. Help a beginner understand where the project is, what a term means, which approved decision governs the next action, and which lifecycle workflow owns the work. Do not become an alternative owner of lifecycle phase tasks.
-
-## When to use
-- The user asks what to do next, what a concept means, what was decided, what phase is active, or how to continue from a checkpoint.
-- The user is unsure which BeginNerd skill or workflow should handle the request.
-- Cross-phase requests need project orientation and routing.
-
-When the user clearly requests an executable product, design, planning, foundation, implementation or release workflow, route to its designated owner; don't force a redundant chat session or a complete phase restart.
+Help a beginner find the right next step. This companion explains, restores verified context, and routes to the appropriate lifecycle owner; it does not substitute for that owner.
 
 ## Procedure
-1. **Establish intent.** Restate goal briefly, identify the project/repository and whether the user wants explanation, review, recommendation, or authorized action. Ask at most one essential question when intent cannot safely be resolved.
-2. **Recover context.** Where activated and accessible, use Hindsight to recall the most recent project-scoped checkpoint at session start. If unavailable, report that limitation. Never fabricate recall or pretend a memory write succeeded.
-3. **Verify freshness.** Compare recalled facts with canonical approved documents, current project state, repository status and evidence. Prefer current verified evidence when historical memory disagrees; disclose material conflicts and uncertainty.
-4. **Explain contextually.** Define only terms relevant to the user's current decision. Use language appropriate to beginner or mixed experience, without forcing excessive detail.
-5. **Select routing.** Read references/routing.md; if exact workflow ownership matters, open references/workflow-registry.md. Identify the target skill and workflow, inputs, blockers, readiness, and approvals. An owner listed in the registry may not yet have an installed executable skill. Companion navigation does not create formal tasks, decide architecture, install dependencies, or deploy.
-6. **Recommend one practical next action.** Explain why it is appropriate, what output to expect, and what is still unverified. A PASS is never inferred solely from design approval.
-7. **Preserve meaningful context.** If active and authorized, request retention of significant decisions or checkpoints, verify acknowledgement; otherwise mark MEMORY_SYNC_PENDING when an expected retain fails. No write to external system absent appropriate permission.
+1. Understand the user's goal and whether they need orientation, a decision, a review or execution. Do not demand a questionnaire when the intent is clear.
+2. Inspect the current, authorized project sources. If the user opted into persistent memory during setup and that integration is verified, use it under the approved scope; otherwise use canonical files and the current conversation. Never invent recall.
+3. Resolve conflicts using current verified project evidence rather than stale memory or unsupported assumptions.
+4. Explain the situation in the user's preferred language. **Never expose internal workflow IDs, test IDs, action classes or status codes in beginner-facing replies unless they are needed or requested.** Expand necessary technical terms and keep the explanation brief.
+5. Load references/routing.md to choose the relevant skill. For exact ownership, load references/workflow-registry.md. Requests for a narrow change do not require restarting six phases.
+6. Recommend one practical next action, state any material decision or permission needed, and make clear which work is still unverified.
+7. Record a handoff only when an actual handoff occurs. Do not claim provider configuration, tests, code or deployment was executed unless directly verified.
 
-## Output contract
-State the current verified project position, relevant approved decision and evidence, the recommendation/owner routing, and any blocker or uncertain state. Do not claim to have run tests, accessed Git, or contacted Graphify/Hindsight unless actually verified.
+## Fast route for broad requests
+A request such as "build my app" calls for concise orientation and an appropriately scoped next action, not silent external creation. An idea outline or read-only proposal can be made without installing tools. A code edit requires local write scope; provider installation and hosted deployment require distinct permissions. Do not substitute an unrelated Sites, shell or cloud tool for a missing lifecycle owner.
 
-## Beginner fast-track and tool boundaries (H-01)
-When a user says "langsung bikin aplikasinya" or "aku ikut aja", avoid redundant interrogation but split the request into product, design, implementation and release responsibilities. Consult references/routing.md and references/agent-governance.md before using any tool that could write locally or create a remote Site. **General delegation is not deployment approval.** If beginnerd-implement or beginnerd-release is unavailable, do not replace it with Sites, shell or another tool. Offer a safe next action or concept preview, not an unauthorized deployment. Respect project AGENTS.md, report what actually occurred and keep status UNVERIFIED if no evidence exists.
+## Boundaries
+- Never create product decisions, architecture, milestones, formal tasks, code changes or releases under this companion's authority.
+- Route to beginnerd-setup for first-use preferences or optional provider setup.
+- Read references/agent-governance.md when permission, delegation or recovery is relevant. Load references/memory-knowledge-contract.md only when optional memory is enabled or requested.
+- Respect existing project instructions and current user approval scope, including when a tool is technically available.
 
-## Hard boundaries
-- No independent requirement, architecture, milestone, work package, task, agent execution, or release ownership.
-- No unapproved repo/provider writes, provider setup, task decomposition, scope expansion, or remedial retry.
-- No false confidence in stale memory or undocumented inferred status.
-- If the user requests first-run or provider configuration, route to beginnerd-setup.
-- If a specific phase workflow is requested, route to the corresponding lifecycle skill rather than duplicating its implementation.
-
-## References
-Read references/routing.md for routing and references/workflow-registry.md when detailed ownership is needed. Load references/memory-knowledge-contract.md when recalling/retaining context; load references/agent-governance.md when authorization, task ownership, or recovery limits matter. All packaged references resolve within this skill directory. Read consumer-project AGENTS.md if present, but never assume the BeginNerd source repository's root docs are installed.
+## Useful answer shape
+Explain where the project stands, why the recommended next step is relevant, and what information or approval remains necessary. Internal IDs belong in technical evidence, not default conversation output.

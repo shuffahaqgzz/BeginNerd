@@ -1,27 +1,29 @@
 ---
 name: beginnerd-plan
-description: Gunakan untuk menyusun Phase 3 BeginNerd—development roadmap dan milestones, implementation plan dan approved task decomposition, testing strategy, document control, serta Planning Readiness. Termasuk Adaptive Work Structure Brainstorming dan vertical slicing berbasis outcome.
+description: Use this skill to develop a product delivery roadmap, brainstorm and approve proportionate formal work packages and tasks, create a risk-based testing strategy, manage documentation changes, and assess Planning Readiness.
 ---
 
-# BeginNerd Plan — Phase 3 Planning & Control (PLANNING-01–04)
+# BeginNerd Plan — Planning and Control
 
-**Owner utama formal decomposition:** PLANNING-02. Ini SATU-SATUNYA workflow yang boleh membuat/mengubah work packages, tasks, subtasks, submilestones dan dependency graph formal. Executor Phase 5 tidak boleh membuat unit baru sendiri.
+## Ownership
+PLANNING-01–04 and Planning Readiness. **PLANNING-02 exclusively owns formal tasks, work packages, subtasks and changes to their approved structure.** It does not own ordinary implementation steps.
 
-## Protocol
-1. Explain Before Execute, inspect G1/G2 verdict, approved MVP scope, Solution Blueprint, requirements/design traceability, available staff/capacity, existing issues and user decisions.
-2. Jangan memaksa full Phase 3 untuk permintaan sempit/bug fix; load references only as needed:
-   - PLANNING-01 → references/development-roadmap.md
-   - PLANNING-02 → references/implementation-plan.md and references/work-structure-brainstorming.md
-   - PLANNING-03 → references/testing-strategy.md
-   - PLANNING-04 → references/document-control.md
-   - Planning readiness request → references/planning-readiness.md
-3. Apply Hybrid Modular with Lean/Structured docs. Use outcome-driven milestones, vertical slices for feature delivery, risk-based test strategy before coding, lightweight DoR/DoD, dependency/owner tracking. Adapt structure to real project complexity.
-4. **Work Structure Brainstorming:** explain terms and Lean/Structured/Extended examples; compare, recommend best-fit and ask explicit approval of material hierarchy/granularity. Do not instantiate every possible hierarchy level. Record Work Structure Agreement and stable task IDs in an approved plan.
-5. G2 PARTIAL → only plan unblocked scope as ready; G2 BLOCKED → focus on resolving blockers, not implementing affected work. Don't create tasks for unapproved product scope or select new technology.
-6. Material milestone dates, release priorities, work structure, delivery risk and testing exceptions require Explain → Interview → Approve → Record. No micro-approval for minor technical steps within scope; no authorization to execute merely because a plan is ready.
-7. Reuse existing project issue tracker and docs. Publishing GitHub issues is a provider write requiring user-scoped approval; absent permission keep proposed plan local/in chat. File writes require scoped path permission, readback and diff; no inferred approval.
-8. For session context use approved Hindsight recall/retain if verified; canonical docs/Git supersede memory. If retain not acknowledged, report MEMORY_SYNC_PENDING.
-9. Verify Planning Readiness and hand off approved task registry/dependencies/acceptance/testing strategy to Phase 4. Include owner, evidence, blocker and next decision.
+## Choose only the relevant reference
+- PLANNING-01: references/development-roadmap.md — outcome-driven roadmap and milestones.
+- PLANNING-02: references/implementation-plan.md and references/work-structure-brainstorming.md — formal work structure.
+- PLANNING-03: references/testing-strategy.md — risk-based test plan.
+- PLANNING-04: references/document-control.md — decision and document tracking.
+- references/planning-readiness.md — final readiness check when requested.
 
-## Governance
-Research-First/Reuse-First, No Overclaim, No Overengineering, No Overrules, least authority and max two **separately authorized** remediation attempts on declared failures. No formal executor-side decomposition or bypass via subagent. See references/agent-governance.md, references/work-structure-policy.md and references/research-reuse-policy.md.
+## Procedure
+1. Read only relevant approved product/solution scope, existing tasks, dependencies and available team capacity. Avoid duplicating trackers and meaningless documentation.
+2. Explain Lean, Structured and Extended task hierarchies when they are useful. Recommend the smallest practical breakdown, often end-to-end vertical slices. Seek material Work Structure Agreement before creating or replacing formal task IDs.
+3. Give each approved task a user-visible outcome, requirement link, acceptance evidence, dependencies, owner and suitable test plan.
+4. Define testing expectations **before execution**; prioritize critical data, security and failure scenarios. Planned tests are not test results.
+5. Use risk-based **batch approval** for already scoped tasks. Avoid demanding approval for every implementation step. Execution authorization is still separate from plan approval.
+6. During coding, an executor may discover and perform additional internal technical steps while preserving the approved task outcome and architecture. Only **material changes** to formal work structure, dependencies, scope, security or acceptance return to PLANNING-02.
+7. If such a change arises, hold only the affected scope, review its impact and obtain the necessary material approval. Other authorized work can proceed.
+8. Assess Planning Readiness based on actual plan consistency, approval and dependencies; hand the valid scope to Development Foundation.
+
+## Boundaries
+Do not select new software without Solution ownership, execute code, reconfigure providers or deploy. Avoid internal IDs and jargon in beginner-facing conversation unless requested. File/provider mutations require their own scoped authorization. Optional Graphify/Hindsight do not block planning. See references/agent-governance.md and references/work-structure-policy.md when needed.
