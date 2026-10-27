@@ -28,3 +28,6 @@
 5. Obtain Owner's separate release/tag/publication authorization. Only then cut version, publish release notes and declare verified scope.
 
 Repository being publicly readable, having eight SKILL.md files or static CI SUCCESS alone never means RELEASE_READY.
+
+## Reviewer hardening evidence still outstanding
+Proposed source instructions and portable snapshots are not live evidence of usability or enforceable permissions. Acceptance needs bilingual prompt-routing tests, real-user validation evidence when appropriate, measurement of approval friction, permission negative checks on each target harness, and accurate reports when optional Graphify/Hindsight are disabled. These assessments belong to existing workflows; no new SDLC workflow is created.
