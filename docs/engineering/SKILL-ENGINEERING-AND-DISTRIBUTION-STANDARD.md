@@ -50,6 +50,10 @@
 - Jangan membuat `package.json`, marketplace manifest, symlink installer, auto-update, publikasi npm atau release tag hanya untuk mengklaim distribusi sebelum compatibility diuji.
 - Update/uninstall harus diuji bersama versi pinned, scope isolasi, idempotensi dan rollback, bukan mengasumsikan CLI selalu bekerja.
 
+## Updated 27 October 2026 — eight source candidates, not eight runtime passes
+
+Source packaging sekarang mencakup 8 skill (2 companion + 6 lifecycle), 32 workflow references dan offline advisory checkers Phase 5/6. Skenario activation/behavioral untuk seluruh 8 skills ditambahkan dengan execution_status NOT_EXECUTED sampai evidence langsung tersedia. Validator mencakup self-contained copies and generated snapshots, **tidak membuktikan runtime**. Read-only JSON authorization checkers tidak menggantikan host/provider-side enforcement. Owner A2 menunda real study case, sehingga v1.0 RELEASE_READY dan E2E remain unverified.
+
 ## 6. Exit criteria dari persiapan ke runtime validation
 - Setiap skill yang diusulkan sebagai installable (dua companion + kandidat product) memiliki references yang resolvable tanpa repository root.
 - Validator contract dan isolated copies lulus di CI.

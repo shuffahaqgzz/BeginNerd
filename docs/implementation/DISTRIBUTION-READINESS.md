@@ -1,53 +1,36 @@
-# BeginNerd — Companion Skill Packaging & Installation Readiness
+# BeginNerd — Skill Packaging & Installation Readiness
 
-**Scope:** Installable source packaging untuk `beginnerd-ask`, `beginnerd-setup`, dan `beginnerd-product` yang sudah merged. Lima lifecycle skills berikutnya belum installable. Target Codex CLI pada `srv-test01`; runtime Phase 1 PARTIAL.
+**Scope:** 8 source skill candidates (2 companion + 6 lifecycle) on branch feat/phase2-6-portable-skills-20261027. Target consumer runtime: Codex CLI srv-test01. **These files were not installed/tested on srv-test01 in this PR.**
 
-## Langkah aman untuk assessment
-Mulai dengan inventory, tanpa mengubah instalasi agent:
+## Safe local source inspection
 
-```bash
-# Kebutuhan dan path aktual harus diverifikasi pada mesin target
-node --version
-npx skills@latest add shuffahaqgzz/BeginNerd --list
-npx skills@latest ls -g
-```
+~~~bash
+git clone https://github.com/shuffahaqgzz/BeginNerd.git
+cd BeginNerd
+git checkout feat/phase2-6-portable-skills-20261027
+python3 scripts/validate_repository.py
+python3 scripts/build_portable_references.py --check
+python3 scripts/validate_skill_packages.py
+python3 -m unittest discover -s tests/contracts -p 'test_*.py' -v
+~~~
 
-`--list` tidak memasang skill, tetapi `npx` dapat mengunduh CLI ke npm cache. Jangan salah menganggap perintah ini sama sekali tanpa efek filesystem/network.
+Tests check source metadata, references and offline contracts only. Optional upstream Agent Skills validator is a separate qualification step; GitHub Actions does NOT run live Codex.
 
-**Expected discoverable from main**: `beginnerd-ask`, `beginnerd-setup`, `beginnerd-product`. Actual source parity on `srv-test01` must be reverified.
+## Install procedure — not executed / requires permission
 
-## Controlled installation (belum diotorisasi/diuji dalam sesi ini)
-Setelah membandingkan preexisting skills, memeriksa konfigurasi, menetapkan target scope, dan memperoleh otorisasi:
+1. Inspect Codex/Skills CLI versions, existing system/global/project skill paths, installed skill names, SHA/origins, .agents and related config without changing it. Keep private config out of public logs.
+2. Before Skills CLI usage, decide and approve source ref, target user/project scope, overwrite disposition, rollback/backup, and whether npx may download/cache the CLI.
+3. Inspect discovery from **the exact source branch/commit**. Discovery against main will show only currently merged skills; do not mistake it for this candidate branch.
+4. Use supported native/Skills CLI installation based on actual verified version. Do not install both native plugin and Skills CLI copies of the same skill. Project-scoped installation is preferable for acceptance fixtures.
+5. Compare installed files/hash to source, verify self-contained references and fresh-session routing with positive and negative cases.
+6. Test idempotent reinstall/update and rollback without removing user changes; record before/after manifests, permitted paths and sanitized evidence.
+7. For required providers, beginnerd-setup must obtain separate consent for Graphify project isolation and Hindsight persistent memory; test actual recall→retain acknowledgement→readback in a disposable scope, never provider write without permission.
+8. Record pass/fail per case. A refused but **attempted** unauthorized external provider call is behavioral FAIL, not a PASS merely because the tool denied it.
 
-```bash
-# Jalankan dari consumer-project bila ingin instalasi project-scoped
-npx skills@latest add shuffahaqgzz/BeginNerd \
-  --skill beginnerd-ask --skill beginnerd-setup -a codex
-```
+## Execution safety
+No live Sites create/deploy for H-01 negative cases. Verify provider write-deny or mocked tools first; read-only shell sandbox does NOT guarantee external plugins cannot mutate. Preserve global Codex user preferences and existing srv-test01 configuration.
 
-Instalasi global `-g` adalah perubahan user-wide; minta izin eksplisit sebelum penggunaan. Hindari menduplikasi skill lewat native plugin dan Skills CLI sekaligus. Jangan memakai `-y` sebelum scope/diff disetujui.
+## Status and no-overclaim
+Source packages: present on feature branch. Upstream conformance: UNVERIFIED until validator run. Skills CLI install/activation: NOT EXECUTED on this branch. Phase 1 operational acceptance: PARTIAL. Phase 2–6 behavior: NOT EXECUTED. Provider isolation: UNVERIFIED. A2 real-world E2E: waiting for case choice.
 
-## Setelah instalasi
-- Verifikasi lokasi discovery aktual Codex; jangan menebak path jika versi runtime berbeda.
-- Pastikan kedua direktori memuat `SKILL.md` dan `references/` termasuk generated governance snapshots; uji root-independent lookup.
-- Periksa invocation melalui sesi baru dan 22 behavioral scenarios; lihat `tests/activation/queries.json` untuk positive/negative triggers.
-- Hindsight activation, retain dan Graphify retrieval **tidak diaktifkan oleh installer**. Lanjutkan melalui `beginnerd-setup` dengan explicit consent dan disposable project test scope.
-- Rekam versi source, hash, before/after diffs, test evidence, rollback, dan status jujur.
-
-## Update dan rollback
-```bash
-npx skills@latest ls -g  # periksa daftar skill global yang terpasang
-npx skills@latest update -g  # Hanya untuk instalasi global; perlu approval
-```
-
-`check` dan `update` sebaiknya diverifikasi terhadap CLI versi terpasang. Untuk me-rollback, simpan inventory dan versi sumber yang diketahui baik, lalu lakukan pemulihan yang disetujui; jangan hapus direktori skill yang mungkin berisi user modifications tanpa review.
-
-## Status
-- Portable files & CI: bukti hanya berlaku jika PR lulus dan disetujui.
-- Skills CLI actual discovery/install: NOT EXECUTED.
-- Runtime invocation: NOT EXECUTED.
-- Graphify/Hindsight integration: UNVERIFIED.
-- Issue #2 tetap OPEN untuk validasi runtime.
-
-## Phase 1 product candidate (in separate PR)
-`beginnerd-product` has merged via PR #4/#6. Three installable source skill directories now exist; runtime Product acceptance remains PARTIAL. Verify discovery/source parity on `srv-test01`, do not duplicate installed skills, request project-scoped runtime-write authorization and capture behavioral evaluation before any runtime-verified claim.
+See the companion-specific historical Paket 01 validation plan and Issue #2; the presence of this file does not close either.
