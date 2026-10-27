@@ -1,64 +1,54 @@
-# BeginNerd — Skill Engineering & Distribution Standard v1.0
+# BeginNerd — Agent Skills Engineering and Distribution Standard
 
-**Status:** MERGED IMPLEMENTATION STANDARD v1.0 (PR #3); bukan keputusan arsitektur baru maupun bukti runtime-ready. **Parent baseline:** BN-DEC-009, 8 skill target (2 companion + 6 lifecycle), 32 workflow. **Tracking:** Issue #2, Paket 01.
+**Status:** Approved source-engineering baseline, updated after Owner-reviewed T1–T7 improvements. The framework still needs independent runtime acceptance.
 
-## Hierarki acuan
-1. **Agent Skills Specification** — format dan metadata `SKILL.md`, path references, progressive disclosure: https://agentskills.io/specification
-2. **Agent Skills authoring & evaluations** — best practices, description triggering, with/without-skill evaluation: https://agentskills.io/skill-creation/best-practices ; https://agentskills.io/skill-creation/optimizing-descriptions ; https://agentskills.io/skill-creation/evaluating-skills
-3. **Matt Pocock skills** — rujukan implementasi/perilaku modular, `skills.sh` installer dan plugin marketplace; bukan sumber governance BeginNerd: https://github.com/mattpocock/skills
-4. **BN-DEC-approved contracts** — sumber otoritatif keputusan BeginNerd, phase ownership, approval dan Hindsight/Graphify continuity. Jika contoh eksternal bertentangan, jangan diam-diam mengganti keputusan yang sudah approved.
+## What to follow
+1. [Agent Skills specification](https://agentskills.io/specification): portable SKILL.md metadata, progressive disclosure and references.
+2. [Agent Skills authoring and evaluation](https://agentskills.io/skill-creation/best-practices): clear triggers, compact entry points and with/without-skill tests.
+3. [Matt Pocock's skill collection](https://github.com/mattpocock/skills): inspiration for practical, composable workflows—not BeginNerd governance authority.
+4. BeginNerd's [approved architecture](../architecture/FRAMEWORK-ARCHITECTURE.md), [workflow registry](../workflows/WORKFLOW-REGISTRY.md) and [Owner decisions](../decisions/REVIEW-T1-T7-OWNER-DECISIONS.md).
 
-## 1. Spesifikasi skill
-- Tiap skill yang **ditawarkan untuk instalasi** harus mempunyai `skills/<name>/SKILL.md` dengan YAML frontmatter `name` dan `description` yang valid.
-- `name`: huruf kecil, angka, dash; panjang 1–64, tanpa dash awal/akhir atau ganda, sama dengan nama direktori. `description`: 1–1024 karakter; menjelaskan kapan/untuk apa skill dipakai.
-- `compatibility` opsional (maks. 500 karakter). `license`, `metadata`, `allowed-tools` adalah field opsional; jangan mengasumsikan vendor mendukung semuanya. Jangan menyatakan lisensi BeginNerd sampai Owner memilihnya.
-- `SKILL.md` berisi instruksi inti dan dapat dibaca tanpa seluruh source repository. Target authoring: kurang dari 500 baris dan kurang dari 5.000 token (guideline, bukan hard spec).
-- Buat references terarah: tulis *kapan* harus dibaca, bukan instruksi membacanya semua. Hindari link dari skill ke `../../docs` atau file `AGENTS.md` milik repository sumber sebagai **hard dependency**.
-- Jika perlu instruksi proyek konsumen, baca file existing milik proyek konsumen jika ada. Bila tidak ada, jangan memaksakan scaffolding oleh companion skill.
+## Authoring standards
+- Every installable skill lives under skills/<name>/SKILL.md. The file starts with valid YAML frontmatter containing exact `name` and meaningful native-English `description`.
+- Use short entry points; load supporting references only when relevant. Aim below 500 lines and 5,000 tokens per entry point (guidance, not a formal limit).
+- Source instructions and canonical documents use **native English**. User-visible replies follow the user's preferred language, with internal tracking IDs and issue codes omitted unless technically necessary or requested.
+- Stable workflow IDs use the **full words** of their phase names, such as PRODUCT-FOUNDATION-01 and IMPLEMENTATION-01. Historical aliases remain documented at docs/workflows/WORKFLOW-ID-MIGRATION.md.
+- Preserve internal acceptance, source, security and permission details in references/technical records, not conversational jargon.
+- Eight skills are the approved inventory: two companions and six lifecycle entry points. Do not add a new skill/workflow for research, effectiveness or governance.
+- Guidance must remain adaptive: a small bug fix should not trigger the entire product lifecycle. Material approvals should be risk-tiered, and routine authorized technical steps should not restart Planning.
 
-## 2. Kewenangan & invocation
-- `beginnerd-ask`: penjelasan, recovery verified context dan routing. Tidak mengubah scope/plan atau mengeksekusi tugas milik lifecycle.
-- `beginnerd-setup`: onboarding, preferences, existing-state inventory, setup terotorisasi, verifikasi provider. Tidak otomatis menulis konfigurasi ketika dipanggil, tidak menjadi `beginnerd-foundation`.
-- beginnerd-product remains Phase 1 with PARTIAL runtime acceptance. The five later lifecycle SKILL.md packages are now present on `main` **as source candidates**, not runtime-verified skills. Do not claim runtime readiness or add placeholder skills merely to reach a count.
-- User-invoked / model-invoked dan vendor-specific metadata diputuskan berdasarkan runtime compatibility serta evaluation. Format standar netral terhadap harness.
-- Scoped authorization, No Overclaim, research/reuse-first, PLANNING-02-only formal decomposition dan maksimum dua remediasi terotorisasi tetap wajib.
+## Portable packages and duplicate references
+Skills CLI often copies a **single skill folder** without the root canonical docs. Every package therefore contains the self-contained references it needs. The six canonical sources synchronized by scripts/build_portable_references.py produce **38 generated snapshots**, with Git blob provenance.
 
-## 3. Packaging portability
-- Instalasi `skills CLI` dapat menyalin **satu direktori skill**, tanpa `docs/` canonical root. Oleh karena itu setiap companion harus memuat minimum references yang dibutuhkan secara **self-contained**.
-- Source of truth adalah `docs/governance/AGENT-GOVERNANCE.md`, `docs/governance/MEMORY-KNOWLEDGE-CONTRACT.md`, dan `docs/workflows/WORKFLOW-REGISTRY.md`.
-- scripts/build_portable_references.py kini mereplikasi **6 sumber canonical menjadi 38 reference snapshots** pada delapan skill packages, dengan Git blob SHA provenance dan pemeriksaan stale snapshot. Source docs tetap authoritative, bukan salinan mandiri dengan aturan baru.
-- Gunakan `python3 scripts/build_portable_references.py --write` setelah canonical docs berubah, review diff, dan commit bersama. CI menjalankan `--check` agar snapshot stale langsung gagal.
-- Pengguna yang menginstal individual skill menggunakan snapshot terpasang pada versinya. Pembaruan sumber canonical hanya berlaku setelah skill diperbarui. Snapshot bukan bukti bahwa repository saat runtime selalu tersedia.
+The canonical sources remain authoritative: docs/governance/AGENT-GOVERNANCE.md, docs/governance/MEMORY-KNOWLEDGE-CONTRACT.md, docs/governance/WORK-STRUCTURE-POLICY.md, docs/governance/RESEARCH-REUSE-POLICY.md, docs/architecture/ARTIFACT-AND-READINESS-CONTRACT.md and docs/workflows/WORKFLOW-REGISTRY.md.
 
-## 4. Validation berlapis
-| Stage | Evidence minimum | Batas klaim |
+After changing a canonical source, run `python3 scripts/build_portable_references.py --write`, inspect the generated diff, then run `--check`. Never hand-edit generated snapshots or make standalone skills depend on ../../docs at runtime.
+
+## Optional provider integrations
+Graphify (knowledge) and Hindsight (persistent memory) are opt-in choices during beginnerd-setup. Do not require them for ordinary use of any lifecycle skill. If enabled, verify real project-scoped operations, consent, isolation and acknowledgement; if disabled, rely on canonical project files without reporting a failure. A skill file must not silently install or configure an external provider.
+
+## Validation layers — keep claims separate
+| Layer | Evidence | What it cannot prove |
 |---|---|---|
-| Metadata/static | `validate_skill_packages.py`, `validate_repository.py`, CI | Menguji flat frontmatter subset & file package. **Bukan** parser YAML formal lengkap |
-| Source parity | portable references `--check`, isolated package tests | Menemukan stale/missing reference; **bukan** runtime discovery |
-| Upstream conformance | `skills-ref validate <skill>` dari sumber **agentskills/agentskills** yang diverifikasi jika tersedia | Reference demo, bukan sertifikasi keamanan/portabilitas; jangan mengandalkan paket PyPI acak |
-| Discovery | `npx skills@latest add shuffahaqgzz/BeginNerd --list` pada environment test | Membuktikan skill terdeteksi saja; `npx` dapat memakai network/npm cache |
-| Installation | Scope/target dipilih dan diotorisasi; preexisting installations diperiksa; before/after inventory | Membuktikan files dipasang, **bukan** dipanggil dengan benar |
-| Activation | Positive/negative trigger cases dan near-misses pada runtime fresh | Menguji pemilihan/false trigger; bukan proof eksekusi workflow |
-| Behavioral & E2E | Source scenario registry (currently 67 cases); with-skill/without-skill, trace/evidence and honest per-case status | User experience, governance, Hindsight/Graphify memerlukan tes provider sebenarnya |
+| Source/static | scripts/validate_repository.py, scripts/validate_skill_packages.py and CI | Agent routing or user experience |
+| Portable parity | build_portable_references.py --check, isolated package checks | Live installation or correct provider permissions |
+| Upstream format | Verified official Agent Skills validator where available | Security certification |
+| Discovery | Actual Skills CLI or native harness enumeration | Correct activation |
+| Activation | Positive, negative and bilingual prompts with per-case evidence | Correct execution/permission enforcement |
+| Behavior | Safe tool traces, user-facing clarity, no unauthorized attempted action | Every possible runtime or provider integration |
+| Effectiveness | Observed tasks, user outcomes, friction and error/rework measures | A universal product success guarantee |
+| Provider | Consented Graphify/Hindsight isolated operations | Safety of unrelated tools |
+| Release | Real authorization, deploy smoke, rollback and operations evidence | Permission to label untested areas PASS |
 
-### Format status
-`DESIGNED`, `STATIC_PASS`, `DISCOVERY_VERIFIED`, `INSTALLED`, `RUNTIME_VERIFIED`, `PROVIDER_VERIFIED`, `RELEASE_READY` adalah **dimensi berbeda**, bukan urutan kelulusan otomatis. Untuk acceptance, gunakan PASS/PARTIAL/BLOCKED/UNVERIFIED berdasarkan evidence nyata. Jangan menutup Paket 01 hanya karena CI PASS.
+Source cases in tests/activation/queries.json and tests/behavioral/scenarios.json are **NOT_EXECUTED** until real case-specific runs are reconciled. Static tests do not establish runtime pass. Read-only contract diagnostics do not enforce external provider permissions.
 
-## 5. Distribusi
-- **Tahap awal:** inspect current installations, versions and project/global scopes before Skills CLI discovery. `main` now includes all eight source candidates following PR #9; actual installed copies must be checked independently. Project-scoped install and fresh-session verification require separate approval; no new BeginNerd npm installer.
-- **Tahap berikut:** native plugin manifests dan release/versioning setelah portable install & runtime invocation terbukti, dengan approval Owner. Hindari plugin + skills CLI ganda pada runtime sama.
-- Jangan membuat `package.json`, marketplace manifest, symlink installer, auto-update, publikasi npm atau release tag hanya untuk mengklaim distribusi sebelum compatibility diuji.
-- Update/uninstall harus diuji bersama versi pinned, scope isolasi, idempotensi dan rollback, bukan mengasumsikan CLI selalu bekerja.
+## Multi-harness compatibility and permission enforcement
+- Supported source format targets Claude Code, Codex, Cursor, OpenCode, Hermes Agent and other Agent Skills-compatible harnesses. Consult [multi-harness adoption](../setup/MULTI-HARNESS-ADOPTION.md).
+- Harness security requires actual native permissions, hooks, sandbox policies or provider allowlists. See docs/security/HARNESS-ACTION-GATES.md. Never automatically write global configuration or install hook samples.
+- Test external-mutation refusals through isolated denied/mocked tools, not live creation of a private Site. A denied attempted forbidden action is still a **behavioral failure**.
+- Keep exact skill source revision, authorization and before/after evidence. When outcome metrics are absent, say so.
 
-## Updated 27 October 2026 — eight source candidates, not eight runtime passes
+## Distribution
+No dedicated BeginNerd npm installer is required. First inspect existing installed skills; use Skills CLI or native harness installation once, prefer isolated project scope, verify updates and rollback, and prevent duplicate copies of the same skill.
 
-Source packaging sekarang mencakup 8 skill (2 companion + 6 lifecycle), 32 workflow references dan offline advisory checkers Phase 5/6. Skenario activation/behavioral untuk seluruh 8 skills ditambahkan dengan execution_status NOT_EXECUTED sampai evidence langsung tersedia. Validator mencakup self-contained copies and generated snapshots, **tidak membuktikan runtime**. Read-only JSON authorization checkers tidak menggantikan host/provider-side enforcement. Owner A2 menunda real study case, sehingga v1.0 RELEASE_READY dan E2E remain unverified.
-
-## 6. Exit criteria dari persiapan ke runtime validation
-- Setiap satu dari delapan source skill kandidat memiliki references yang resolvable tanpa repository root; package validation is not runtime approval.
-- Validator contract dan isolated copies lulus di CI.
-- Activation cases nyata tersedia sebagai spesifikasi dengan label NOT_EXECUTED.
-- Source provenance, approval boundary, provider consent dan perbedaan status sudah terdokumentasi.
-- V01–V02 actual installed-skill comparison yang BLOCKED masih perlu diselesaikan; jangan melompati V03–V10.
-
-**Tidak ada skill baru, workflow baru, release, instalasi runtime, atau perubahan BN-DEC dalam standard ini.**
+Do not add auto-update installers, new provider dependencies, mandatory marketplaces or release tags just for appearances. Release/version claims remain linked to real acceptance and Owner authorization.
