@@ -58,4 +58,4 @@ Pembagian task formal hanya melalui Planning (PLANNING-02). Remediasi setelah ve
 
 Gunakan branch dan Pull Request; jangan menganggap persetujuan desain sebagai izin deployment. Rahasia, konfigurasi privat, dan memory aktual tidak boleh masuk repository public. Knowledge Provider **Graphify** dan Memory Provider **Hindsight** harus diverifikasi secara nyata dan mengikuti izin user serta scope proyek.
 
-Lisensi belum ditetapkan pemilik; jangan mengasumsikan repository public berarti seluruh kode dapat digunakan ulang tanpa syarat.
+**Lisensi repository:** [MIT](LICENSE), sesuai pilihan Owner D2 (2026-10-27). Penggunaan komponen pihak ketiga tetap mengikuti lisensi masing-masing; ketersediaan source belum membuktikan kesiapan runtime.
