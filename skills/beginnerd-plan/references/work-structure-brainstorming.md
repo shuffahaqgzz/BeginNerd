@@ -8,7 +8,7 @@ This is an INTERNAL procedure of PLANNING-02, not a new workflow, skill, quality
 4. **Best-fit recommendation:** justify hierarchy/granularity; vertical slices default; do NOT automatically create every possible organizational object.
 5. **Interview / Approve:** Owner explicitly agrees to material structure, ownership, hierarchy and intended execution scope. Record Work Structure Agreement and approval reference inside IMPLEMENTATION-PLAN.md or Lean equivalent.
 6. **Baseline:** stable IDs, parent relationships, dependency graph, requirements/test links, status, authorization reference and change process.
-7. **Executor contract:** IMPLEMENT-01/02/05 may perform internal technical steps and scheduling of authorized tasks, but may NOT create new formal tasks/subtasks/packages. Too broad or ambiguous → HOLD affected scope → return-to-PLANNING-02 with impact analysis. Coordinator/subagents inherit this restriction.
+7. **Executor contract:** IMPLEMENTATION-01/02/05 may perform internal technical steps and scheduling of authorized tasks, but may NOT create new formal tasks/subtasks/packages. New internal technical steps are allowed inside an already approved task. Only material changes to formal structure/scope/acceptance cause a scoped HOLD and return to PLANNING-02. Coordinator/subagents inherit this restriction.
 8. **Historical identity:** approved task ID and attempt history cannot be erased by rename or replan; material work structure change requires approval.
 
 Approval of task breakdown is NOT the same as authorization to mutate code/repo or deploy an application.

@@ -1,4 +1,4 @@
-# OPS-02 — Incident Response & Controlled Recovery
+# OPERATIONS-02 — Incident Response & Controlled Recovery
 
 **Input:** Current approved decisions, source/QA/runtime environment evidence, authorized scope and risk classification.
 ## Procedure
