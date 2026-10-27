@@ -1,36 +1,35 @@
-# BeginNerd Framework Architecture — Approved Design v1.0
+# BeginNerd Framework Architecture — Approved Six-Phase Design
 
-## Scope and interpretation
-BeginNerd is a Guided Building framework for beginners and mixed-experience teams. BN-DEC-009 approved a six-phase Hybrid Modular Architecture with 32 lifecycle workflows. Companion skills provide navigation and setup across phases, but do not own phase workflows. These are DESIGN decisions, not a claim that runtime integration is working.
+BeginNerd supports beginners and mixed-experience teams through **Guided Building**. The approved design contains six modular lifecycle skills, two optional-entry companion skills and **32 workflow responsibilities**. Approval of the design does not mean implementation or runtime evaluation has passed.
 
-| Phase | Lifecycle skill | Workflows | Assessment |
-|---|---|---:|---|
-| 1 — Product Foundation | beginnerd-product | 4 | G1 Product Baseline Readiness |
-| 2 — UX & Solution Architecture | beginnerd-solution | 8 | G2 Solution Design Readiness |
-| 3 — Planning & Control | beginnerd-plan | 4 | Planning Readiness Check |
-| 4 — Development Foundation | beginnerd-foundation | 5 | Foundation Readiness Check |
-| 5 — Implementation & QA | beginnerd-implement | 5 | Evidence-Based Completion Check |
-| 6 — Release & Operations | beginnerd-release | 6 | Release / Deployment / Operational Readiness |
-| **Total** | **6 lifecycle skills** | **32** | |
+| Phase | Lifecycle skill | Workflow IDs | Readiness review |
+|---|---|---|---|
+| Product Foundation | beginnerd-product | PRODUCT-FOUNDATION-01–04 | Product Baseline Readiness (internal G1) |
+| User Experience & Solution Architecture | beginnerd-solution | SOLUTION-01–08 | Solution Design Readiness (internal G2) |
+| Planning & Control | beginnerd-plan | PLANNING-01–04 | Planning Readiness |
+| Development Foundation | beginnerd-foundation | FOUNDATION-01–05 | Foundation Readiness |
+| Implementation & Quality Assurance | beginnerd-implement | IMPLEMENTATION-01–05 | Evidence-Based Completion |
+| Release & Operations | beginnerd-release | RELEASE-01–03 and OPERATIONS-01–03 | Release, deployment and operational readiness |
 
-Cross-phase companion skills:
-- beginnerd-ask: understand intent, explain position and terminology, recall context, route to the proper owner.
-- beginnerd-setup: first-use onboarding, guidance-mode selection, contextual configuration and consented Graphify/Hindsight setup.
+**Companions:** beginnerd-ask orients a user and routes to the correct owner; beginnerd-setup handles onboarding, guidance style, and optional Graphify/Hindsight provider choices.
 
-## Design principles
-Hybrid Modular: one main entry point per phase with internal workflow references and adaptive Lean / Structured artifacts. Workflows can operate independently where dependencies permit. The six lifecycle skills plus two companion skills form the target inventory of eight skills.
+## Guided Building design principles
 
-Research-first and reuse-first across all phases. Phase 2 SOLUTION-06 owns principal evaluation and selection of reusable software. Phase 3 PLANNING-02 owns formal task decomposition; Phase 5 cannot silently re-decompose tasks. Security architecture is risk-based, not dependent on user coding experience.
+- **One skill per phase, references per workflow.** Load only the references needed for the question; a small repair does not need to restart six phases.
+- **Research First and Reuse First.** SOLUTION-06 primarily owns research and selection of relevant existing software. PRODUCT-FOUNDATION-01 explores the real user problem before committing to implementation.
+- **Proportional approval and iteration.** Material decisions receive informed approval; routine steps inside an authorized task or batch proceed with evidence. PLANNING-02 alone maintains formal tasks; IMPLEMENTATION-01–05 may create internal technical steps without turning them into new formal work units.
+- **Contextual learning.** Runtime instructions are authored in native English; user-facing explanations match the user's selected language and avoid internal codes unless requested.
+- **Optional memory and knowledge.** Graphify and Hindsight are opt-in features of beginnerd-setup. They are not hard prerequisites for the six lifecycle skills.
+- **Evidence, not claims.** A planned test is not an executed test. A written guardrail is not tool-side enforcement. A source-package PASS is not a cross-harness behavioral PASS.
 
-## Source-of-truth order
-Approved requirements and material decisions → approved work structure/implementation plan → current scoped execution authorization → agent proposals and execution. Actual environment evidence, security constraints, and permissions must be checked; contradictions cause a scoped HOLD, not a silent override.
+## Evidence priority
 
-## Handoffs
-- G1 supports Phase 2 solution work.
-- G2 supports Phase 3 planning; PARTIAL restricts planning to unblocked scope.
-- Planning Readiness supports Phase 4 foundation.
-- Foundation Readiness supports bounded Phase 5 execution.
-- Evidence-based Phase 5 completion supports Phase 6 release review.
-- Operational incidents, new product scope, or material solution changes are returned to their designated owner; no direct bypass of Planning.
+Approved product decisions and requirements → approved architecture/work structure → scoped action authorization → actual environment evidence and test results → agent proposals. Memory and knowledge caches assist navigation but never override canonical project artifacts.
 
-See docs/workflows/WORKFLOW-REGISTRY.md for canonical phase responsibility IDs.
+## Handoffs and learning loops
+
+Product Baseline Readiness supports Solution Design; Solution Design Readiness supports planning the unblocked scope. Planning and Foundation Readiness support bounded implementation; real implementation acceptance supports release assessment.
+
+This is **iterative, not a forced waterfall**: unblocked work can continue; new discoveries can return to Product or Solution as needed. After a permitted release, OPERATIONS-01 measurement and user feedback can return to PRODUCT-FOUNDATION-01 and PRODUCT-FOUNDATION-03 to validate hypotheses and refine the next iteration. Each material scope change is reviewed with the appropriate Owner.
+
+See docs/workflows/WORKFLOW-REGISTRY.md and docs/workflows/WORKFLOW-ID-MIGRATION.md for precise responsibilities and migration.
