@@ -1,6 +1,6 @@
 # BeginNerd — Repository & Runtime Quickstart
 
-**Scope:** source inspection for eight skill candidates; this is not automatic installation or provider provisioning.
+**Scope:** source inspection for eight skill candidates merged to `main`; this is not automatic installation or provider provisioning.
 
 ## Repository review
 1. Identify base branch, source commit, expected changes and current project instructions.

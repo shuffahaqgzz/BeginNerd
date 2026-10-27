@@ -19,7 +19,7 @@
 ## 2. Kewenangan & invocation
 - `beginnerd-ask`: penjelasan, recovery verified context dan routing. Tidak mengubah scope/plan atau mengeksekusi tugas milik lifecycle.
 - `beginnerd-setup`: onboarding, preferences, existing-state inventory, setup terotorisasi, verifikasi provider. Tidak otomatis menulis konfigurasi ketika dipanggil, tidak menjadi `beginnerd-foundation`.
-- beginnerd-product remains Phase 1 with PARTIAL runtime acceptance. The five later lifecycle SKILL.md packages are now present **as unmerged source candidates** on the Phase 2–6 branch. Do not claim runtime readiness or add placeholder skills merely to reach a count.
+- beginnerd-product remains Phase 1 with PARTIAL runtime acceptance. The five later lifecycle SKILL.md packages are now present on `main` **as source candidates**, not runtime-verified skills. Do not claim runtime readiness or add placeholder skills merely to reach a count.
 - User-invoked / model-invoked dan vendor-specific metadata diputuskan berdasarkan runtime compatibility serta evaluation. Format standar netral terhadap harness.
 - Scoped authorization, No Overclaim, research/reuse-first, PLANNING-02-only formal decomposition dan maksimum dua remediasi terotorisasi tetap wajib.
 
@@ -45,7 +45,7 @@
 `DESIGNED`, `STATIC_PASS`, `DISCOVERY_VERIFIED`, `INSTALLED`, `RUNTIME_VERIFIED`, `PROVIDER_VERIFIED`, `RELEASE_READY` adalah **dimensi berbeda**, bukan urutan kelulusan otomatis. Untuk acceptance, gunakan PASS/PARTIAL/BLOCKED/UNVERIFIED berdasarkan evidence nyata. Jangan menutup Paket 01 hanya karena CI PASS.
 
 ## 5. Distribusi
-- **Tahap awal:** inspect current installations, versions and project/global scopes before Skills CLI discovery. Source branch now contains eight candidates; main has only merged skills until PRs are reviewed. Project-scoped install and fresh-session verification require separate approval; no new BeginNerd npm installer.
+- **Tahap awal:** inspect current installations, versions and project/global scopes before Skills CLI discovery. `main` now includes all eight source candidates following PR #9; actual installed copies must be checked independently. Project-scoped install and fresh-session verification require separate approval; no new BeginNerd npm installer.
 - **Tahap berikut:** native plugin manifests dan release/versioning setelah portable install & runtime invocation terbukti, dengan approval Owner. Hindari plugin + skills CLI ganda pada runtime sama.
 - Jangan membuat `package.json`, marketplace manifest, symlink installer, auto-update, publikasi npm atau release tag hanya untuk mengklaim distribusi sebelum compatibility diuji.
 - Update/uninstall harus diuji bersama versi pinned, scope isolasi, idempotensi dan rollback, bukan mengasumsikan CLI selalu bekerja.

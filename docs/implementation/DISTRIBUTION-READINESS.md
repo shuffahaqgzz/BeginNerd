@@ -1,13 +1,13 @@
 # BeginNerd — Skill Packaging & Installation Readiness
 
-**Scope:** 8 source skill candidates (2 companion + 6 lifecycle) on branch feat/phase2-6-portable-skills-20261027. Target consumer runtime: Codex CLI srv-test01. **These files were not installed/tested on srv-test01 in this PR.**
+**Scope:** 8 source skill candidates (2 companion + 6 lifecycle) integrated on GitHub `main` after PR #9. Target consumer runtime: Codex CLI srv-test01. **These files were not installed/tested on srv-test01 in this PR.**
 
 ## Safe local source inspection
 
 ~~~bash
 git clone https://github.com/shuffahaqgzz/BeginNerd.git
 cd BeginNerd
-git checkout feat/phase2-6-portable-skills-20261027
+git checkout main # pin to a reviewed commit for reproducible validation
 python3 scripts/validate_repository.py
 python3 scripts/build_portable_references.py --check
 python3 scripts/validate_skill_packages.py
@@ -20,7 +20,7 @@ Tests check source metadata, references and offline contracts only. Optional ups
 
 1. Inspect Codex/Skills CLI versions, existing system/global/project skill paths, installed skill names, SHA/origins, .agents and related config without changing it. Keep private config out of public logs.
 2. Before Skills CLI usage, decide and approve source ref, target user/project scope, overwrite disposition, rollback/backup, and whether npx may download/cache the CLI.
-3. Inspect discovery from **the exact source branch/commit**. Discovery against main will show only currently merged skills; do not mistake it for this candidate branch.
+3. Verify discovery against **a pinned `main` source commit** containing the eight merged skills. Actual Codex installs, updates, and runtime acceptance remain unverified.
 4. Use supported native/Skills CLI installation based on actual verified version. Do not install both native plugin and Skills CLI copies of the same skill. Project-scoped installation is preferable for acceptance fixtures.
 5. Compare installed files/hash to source, verify self-contained references and fresh-session routing with positive and negative cases.
 6. Test idempotent reinstall/update and rollback without removing user changes; record before/after manifests, permitted paths and sanitized evidence.

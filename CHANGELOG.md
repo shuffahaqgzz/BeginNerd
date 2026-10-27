@@ -5,9 +5,9 @@ All notable source changes are recorded with Git history and Pull Requests. This
 ## Unreleased — source candidates (27 October 2026)
 - Approved design baseline: six lifecycle phases, 32 workflow responsibilities, two companion skills.
 - Phase 1 Product source and governance hardening via PR #4/#5/#6. Runtime acceptance remains PARTIAL.
-- Scoped H02-03 source remediation and evidence-status corrections proposed in Draft PR #7.
-- Phase 2–6 portable source candidates, references, templates, static/offline contract tests and release/operations governance proposed for review.
-- MIT LICENSE, contribution guide and publication checklist proposed in independent Draft PR #8; copyright/third-party obligations require review.
+- Scoped H02-03 source remediation and evidence-status corrections merged through PR #7 (source only; runtime retest pending).
+- Phase 2–6 portable source candidates, references, templates, static/offline contract tests and release/operations governance merged through PR #9 (not runtime-accepted).
+- MIT LICENSE, contribution guide and publication checklist integrated through PR #8; copyright-holder and third-party obligations still require review before validated v1.0 release.
 - No v1.0 tag, runtime E2E PASS, deployment or release is claimed here.
 
 ## Release notes policy

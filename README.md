@@ -2,7 +2,7 @@
 
 **BeginNerd** membantu pemula dan tim campuran membangun aplikasi bersama AI coding agent melalui enam fase SDLC yang modular, dapat ditelusuri, dan berbasis bukti.
 
-> **Status 27 Oktober 2026:** approved framework design = **6 fases / 32 workflows / 8 skills**. Pada branch implementasi ini, **delapan paket skill memiliki source SKILL.md, references dan templates**. Status mereka adalah **SOURCE CANDIDATE**, bukan RUNTIME_VERIFIED. Fase 1 Product skill tetap **PARTIAL / NOT ACCEPTED** menurut laporan acceptance terakhir (4 PASS, 1 FAIL, 6 BLOCKED); Graphify/Hindsight dan full E2E belum terbukti. Source dan CI tidak boleh dipakai untuk klaim release v1.0 siap digunakan.
+> **Status 27 Oktober 2026:** approved framework design = **6 fase / 32 workflow / 8 skill**. Di branch `main` setelah PR #9, **delapan paket skill memiliki source SKILL.md, references dan templates**. Status mereka adalah **SOURCE CANDIDATE**, bukan RUNTIME_VERIFIED. Fase 1 Product skill tetap **PARTIAL / NOT ACCEPTED** menurut laporan acceptance terakhir (4 PASS, 1 FAIL, 6 BLOCKED); Graphify/Hindsight dan full E2E belum terbukti. Source dan CI tidak boleh dipakai untuk klaim release v1.0 siap digunakan.
 
 ## Skill inventory
 
@@ -32,7 +32,7 @@ python3 scripts/validate_skill_packages.py
 python3 -m unittest discover -s tests/contracts -p 'test_*.py' -v
 ~~~
 
-**Catatan branch:** sampai Draft PR source Fase 2–6 di-review dan merge, checkout default main belum memiliki kelima SKILL.md baru. Sumber yang sedang ditinjau berada di branch feat/phase2-6-portable-skills-20261027; PR #7 untuk H02-03 adalah base perubahan ini.
+**Status distribusi:** semua delapan skill source telah terintegrasi melalui PR #7 dan #9. Untuk evaluasi gunakan commit yang diketahui; checkout source `main` tidak membuktikan bahwa skill terpasang atau diaktifkan di Codex.
 
 ### Portable skill discovery dan penggunaan nyata
 
@@ -58,7 +58,7 @@ Panduan terkait: [Runtime Quickstart](docs/setup/QUICKSTART.md), [Packaging](doc
 
 ## Open source, security dan kontribusi
 
-Repository GitHub telah publik. Owner memilih **MIT License (D2, 27 Oktober 2026)**; LICENSE dan CONTRIBUTING.md sedang diusulkan dalam [PR #8](https://github.com/shuffahaqgzz/BeginNerd/pull/8), **belum otomatis menjadi bagian branch ini/main**. Jangan menyatakan lisensi terpasang sebelum PR merge dan copyright/third-party review selesai.
+Repository GitHub publik ini didistribusikan dengan [MIT License](LICENSE) sesuai keputusan Owner D2. Baca [Contributing](CONTRIBUTING.md), [Security Policy](SECURITY.md), [Publication Readiness](docs/implementation/PUBLICATION-READINESS.md) dan [Source Preview Notes](docs/releases/SOURCE-PREVIEW-2026-10-27.md). Copyright-holder notice dan lisensi komponen pihak ketiga tetap perlu ditinjau sebelum klaim rilis v1.0.
 
 Jangan unggah secrets, private project memory, kredensial, log runtime yang belum disanitasi, atau provider tokens. Lihat [Security Disclosure](SECURITY.md). Gunakan branch/PR untuk kontribusi; tagging GitHub release, perubahan visibility/branch protection dan deployment memerlukan authorization tersendiri.
 

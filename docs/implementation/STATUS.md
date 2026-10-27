@@ -11,7 +11,7 @@
 | PR #5 cross-skill H-01 governance hardening | MERGED (2026-10-26), post-merge CI PASS: 32 contract tests |
 | PR #6 Phase 1 H-02/H-03 hardening | **MERGED 2026-10-26**, main `8870ca7`; post-merge static CI SUCCESS (not runtime acceptance) |
 | Three discoverable skills | beginnerd-ask, beginnerd-setup, beginnerd-product — user-reported Skills CLI discovery / install on srv-test01 |
-| Five additional lifecycle skill sources (Phase 2–6) | SOURCE CANDIDATES on unmerged branch; all 32 workflow responsibilities now represented in skill refs; runtime activation/behavior NOT EXECUTED |
+| Five additional lifecycle skill sources (Phase 2–6) | SOURCE CANDIDATES MERGED via PR #9 (`244f611`); all 32 workflow responsibilities represented; runtime activation/behavior NOT EXECUTED |
 | Source-only static advisory authorization checkers | Implemented under beginnerd-implement/release; provider-level enforcement UNVERIFIED |
 | B-01 natural beginner Product discovery and artifact draft | SCOPED BEHAVIORAL PASS, user-supplied dialogue |
 | B-02 requirements refinement and readiness review | SCOPED BEHAVIORAL PASS; simulation G1 remained PARTIAL |
@@ -45,9 +45,9 @@ Behavioral outcomes reported: **4 PASS, 1 FAIL, 6 BLOCKED**, not 11 new successf
 
 ## Phase 2–6 source implementation update — 27 Oktober 2026
 
-Branch: feat/phase2-6-portable-skills-20261027, based on Draft PR #7. Five phase source skills include progressive references, Lean/Structured templates and self-contained approved governance snapshots. Phase 3 includes Work Structure Brainstorming inside PLANNING-02, Phase 5 includes bounded recovery, and Phase 6 separates release/deployment/operations. Static validators now target all eight source skills. **Their GitHub CI result must be reported separately after execution**, and CI does not prove provider-side enforcement or runtime skill routing.
+Integrated source baseline: PR #7 squash `6986a314`, followed by PR #9 squash `244f611` on main. Five phase source skills include progressive references, Lean/Structured templates and self-contained approved governance snapshots. Phase 3 includes Work Structure Brainstorming inside PLANNING-02, Phase 5 includes bounded recovery, and Phase 6 separates release/deployment/operations. Static validators now target all eight source skills. **PR #9 GitHub static CI PASS (57 tests), not Codex runtime acceptance**, and CI does not prove provider-side enforcement or runtime skill routing.
 
-The Owner selected **A2** (another real-world study case) but explicitly deferred naming the case. Do not create a fake E2E success or choose a replacement. Owner selected **B1** branch+PR with no auto-merge, **C1** Codex CLI srv-test01 without global changes, and **D2** MIT license (separate Draft PR #8). No deployment, release publication or configuration mutations are authorized.
+The Owner selected **A2** (another real-world study case) but explicitly deferred naming the case. Do not create a fake E2E success or choose a replacement. Owner selected **B1** branch+PR with no auto-merge, **C1** Codex CLI srv-test01 without global changes, and **D2** MIT license (integrated in PR #8). Owner authorized public source publication, not a claim of verified v1.0 runtime readiness. No deployment or host/provider configuration mutations occurred.
 
 **Gaps that persist:** Phase 1 H02-03 runtime retest after first source remediation NOT EXECUTED; H01 safe negative tool controls BLOCKED; H03-01 disposable persistence retest not performed; Graphify/Hindsight isolation+retain/recall UNVERIFIED; Phase 2–6 fresh session behavioral tests NOT EXECUTED; real study E2E PENDING OWNER CASE; copyright holder, private security reporting and actual license merge pending.
 

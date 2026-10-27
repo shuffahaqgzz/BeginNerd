@@ -16,8 +16,8 @@
 | Real-world greenfield | User-selected A2 case, full lifecycle and acceptance evidence | PENDING OWNER CASE |
 | Brownfield | Existing repo safe reuse, preservation, controlled change/rollback | NOT EXECUTED |
 | Security | Secrets scan, external mutation denial, disclosure route enabled and verified | PARTIAL / UNVERIFIED |
-| MIT License | D2 approved; LICENSE committed, copyright and third-party license review | Draft PR #8 / PENDING MERGE |
-| Documentation | README, quickstart, limitations, contributing, privacy and release notes | SOURCE PREPARED / REVIEW PENDING |
+| MIT License | D2 approved; LICENSE included in PR #8, but copyright-holder/third-party review remains | SOURCE PUBLISHED / LEGAL REVIEW OPEN |
+| Documentation | README, quickstart, limitations, contributing, privacy and source-preview notes | SOURCE PUBLISHED / RUNTIME GAPS DISCLOSED |
 | Version/tag | Immutable tag, source/QA provenance, Owner scoped release authorization | NOT AUTHORIZED |
 
 ## Release procedure
