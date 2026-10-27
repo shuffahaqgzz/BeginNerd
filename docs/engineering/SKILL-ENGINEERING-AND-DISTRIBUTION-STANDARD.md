@@ -19,7 +19,7 @@
 ## 2. Kewenangan & invocation
 - `beginnerd-ask`: penjelasan, recovery verified context dan routing. Tidak mengubah scope/plan atau mengeksekusi tugas milik lifecycle.
 - `beginnerd-setup`: onboarding, preferences, existing-state inventory, setup terotorisasi, verifikasi provider. Tidak otomatis menulis konfigurasi ketika dipanggil, tidak menjadi `beginnerd-foundation`.
-- `beginnerd-product` menjadi kandidat lifecycle skill pertama pada PR khusus Phase 1. Lima lifecycle skill lainnya belum implementable. *Jangan membuat SKILL.md kosong hanya agar delapan skill tampak tersedia.*
+- beginnerd-product remains Phase 1 with PARTIAL runtime acceptance. The five later lifecycle SKILL.md packages are now present **as unmerged source candidates** on the Phase 2–6 branch. Do not claim runtime readiness or add placeholder skills merely to reach a count.
 - User-invoked / model-invoked dan vendor-specific metadata diputuskan berdasarkan runtime compatibility serta evaluation. Format standar netral terhadap harness.
 - Scoped authorization, No Overclaim, research/reuse-first, PLANNING-02-only formal decomposition dan maksimum dua remediasi terotorisasi tetap wajib.
 
@@ -39,13 +39,13 @@
 | Discovery | `npx skills@latest add shuffahaqgzz/BeginNerd --list` pada environment test | Membuktikan skill terdeteksi saja; `npx` dapat memakai network/npm cache |
 | Installation | Scope/target dipilih dan diotorisasi; preexisting installations diperiksa; before/after inventory | Membuktikan files dipasang, **bukan** dipanggil dengan benar |
 | Activation | Positive/negative trigger cases dan near-misses pada runtime fresh | Menguji pemilihan/false trigger; bukan proof eksekusi workflow |
-| Behavioral & E2E | 22 scenarios; with-skill/without-skill, trace/evidence dan status | User experience, governance, Hindsight/Graphify memerlukan tes provider sebenarnya |
+| Behavioral & E2E | Source scenario registry (currently 67 cases); with-skill/without-skill, trace/evidence and honest per-case status | User experience, governance, Hindsight/Graphify memerlukan tes provider sebenarnya |
 
 ### Format status
 `DESIGNED`, `STATIC_PASS`, `DISCOVERY_VERIFIED`, `INSTALLED`, `RUNTIME_VERIFIED`, `PROVIDER_VERIFIED`, `RELEASE_READY` adalah **dimensi berbeda**, bukan urutan kelulusan otomatis. Untuk acceptance, gunakan PASS/PARTIAL/BLOCKED/UNVERIFIED berdasarkan evidence nyata. Jangan menutup Paket 01 hanya karena CI PASS.
 
 ## 5. Distribusi
-- **Tahap awal:** `npx skills@latest add shuffahaqgzz/BeginNerd --list`, lalu controlled install hanya untuk dua companion yang sudah diuji discovery/basic invocation, kemudian kandidat product setelah merge dan instalasi yang disetujui. Tidak perlu `package.json` atau npm package khusus BeginNerd.
+- **Tahap awal:** inspect current installations, versions and project/global scopes before Skills CLI discovery. Source branch now contains eight candidates; main has only merged skills until PRs are reviewed. Project-scoped install and fresh-session verification require separate approval; no new BeginNerd npm installer.
 - **Tahap berikut:** native plugin manifests dan release/versioning setelah portable install & runtime invocation terbukti, dengan approval Owner. Hindari plugin + skills CLI ganda pada runtime sama.
 - Jangan membuat `package.json`, marketplace manifest, symlink installer, auto-update, publikasi npm atau release tag hanya untuk mengklaim distribusi sebelum compatibility diuji.
 - Update/uninstall harus diuji bersama versi pinned, scope isolasi, idempotensi dan rollback, bukan mengasumsikan CLI selalu bekerja.
@@ -55,7 +55,7 @@
 Source packaging sekarang mencakup 8 skill (2 companion + 6 lifecycle), 32 workflow references dan offline advisory checkers Phase 5/6. Skenario activation/behavioral untuk seluruh 8 skills ditambahkan dengan execution_status NOT_EXECUTED sampai evidence langsung tersedia. Validator mencakup self-contained copies and generated snapshots, **tidak membuktikan runtime**. Read-only JSON authorization checkers tidak menggantikan host/provider-side enforcement. Owner A2 menunda real study case, sehingga v1.0 RELEASE_READY dan E2E remain unverified.
 
 ## 6. Exit criteria dari persiapan ke runtime validation
-- Setiap skill yang diusulkan sebagai installable (dua companion + kandidat product) memiliki references yang resolvable tanpa repository root.
+- Setiap satu dari delapan source skill kandidat memiliki references yang resolvable tanpa repository root; package validation is not runtime approval.
 - Validator contract dan isolated copies lulus di CI.
 - Activation cases nyata tersedia sebagai spesifikasi dengan label NOT_EXECUTED.
 - Source provenance, approval boundary, provider consent dan perbedaan status sudah terdokumentasi.

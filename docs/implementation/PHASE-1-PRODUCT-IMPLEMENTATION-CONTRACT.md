@@ -1,5 +1,7 @@
 # BeginNerd Phase 1 — beginnerd-product Implementation Contract
 
+> **Historical scope note (27 Oct 2026):** This contract was written when Phase 1 was the only lifecycle source candidate. The statement below about five README-only directories describes that earlier checkpoint, not the current Phase 2–6 implementation branch. New source packages have been added in Draft PR #9; no Phase 1 runtime acceptance or Phase 2–6 runtime acceptance is implied.
+
 **Status:** IMPLEMENTATION CANDIDATE / PR REVIEW; framework **BN-DEC-009.1 is already APPROVED at design level**. This file describes the translation of that design to a portable Agent Skill, not a new user approval or proof of runtime acceptance.
 
 ## Known approved decisions and unresolved provenance
