@@ -1,47 +1,35 @@
-# Phase 1 — Adaptive Documentation & Change Control
+# Product Foundation — Adaptive Documentation and Change Control
 
-## Artifact modes
-**Lean** (default pada scope kecil, jika sesuai kebutuhan): satu `PRODUCT.md` dengan sections Discovery / Product Brief, Product Requirements, MVP, Technical Requirements, Decisions & G1. Jangan membuat empat dokumen terpisah bila informasi ringkas cukup.
+## Documentation depth
+**Lean:** A single PRODUCT.md is appropriate for a small product, containing Product Brief/Discovery, Requirements, Minimum Viable Product, Technical Constraints, decisions and readiness. Do not generate multiple mostly empty documents.
 
-**Structured** (scope/risiko lebih besar atau dipilih user):
-- PF-01 → `PRODUCT-BRIEF.md`
-- PF-02 → `PRODUCT-REQUIREMENTS-DOC.md`
-- PF-03 → `MINIMUM-VIABLE-PRODUCT-SCOPE.md`
-- PF-04 → `TECHNICAL-REQUIREMENTS-DOC.md`
+**Structured:** Use PRODUCT-BRIEF.md, PRODUCT-REQUIREMENTS-DOC.md, MINIMUM-VIABLE-PRODUCT-SCOPE.md and TECHNICAL-REQUIREMENTS-DOC.md where risk, complexity or team size justify them.
 
-Nama lama `PRD.md`, `MVP-SCOPE.md`, dan `TRD.md` adalah proposal historis, **bukan final default naming**. `PRODUCT-BRIEF.md` tidak diganti. `API-GUIDE.md` tidak menjadi Phase 1 mandatory artifact.
+Historical PRD.md, MVP-SCOPE.md and TRD.md are not mandatory canonical names. PRODUCT-BRIEF.md remains valid. API-GUIDE.md is not a mandatory Product Foundation artifact.
 
-## Reuse & brownfield
-Audit dokumen dan naming existing terlebih dahulu. Jika dokumen approved yang setara sudah ada, referensi/revisi secara terkendali; jangan menciptakan canonical parallel. Pilih mode berdasarkan kompleksitas, risiko dan kebutuhan user; jelaskan rekomendasi, terima override user dengan mencatat konsekuensi.
+## Existing projects
+Inspect current docs/approved names and reuse valid sources. If a stable requirement ID or existing decision exists, link it rather than duplicating or silently replacing it.
 
-## Approval and revisions
-1. Tentukan sumber canonical dan status: `DRAFT`, `IN_REVIEW`, `APPROVED`, `SUPERSEDED`.
-2. Pertahankan stable IDs: `REQUIREMENTS-001`, `ACCEPTANCE-CRITERIA-001`, `TECHNICAL-REQUIREMENTS-001`; periksa collisions dan references.
-3. Saat scope/requirement berubah, identifikasi artefak, MVP, technical/acceptance, dan keputusan terdampak.
-4. Jelaskan change impact dan rekomendasi; interview untuk approval material. Jangan ubah keputusan yang sudah approved sepihak.
-5. Rekam siapa/apa yang mengotorisasi (bila tersedia), evidence dan versi current; jika informasi approval belum ada, status tetap pending.
-6. Jika menulis file/repo: izin khusus diperlukan; jika hanya menjawab, tampilkan draf siap review.
+## Material change handling
+1. Locate canonical requirements, acceptance, technical constraints, experiment evidence, approved product scope and source version.
+2. Preserve stable IDs such as REQUIREMENTS-001, ACCEPTANCE-CRITERIA-001 and TECHNICAL-REQUIREMENTS-001. Canonical workflow IDs now use PRODUCT-FOUNDATION-01–04; read old aliases through the migration reference.
+3. Explain the impact of proposed requirement/scope changes and group related **material** approvals. Ordinary corrections inside an already authorized documentation batch do not require per-line approval.
+4. Record real Owner evidence, decisions, open assumptions, hypotheses and next verification; do not invent participants, interview findings, approval or experiment success.
+5. For authorized file writes, read back the actual saved content, validate traceability, status, and pending decision references. File-write permission does not imply product-scope approval.
 
-## Templates (read only when producing artifacts)
-- Lean → `assets/product-lean-template.md`
-- Structured brief → `assets/product-brief-template.md`
-- Structured requirements → `assets/product-requirements-template.md`
-- Structured MVP → `assets/mvp-scope-template.md`
-- Structured technical requirements → `assets/technical-requirements-template.md`
+## Workspace integrity
+- Before writing, inspect target files and in-scope preexisting edits, including untracked/ignored files when permission permits.
+- After writing, record path, content hash, timestamp and a scoped **before-and-after** inventory of relevant paths. An unchanged Git status for untracked directories does **not** prove their contents are unchanged.
+- If no comparable baseline exists, report unrelated-file preservation as UNVERIFIED instead of claiming it.
+- Do not copy private memory, secrets or credentials into documents or evidence.
+- A static document checker cannot prove a user interview occurred, a runtime test passed, a change was approved or a deployment happened.
 
-Template adalah starter, bukan bukti acceptance. G1 status memerlukan kriteria di `references/g1-readiness.md`.
+## Templates
+Load only the needed artifact:
+- assets/product-lean-template.md
+- assets/product-brief-template.md
+- assets/product-requirements-template.md
+- assets/mvp-scope-template.md
+- assets/technical-requirements-template.md
 
-## H-03 — Controlled persistence, readback and workspace integrity
-
-For any file write, check the actual consumer project instructions (for example AGENTS.md), inventory existing artifacts and select an explicitly authorized target. A private smoke directory is not automatically an application implementation workspace. User approval to persist a product document is not authorization to create application code, upload artifacts or publish a Site.
-
-After writing an artifact:
-1. **Read back the actual saved file**, not the proposed text in conversation.
-2. Check canonical naming and status, IDs and bidirectional references where present, approved/proposed separation, open decisions with owners, planned-vs-executed test language, and readiness evidence.
-3. Record precise path, file existence, stable content hash, readback timestamp and diff against prior artifact when available. A hash proves content at the observation time, not historical provenance.
-4. For workspace isolation, compare a scoped **before-and-after inventory with content hashes** of relevant files and paths (including untracked and ignored content as permitted). The fact that `git status --short` lists the same untracked directories does **not** establish that their contents did not change.
-5. If a baseline manifest is unavailable, state **UNVERIFIED** for unrelated-file preservation rather than asserting all other files unchanged.
-6. Keep material changes PROPOSED until separately approved; approval to save a document is not approval of its new feature proposals.
-7. Never copy secrets or private memory into test evidence. Save sanitized evidence only in an approved location.
-
-A static document checker can catch missing/duplicate IDs and broken links, but cannot establish that user approval, real test execution, deployment readiness or full filesystem isolation occurred. Report those dimensions separately.
+Each begins DRAFT/PENDING. Artifact structure is not evidence of readiness.

@@ -1,9 +1,9 @@
-# beginnerd-product — Phase 1
+# beginnerd-product — Product Foundation
 
-**Repository status:** INITIAL SKILL IMPLEMENTATION CANDIDATE; static/portability validation applies after CI runs; **runtime invocation NOT VERIFIED**. Directory contains an Agent Skills entry point and workflow references, unlike the five still-pending lifecycle skill directories.
+**Source package available; full runtime acceptance remains PARTIAL / NOT ACCEPTED.** This package owns PRODUCT-FOUNDATION-01–04, from validating the user problem through requirements, minimum viable product scope and product-level technical constraints.
 
-Owns PF-01 Product Discovery, PF-02 Product Requirements, PF-03 MVP Definition, PF-04 Technical Requirements and G1 Product Baseline Readiness.
+**Lean:** PRODUCT.md. **Structured (when useful):** PRODUCT-BRIEF.md, PRODUCT-REQUIREMENTS-DOC.md, MINIMUM-VIABLE-PRODUCT-SCOPE.md and TECHNICAL-REQUIREMENTS-DOC.md.
 
-Lean: `PRODUCT.md`. Structured: `PRODUCT-BRIEF.md`, `PRODUCT-REQUIREMENTS-DOC.md`, `MINIMUM-VIABLE-PRODUCT-SCOPE.md`, `TECHNICAL-REQUIREMENTS-DOC.md`. Refer to approved BN-DEC-009.1 and Product Foundation implementation contract; do not conflate design approval with runtime evidence.
+This phase now includes interview guidance, optional Jobs-to-be-Done framing, alternatives research, small experiment design and post-release learning linked to existing operations measurement. Actual interviews and experiments remain NOT EXECUTED unless separate real evidence exists.
 
-No final technology selection (SOLUTION-06), no formal task decomposition (PLANNING-02), no unauthorized write or provider activation.
+Research and final technology selection belong to SOLUTION-06; formal tasks belong to PLANNING-02. No automatic code writing or external provider changes. Graphify and Hindsight are optional setup choices, not prerequisites for Product Foundation.

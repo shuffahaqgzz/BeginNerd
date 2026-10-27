@@ -1,54 +1,50 @@
-# PRODUCT — [Nama Produk]
+# PRODUCT — [Product Name]
 
-**Document status:** DRAFT  
-**Project / Product owner:** TBD  
-**Version / canonical source:** TBD  
+**Document status:** DRAFT
+**Product Owner:** TBD
+**Version / canonical source:** TBD
 **Evidence / approval reference:** PENDING
 
-## PF-01 — Product Brief
-- Masalah utama: TBD
-- Target pengguna dan kebutuhan: TBD
-- Outcomes dan indikator keberhasilan: TBD
-- Batasan produk, resource, channel, bahasa, privasi: TBD
-- Fakta vs asumsi yang perlu diverifikasi: TBD
+## PRODUCT-FOUNDATION-01 — Problem Discovery
+- User segment, situation and current workaround: TBD
+- Outcome the user needs: TBD
+- Real observations and sources (not invented): TBD
+- Unverified assumptions and highest-risk hypothesis: TBD
+- Alternatives/competitor evidence and checked dates if relevant: TBD
+- Proposed interview/experiment and decision owner: PLANNED / TBD
+- Privacy, channel, language, budget and context constraints: TBD
 
-## PF-02 — Product Requirements
-| ID | Kebutuhan dan aktor | Prioritas | Acceptance ID | Source | Status |
+## PRODUCT-FOUNDATION-02 — Product Requirements
+| ID | User need / actor | Priority | Acceptance ID | Evidence source | Status |
 |---|---|---|---|---|---|
 | REQUIREMENTS-001 | TBD | TBD | ACCEPTANCE-CRITERIA-001 | TBD | DRAFT |
 
 ### Acceptance criteria
-- **ACCEPTANCE-CRITERIA-001** → REQUIREMENTS-001: TBD (observable, termasuk negative case bila relevan)
+- ACCEPTANCE-CRITERIA-001 (REQUIREMENTS-001): observable expected behavior, including relevant failure cases — TBD.
 
-## PF-03 — MVP Scope
-- MVP essential — requirement IDs: TBD
-- Deferred capabilities — requirement IDs & alasan: TBD
+## PRODUCT-FOUNDATION-03 — Minimum Viable Product
+- Essential capability and requirement IDs: TBD
+- Deferred capability and revisit trigger: TBD
 - Out of scope: TBD
-- Konsekuensi scope dan keputusan owner: PENDING
+- Hypothesis, proposed success signal and observation method: TBD (PLANNED)
+- Material scope approval: PENDING
 
-## PF-04 — Technical Requirements
-| ID | Product requirement | Kebutuhan / batasan teknis | Planned verification | Status |
-|---|---|---|---|---|
-| TECHNICAL-REQUIREMENTS-001 | REQUIREMENTS-001 | TBD | TBD | DRAFT |
-
-- Data, security/privacy, accessibility, integration, performance constraints: TBD
-- Critical user journey failure/negative cases (invalid input, retry, unavailable provider, duplicate, permission denial): TBD
-- Proposed quantitative measures and their owners/sources: TBD; do not invent targets
-- Existing/reusable assets, license, budget, hosting, customization constraints: TBD
-- Final tech selection: DEFER TO PHASE 2 SOLUTION-06
-
-### PF-04 Evidence & Ownership
-| Technical ID | Product ID | Observable measure or TBD | Source / approval | Planned check | Owner for unresolved decision | Status |
+## PRODUCT-FOUNDATION-04 — Technical Requirements
+| ID | Product requirement | Observable constraint or TBD | Source | Planned verification | Owner | Status |
 |---|---|---|---|---|---|---|
-| TECHNICAL-REQUIREMENTS-001 | REQUIREMENTS-001 | TBD | PENDING | TBD (NOT EXECUTED) | TBD | DRAFT |
+| TECHNICAL-REQUIREMENTS-001 | REQUIREMENTS-001 | TBD | TBD | NOT EXECUTED | TBD | DRAFT |
 
-## Decisions, Assumptions & Changes
-| ID / ref | Decision or unresolved question | Owner / evidence | Status |
+- Data/privacy, accessibility, integrations and failure behavior: TBD
+- Reusable components, licensing, hosting and operating budget: TBD
+- Final technology selection: DEFER TO SOLUTION-06
+
+## Decisions, Risks and Changes
+| Reference | Decision / open question | Evidence / Owner | Status |
 |---|---|---|---|
 | TBD | TBD | TBD | PENDING |
 
-## G1 Product Baseline Readiness
-**Proposed verdict:** NOT_ASSESSED (jangan default PASS).  
-**Evidence/approval:** PENDING.  
-**Critical gaps / blockers:** TBD.  
-**Next phase handoff:** After criteria and user approval are verified.
+## Product Baseline Readiness
+**Proposed verdict:** NOT_ASSESSED (never default PASS)
+**Approvals and critical blockers:** PENDING / TBD
+**Market/user validation:** PLANNED or UNVERIFIED until real evidence exists
+**Next phase:** Only approved unblocked scope can continue.
