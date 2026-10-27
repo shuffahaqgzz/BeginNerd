@@ -15,7 +15,8 @@ def evaluate(record):
     candidate = record.get("candidate", {})
     release = record.get("release_authorization", {})
     action = record.get("action", {})
-    if not candidate.get("source_sha") or candidate.get("qa_verdict") != "PASS":
+    if (not candidate.get("source_sha") or candidate.get("qa_verdict") != "PASS"
+            or not candidate.get("qa_evidence_ref")):
         problems.append("RELEASE_CANDIDATE_QA_NOT_VERIFIED")
     if candidate.get("critical_findings_open"):
         problems.append("CRITICAL_FINDINGS_UNRESOLVED")
@@ -28,9 +29,11 @@ def evaluate(record):
         problems.append("CANDIDATE_SHA_MISMATCH")
     if not release.get("rollback_plan_approved"):
         problems.append("ROLLBACK_PLAN_NOT_APPROVED")
+    if release.get("cost_impact_acknowledged") is not True:
+        problems.append("COST_IMPACT_NOT_ACKNOWLEDGED")
     if action.get("destructive") and not release.get("destructive_actions_approved"):
         problems.append("DESTRUCTIVE_SCOPE_NOT_AUTHORIZED")
-    if action.get("external_mutation") and not release.get("external_mutation_approved"):
+    if (action.get("external_mutation") or action.get("type") in ("DEPLOY_RELEASE", "EXTERNAL_CREATE")) and not release.get("external_mutation_approved"):
         problems.append("EXTERNAL_MUTATION_NOT_AUTHORIZED")
     if action.get("credential_admin") and not release.get("secret_admin_approved"):
         problems.append("SECRET_ADMIN_NOT_AUTHORIZED")
