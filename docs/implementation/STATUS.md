@@ -33,7 +33,7 @@
 - No automatic external credential rotation, deployment, provider write, global runtime reconfiguration, or consumer skill update is implied by a repository PR.
 
 ## Latest runtime review (Owner report)
-Behavioral outcomes reported: **4 PASS, 1 FAIL, 6 BLOCKED**, not 11 new successful executions of JSON fixtures. The `tests/behavioral/scenarios.json` registry records *scenario definitions* as `NOT_EXECUTED` pending durable per-case evidence attribution. Source H02-03 changes are corrective attempt 1; success is NOT VERIFIED until runtime retest.
+Behavioral outcomes reported: **4 PASS, 1 FAIL, 6 BLOCKED**, not 11 new successful executions of JSON fixtures. The `tests/behavioral/scenarios.json` registry records *scenario definitions* as `NOT_EXECUTED` pending durable per-case evidence attribution. Source H02-03 changes are corrective attempt 1; the post-change H02-03 retest is **NOT EXECUTED**, and success is NOT VERIFIED until runtime retest.
 
 ## Next checkpoint
 1. Review source remediation + stale status corrections in PR (no automatic merge).
