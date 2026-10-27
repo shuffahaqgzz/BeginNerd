@@ -35,3 +35,5 @@ scripts/guardrails/read_only_hook.py is a small **fail-closed demonstration** fo
 
 ## What source tests mean
 Unit tests can prove this hook parser denies unknown tools in fixtures. They **do not** prove the hook runs for a particular host/tool or provides complete policy enforcement. Until actual end-to-end security acceptance is executed, classify the effective runtime guard as UNVERIFIED or BLOCKED for high-risk actions.
+
+**Important:** A source-level policy and an offline unit test are **not technical enforcement**. Enforce permission controls at the actual installed harness and provider, then test every effective action route.

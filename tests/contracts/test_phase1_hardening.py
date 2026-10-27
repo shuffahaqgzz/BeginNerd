@@ -49,6 +49,11 @@ class Phase1HardeningContractTests(unittest.TestCase):
                                             "TECHNICAL-REQUIREMENTS-001 | REQUIREMENTS-999"))
         self.assertTrue(any("unknown product requirement" in x for x in issues))
 
+    def test_negative_approval_sentence_does_not_falsely_imply_approval(self):
+        issues, _ = validate(SAMPLE.replace("PROPOSAL-001 — Additional feature, PROPOSED",
+                                            "PROPOSAL-001 — This feature is not approved"))
+        self.assertEqual(issues, [])
+
     def test_approval_provenance_is_not_conjured(self):
         issues, _ = validate(SAMPLE.replace("**Status:** DRAFT", "**Status:** APPROVED"))
         self.assertTrue(any("approval provenance" in x for x in issues))

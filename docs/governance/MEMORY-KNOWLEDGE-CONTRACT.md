@@ -7,7 +7,7 @@ BeginNerd can use **Graphify** for project relationship discovery and **Hindsigh
 - All eight skills remain useful without Graphify and Hindsight; do not require them for ordinary product, design, planning, implementation or release guidance.
 - beginnerd-setup asks whether the user wants project knowledge, persistent memory, both, or neither. Explicit consent, privacy/cost context and scope are required before any provider configuration or persistent write.
 - Inspect existing setup and reuse it where appropriate; never automatically install duplicate providers, override settings or silently substitute another provider.
-- When not opted in, use the current project documents, decision records and Git as the source of continuity. **Do not** report MEMORY_SYNC_PENDING because an optional integration was intentionally disabled.
+- When not opted in, record the optional provider as NOT_ENABLED and use current project documents, decision records and Git as the source of continuity. **Do not** report MEMORY_SYNC_PENDING because an optional integration was intentionally disabled.
 
 ## When a provider has been explicitly enabled and verified
 1. Resolve project identity, privacy and permitted knowledge/memory scope.

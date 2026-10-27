@@ -67,14 +67,16 @@ def validate(text):
             issues.append(f"{tid}: missing useful verification plan")
 
     # Missing proposal decision state is an integrity gap; not all proposals need a row.
-    if PROPOSAL.search(text) and not re.search(r"PROPOSED|belum disetujui", text, re.I):
+    if PROPOSAL.search(text) and not re.search(r"\bPROPOSED\b|\bNOT APPROVED\b|\bPENDING\b", text, re.I):
         issues.append("proposals found but no explicit proposed/unapproved status")
 
     status = G1.findall(text)
     if len(status) != 1:
         issues.append("expected exactly one explicit G1: PASS/PARTIAL/BLOCKED/UNVERIFIED declaration")
-    if re.search(r"\bAPPROVED\b", text, re.I) and not re.search(
-        r"bukti persetujuan|approved by|approval reference|approval evidence|persetujuan pengguna|disetujui pengguna", text, re.I
+    if re.search(
+        r"(?im)^\s*(?:\*\*)?(?:Document\s+)?Status:(?:\*\*)?\s*APPROVED\b", text
+    ) and not re.search(
+        r"approved by|approval reference|approval evidence|explicit owner approval", text, re.I
     ):
         issues.append("APPROVED label missing approval provenance narrative")
 
