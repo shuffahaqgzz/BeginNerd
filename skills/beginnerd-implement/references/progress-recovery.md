@@ -1,4 +1,4 @@
-# IMPLEMENT-05 — Progress & Recovery Governance
+# IMPLEMENTATION-05 — Progress & Recovery Governance
 
 **Input:** Approved Task Registry + exact task authorization + relevant current repo/environment and acceptance evidence.
 ## Procedure

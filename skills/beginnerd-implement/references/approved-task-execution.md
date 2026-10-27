@@ -1,4 +1,4 @@
-# IMPLEMENT-01 — Approved Task Execution
+# IMPLEMENTATION-01 — Approved Task Execution
 
 **Input:** Approved Task Registry + exact task authorization + relevant current repo/environment and acceptance evidence.
 ## Procedure

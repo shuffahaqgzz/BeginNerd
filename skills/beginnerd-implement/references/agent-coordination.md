@@ -1,4 +1,4 @@
-# IMPLEMENT-02 — Agent Coordination & Handoff
+# IMPLEMENTATION-02 — Agent Coordination & Handoff
 
 **Input:** Approved Task Registry + exact task authorization + relevant current repo/environment and acceptance evidence.
 ## Procedure

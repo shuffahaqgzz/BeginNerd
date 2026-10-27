@@ -1,4 +1,4 @@
-# IMPLEMENT-04 — Scoped Integration
+# IMPLEMENTATION-04 — Scoped Integration
 
 **Input:** Approved Task Registry + exact task authorization + relevant current repo/environment and acceptance evidence.
 ## Procedure
