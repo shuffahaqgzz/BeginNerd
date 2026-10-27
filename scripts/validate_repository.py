@@ -10,8 +10,8 @@ ROOT = Path(__file__).resolve().parents[1]
 COMPANIONS = ("beginnerd-ask", "beginnerd-setup")
 LIFECYCLE = ("beginnerd-solution", "beginnerd-plan",
              "beginnerd-foundation", "beginnerd-implement", "beginnerd-release")
-COUNTS = {"PF": 4, "SOLUTION": 8, "PLANNING": 4, "FOUNDATION": 5,
-          "IMPLEMENT": 5, "RELEASE": 3, "OPS": 3}
+COUNTS = {"PRODUCT-FOUNDATION": 4, "SOLUTION": 8, "PLANNING": 4,
+          "FOUNDATION": 5, "IMPLEMENTATION": 5, "RELEASE": 3, "OPERATIONS": 3}
 REQUIRED = (
     "README.md", "AGENTS.md", "docs/architecture/FRAMEWORK-ARCHITECTURE.md",
     "docs/decisions/DECISION-REGISTER.md",
@@ -33,7 +33,7 @@ REQUIRED = (
     "scripts/build_portable_references.py",
     "scripts/validate_skill_packages.py",
 )
-ROW = re.compile(r"^\|\s*(PF|SOLUTION|PLANNING|FOUNDATION|IMPLEMENT|RELEASE|OPS)-(\d{2})\s*\|", re.M)
+ROW = re.compile(r"^\|\s*(PRODUCT-FOUNDATION|SOLUTION|PLANNING|FOUNDATION|IMPLEMENTATION|RELEASE|OPERATIONS)-(\d{2})\s*\|", re.M)
 
 def validate():
     errors = []
@@ -72,7 +72,7 @@ def validate():
         ids = [f"{phase}-{number}" for phase, number in ROW.findall(reg.read_text(encoding="utf-8"))]
         if len(ids) != 32 or len(set(ids)) != 32:
             errors.append(f"expected 32 unique workflow IDs, got {len(ids)} rows and {len(set(ids))} unique")
-        phases = Counter(item.split("-")[0] for item in ids)
+        phases = Counter(item.rsplit("-", 1)[0] for item in ids)
         if phases != Counter(COUNTS):
             errors.append(f"workflow counts differ: {dict(phases)}")
 
