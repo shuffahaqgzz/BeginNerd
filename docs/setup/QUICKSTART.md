@@ -1,29 +1,41 @@
-# BeginNerd — Repository & Runtime Quickstart
+# BeginNerd — Quickstart
 
-**Scope:** source inspection for eight skill candidates merged to `main`; this is not automatic installation or provider provisioning.
+BeginNerd is **Agent Skills–based, not Codex-only**. Start with the [multi-harness guide](MULTI-HARNESS-ADOPTION.md) for Claude Code, Codex, Cursor, OpenCode, Hermes Agent, or other compatible harnesses.
 
-## Repository review
-1. Identify base branch, source commit, expected changes and current project instructions.
-2. On a **local, isolated checkout of the intended branch/commit**, run:
+## 1. Discover and choose your agent
 
-~~~bash
+```bash
+npx skills@latest add shuffahaqgzz/BeginNerd --list
+npx skills@latest add shuffahaqgzz/BeginNerd
+```
+
+Skills CLI requires a compatible Node.js version; inspect project/global installs and choose one install route per harness. See [supported agent IDs](https://github.com/vercel-labs/skills/blob/main/docs/agents.md) and [Hermes native alternative](MULTI-HARNESS-ADOPTION.md#hermes-agent--native-alternative).
+
+## 2. Test the portable source
+
+On a clean checkout of the revision you intend to use (Python 3.11+):
+
+```bash
 python3 scripts/validate_repository.py
 python3 scripts/build_portable_references.py --check
 python3 scripts/validate_skill_packages.py
 python3 -m unittest discover -s tests/contracts -p 'test_*.py' -v
-~~~
+```
 
-3. Inspect results, source and portable references. Confirm that all tests that passed were **static/offline**; do not call them runtime acceptance.
-4. Check validation documents for known blocked/partial cases before requesting changes.
+These tests verify package references and offline repository contracts only—not installed skills or runtime behavior.
 
-## Codex runtime use — requires separate scoped consent
-- Target selected by Owner: srv-test01 Codex CLI, but this source work did **not** access that host. Do not infer CLI version, skill path or installed providers.
-- Inventory existing skills/Graphify/Hindsight and global/project configs before changes, no duplicate install.
-- For each install/overwrite use project/target permission; retain user preferences, backup and rollback. Never assume repo PR approval grants provider config or persistent memory writes.
-- Perform fresh-session skill routing checks (positive and negative) and behavioral tests with sanitized tool traces; retain Hindsight only with consent and verified acknowledgement.
-- Test H01 external-mutation refusal only with verified mocks/denial; do not create real Sites resources.
+## 3. Verify your own harness
 
-## Suggested phase test order
-H02-03 remedial retest and Phase 1 acceptance → SOLUTION G2 → PLANNING approved Work Structure Agreement → FOUNDATION readiness → IMPLEMENT approved task QA → RELEASE separately authorized deployment + OPS evidence.
+- Inventory installed skill locations and duplicates, and honor local project/global settings before edits.
+- Check fresh-session discovery and activation (including near-miss cases). In Hermes, project skill trust may be required after inspection.
+- Validate tool write boundaries independently. A shell sandbox does not guarantee external provider plugins cannot mutate.
+- Graphify/Hindsight are distinct provider setup tasks requiring authorization, not installed merely by adding BeginNerd.
+- Capture what really happened: source SHA, harness version, expected/observed, attempted actions, actual files changed and sanitized evidence.
 
-As A2 real-world case is deferred, use source static fixtures for now and preserve E2E as NOT EXECUTED. Learn more: docs/implementation/REAL-WORLD-E2E-VALIDATION.md.
+**Existing pilot:** Owner's initial evaluation environment was `srv-test01` with Codex CLI. That is not an architectural requirement and does not prove compatibility on other harnesses. BeginNerd's real-world A2 acceptance case remains deferred.
+
+## 4. When building a real application
+
+Product G1 → Solution G2 → Planning → Foundation → Implementation/QA → separately authorized Release/Operations. You can invoke a single relevant workflow rather than regenerating every phase.
+
+More detail: [multi-harness installation](MULTI-HARNESS-ADOPTION.md), [status & open gaps](../implementation/STATUS.md), [real-world E2E protocol](../implementation/REAL-WORLD-E2E-VALIDATION.md).
