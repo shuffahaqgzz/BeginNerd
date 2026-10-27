@@ -1,4 +1,4 @@
-"""Checks for portable companion packages. These are STATIC tests, not runtime evals."""
+"""Checks for portable eight-skill source packages. These are STATIC tests, not runtime evals."""
 import json
 import shutil
 import sys
@@ -17,15 +17,17 @@ class SkillPortabilityTests(unittest.TestCase):
     def test_generated_references_are_current(self):
         self.assertEqual(synchronize(check=True), [])
 
-    def test_exactly_three_distributable_skills(self):
+    def test_exactly_eight_source_skill_packages(self):
         self.assertEqual(validate(), [])
 
     def test_canonical_sources_have_portable_copies(self):
-        self.assertEqual(len(SOURCES), 5)
-        self.assertEqual(sum(len(paths) for paths in SOURCES.values()), 9)
+        self.assertEqual(len(SOURCES), 6)
+        self.assertEqual(sum(len(paths) for paths in SOURCES.values()), 38)
 
     def test_standalone_copy_needs_no_repository_docs(self):
-        for name in ("beginnerd-ask", "beginnerd-setup", "beginnerd-product"):
+        for name in ("beginnerd-ask", "beginnerd-setup", "beginnerd-product",
+                     "beginnerd-solution", "beginnerd-plan", "beginnerd-foundation",
+                     "beginnerd-implement", "beginnerd-release"):
             with self.subTest(skill=name), tempfile.TemporaryDirectory() as folder:
                 portable = Path(folder) / name
                 shutil.copytree(ROOT / "skills" / name, portable)
@@ -50,7 +52,9 @@ class SkillPortabilityTests(unittest.TestCase):
         data = json.loads((ROOT / "tests" / "activation" / "queries.json").read_text(encoding="utf-8"))
         self.assertGreaterEqual(len(data), 12)
         self.assertTrue(all(x["execution_status"] == "NOT_EXECUTED" for x in data))
-        self.assertEqual({x["skill"] for x in data}, {"beginnerd-ask", "beginnerd-setup", "beginnerd-product"})
+        self.assertEqual({x["skill"] for x in data}, {"beginnerd-ask", "beginnerd-setup", "beginnerd-product",
+                          "beginnerd-solution", "beginnerd-plan", "beginnerd-foundation",
+                          "beginnerd-implement", "beginnerd-release"})
 
 
 if __name__ == "__main__":

@@ -18,6 +18,9 @@ This register captures decisions supported by the supplied BeginNerd source disc
 | Companion skills | beginnerd-ask, beginnerd-setup across all phases | APPROVED — DESIGN |
 | Knowledge & Memory | Graphify required Knowledge Provider; Hindsight required Memory Provider; consent-based activation and project scope | APPROVED — DESIGN |
 
+## Public repository license decision
+Owner choice **D2 — MIT License** on 27 October 2026. The license notice and public contribution guideline are included for source publication in PR #8; the selected license is MIT, without automatically implying runtime acceptance. This is a distribution/license decision; it does not amend BN-DEC-009 SDLC/skill ownership or validate third-party licenses. Confirm copyright holder and dependency-license obligations before an actual v1.0 release.
+
 ## Incomplete provenance
 BN-DEC-001, BN-DEC-002, BN-DEC-005 through BN-DEC-008, and full supporting approval references are **NOT RECONCILED** in this bootstrap. No conclusions are invented for them. Use source records and owner review before claiming a complete decision register.
 

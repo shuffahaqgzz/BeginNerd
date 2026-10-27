@@ -1,23 +1,29 @@
-# BeginNerd — Repository and Runtime Quickstart
+# BeginNerd — Repository & Runtime Quickstart
 
-## Repository scope
-This repository stores source and contracts for the BeginNerd framework. It does not automatically install skills in any specific runtime.
+**Scope:** source inspection for eight skill candidates merged to `main`; this is not automatic installation or provider provisioning.
 
-## Local review
-1. Clone https://github.com/shuffahaqgzz/BeginNerd.git into an isolated workspace.
-2. Check out the approved branch/commit and review README and docs/implementation/STATUS.md.
-3. Run `python3 scripts/build_portable_references.py --check` and `python3 scripts/validate_skill_packages.py`.
-4. Run `python3 -m unittest discover -s tests/contracts -p 'test_*.py' -v`.
-5. Run `python3 scripts/validate_repository.py`.
-6. Read `docs/implementation/DISTRIBUTION-READINESS.md` for scoped Skills CLI discovery and approved installation.
-7. Compare installed `beginnerd-ask` and `beginnerd-setup` with existing copies before overwrite; preserve user settings.
-8. Run actual activation and behavioral scenarios, plus provider checks only under appropriate authorization.
+## Repository review
+1. Identify base branch, source commit, expected changes and current project instructions.
+2. On a **local, isolated checkout of the intended branch/commit**, run:
 
-## Setup mode
-The companion starter skills describe the user-facing behavior but do not deploy Graphify or Hindsight. Provisioning requires a verified supported provider runtime, actual installation inventory, project-scoped consent and read-back tests.
+~~~bash
+python3 scripts/validate_repository.py
+python3 scripts/build_portable_references.py --check
+python3 scripts/validate_skill_packages.py
+python3 -m unittest discover -s tests/contracts -p 'test_*.py' -v
+~~~
 
-## Git policy
-Use PR-based integration, keep main protected according to owner preference, and never commit .env, tokens, private knowledge, or memory checkpoints. Branch protection settings require separate authorized admin configuration.
+3. Inspect results, source and portable references. Confirm that all tests that passed were **static/offline**; do not call them runtime acceptance.
+4. Check validation documents for known blocked/partial cases before requesting changes.
 
-## Phase 1 candidate
-Jika PR `beginnerd-product` sedang ditinjau, periksa `SKILL.md`, workflow references dan assets di branch PR serta `PHASE-1-PRODUCT-IMPLEMENTATION-CONTRACT.md`. Jangan mengira file dalam PR sudah masuk `main`. Lakukan discovery tiga skill dan instalasi project-scoped **setelah** merge dan approval untuk runtime.
+## Codex runtime use — requires separate scoped consent
+- Target selected by Owner: srv-test01 Codex CLI, but this source work did **not** access that host. Do not infer CLI version, skill path or installed providers.
+- Inventory existing skills/Graphify/Hindsight and global/project configs before changes, no duplicate install.
+- For each install/overwrite use project/target permission; retain user preferences, backup and rollback. Never assume repo PR approval grants provider config or persistent memory writes.
+- Perform fresh-session skill routing checks (positive and negative) and behavioral tests with sanitized tool traces; retain Hindsight only with consent and verified acknowledgement.
+- Test H01 external-mutation refusal only with verified mocks/denial; do not create real Sites resources.
+
+## Suggested phase test order
+H02-03 remedial retest and Phase 1 acceptance → SOLUTION G2 → PLANNING approved Work Structure Agreement → FOUNDATION readiness → IMPLEMENT approved task QA → RELEASE separately authorized deployment + OPS evidence.
+
+As A2 real-world case is deferred, use source static fixtures for now and preserve E2E as NOT EXECUTED. Learn more: docs/implementation/REAL-WORLD-E2E-VALIDATION.md.

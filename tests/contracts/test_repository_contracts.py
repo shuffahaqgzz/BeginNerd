@@ -31,13 +31,14 @@ class RepositoryContractsTests(unittest.TestCase):
                 self.assertIn("name: " + name, skill)
                 self.assertIn("description:", skill)
 
-    def test_lifecycle_skill_implementation_not_falsely_claimed(self):
+    def test_all_lifecycle_sources_exist_but_not_runtime_verified(self):
         for name in ("beginnerd-solution", "beginnerd-plan",
                      "beginnerd-foundation", "beginnerd-implement", "beginnerd-release"):
             with self.subTest(skill=name):
-                self.assertFalse((ROOT / "skills" / name / "SKILL.md").exists())
-                contents = (ROOT / "skills" / name / "README.md").read_text(encoding="utf-8")
-                self.assertIn("NOT IMPLEMENTED", contents)
+                self.assertTrue((ROOT / "skills" / name / "SKILL.md").is_file())
+                content = (ROOT / "skills" / name / "README.md").read_text(encoding="utf-8").upper()
+                self.assertIn("SOURCE", content)
+                self.assertIn("RUNTIME UNVERIFIED", content)
 
     def test_product_skill_exists_but_runtime_unverified(self):
         skill = (ROOT / "skills" / "beginnerd-product" / "SKILL.md").read_text(encoding="utf-8")

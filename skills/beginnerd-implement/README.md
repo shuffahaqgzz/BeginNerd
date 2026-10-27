@@ -1,7 +1,2 @@
 # beginnerd-implement — Phase 5
-
-**Status:** DESIGN BOUNDARY ONLY / NOT IMPLEMENTED.
-
-Owns IMPLEMENT-01 approved task execution, 02 agent coordination/handoff, 03 risk-based QA, 04 scoped integration, 05 progress/recovery governance.
-
-Must use the Planning-approved task registry with scoped batch authorization; no executor-side decomposition. Evidence-based completion and No Overclaim apply. Post-failure remediation requires separately approved attempt, maximum two per issue/baseline; then HARD STOP / REVIEW_REQUIRED.
+**Status:** SOURCE IMPLEMENTATION CANDIDATE / RUNTIME UNVERIFIED. Five IMPLEMENT workflows, evidence-based completion and bounded approval-per-attempt recovery. Includes a read-only offline policy-check example; this is **not tool-level enforcement** until exercised in an authorized runtime.

@@ -5,17 +5,17 @@
 ## Release exit criteria (no auto-PASS)
 | Area | Minimum evidence | Status at 27 Oct 2026 |
 |---|---|---|
-| MIT License | Owner D2, LICENSE committed/merged and copyright holder reviewed | PR PROPOSED / COPYRIGHT REVIEW |
-| Skill package conformance | All 8 installable skills have self-contained SKILL.md, references and assets, real validation results | PARTIAL: 3 candidate/source skills, 5 pending |
+| MIT License | Owner D2, LICENSE committed/merged and copyright holder reviewed | SOURCE INTEGRATED / COPYRIGHT REVIEW OPEN |
+| Skill package conformance | All 8 installable skills have self-contained SKILL.md, references and assets, real validation results | SOURCE: 8 candidates; RUNTIME: NOT VERIFIED |
 | 32 workflow contracts | Behavior and ownership mapped from approved BN-DEC baseline to implemented skills | DESIGN APPROVED, implementation pending |
-| Phase 1 H02-03 / H01 / H03 | Verified runtime fixes, safe negative cases and authorized file persistence | PARTIAL/BLOCKED, PR #7 scoped source remediation |
+| Phase 1 H02-03 / H01 / H03 | Verified runtime fixes, safe negative cases and authorized file persistence | PARTIAL/BLOCKED; PR #7 source merged, runtime retest pending |
 | Companion providers | Graphify project-isolated read/freshness, Hindsight consented retain→ack→recall→readback | UNVERIFIED |
 | Phase 2–6 acceptance | Per-phase real runtime cases and representative working product | NOT EXECUTED |
 | Supply chain & licensing | Dependency inventory, third-party license compatibility, secret scanning | NOT VERIFIED |
 | Public security contact | Private vulnerability reporting route configured and tested | PENDING OWNER SETUP |
 | Portable install/upgrade | Skills CLI discovery, isolated install, idempotence, rollback, no duplicate installs | PARTIAL / NOT FULLY VERIFIED |
 | Docs/examples | Quickstart, scope, prereqs, limitations, representative case and sanitized evidence | PARTIAL |
-| Version/release tag | Immutable source version, release notes and release authorization | NOT AUTHORIZED |
+| Version/release tag | Immutable source version, release notes and release readiness | SOURCE PUBLICATION AUTHORIZED; STABLE v1.0 NOT READY |
 | Deployment / operational readiness | Scoped deployment, rollback, monitoring and incident exercises on permitted environment | NOT EXECUTED |
 
 ## Acceptance procedure

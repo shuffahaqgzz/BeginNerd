@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate BeginNerd's currently distributable companions, without side effects.
+"""Validate BeginNerd's source-installable skill candidates, without side effects.
 
 This intentionally checks a simple flat YAML frontmatter subset used by BeginNerd,
 and portable file references. It is NOT a full YAML parser or agent runtime test.
@@ -11,11 +11,10 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-ACTIVE = ("beginnerd-ask", "beginnerd-setup", "beginnerd-product")
-LIFECYCLE = (
-    "beginnerd-solution", "beginnerd-plan",
-    "beginnerd-foundation", "beginnerd-implement", "beginnerd-release",
-)
+ACTIVE = ("beginnerd-ask", "beginnerd-setup", "beginnerd-product",
+          "beginnerd-solution", "beginnerd-plan", "beginnerd-foundation",
+          "beginnerd-implement", "beginnerd-release")
+LIFECYCLE = ()  # All lifecycle packages now have source SKILL.md; none are runtime-certified.
 NAME = re.compile(r"[a-z0-9]+(?:-[a-z0-9]+)*\Z")
 PATH = re.compile(r"(?<![\w/])(?:references|scripts|assets)/[A-Za-z0-9_./-]+")
 MARKDOWN_LINK = re.compile(r"\]\(([^)#]+)(?:#[^)]*)?\)")
@@ -138,7 +137,7 @@ def main() -> int:
             print(" - " + error)
         return 1
     print("SKILL PACKAGE STATIC CHECK: PASS")
-    print("Validated 2 companion + 1 product skill metadata and packaged refs; 5 lifecycle skills pending.")
+    print("Validated all 8 source skill candidates and their portable packaged references.")
     print("NOT VERIFIED: full upstream YAML spec, Skills CLI install, runtime triggering, providers.")
     return 0
 

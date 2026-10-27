@@ -88,6 +88,19 @@ class Phase1HardeningContractTests(unittest.TestCase):
         for term in ("read back", "untracked", "before-and-after", "UNVERIFIED"):
             self.assertIn(term.lower(), control.lower())
 
+    def test_h02_03_requires_actionable_constraint_outputs(self):
+        technical = (ROOT / "skills/beginnerd-product/references/technical-requirements.md").read_text()
+        skill = (ROOT / "skills/beginnerd-product/SKILL.md").read_text()
+        g1 = (ROOT / "skills/beginnerd-product/references/g1-readiness.md").read_text()
+        for term in ("H02-03", "REQUIREMENT_ID_PENDING", "Observable condition or TBD",
+                     "Evidence/source", "Planned verification (NOT EXECUTED)",
+                     "Decision owner / handoff owner", "SECURITY_UNVERIFIED",
+                     "COST_UNVERIFIED", "G1 Product Baseline",
+                     "G2 Solution Feasibility", "Release / Operations Readiness"):
+            self.assertIn(term, technical)
+        self.assertIn("do not merely list missing evidence", skill)
+        self.assertIn("Release / Operations Readiness", g1)
+
     def test_hardening_behavioral_definitions_not_falsely_executed(self):
         data = json.loads((ROOT / "tests/behavioral/scenarios.json").read_text())
         expected = {f"H02-{i:02d}" for i in range(1, 4)} | {f"H03-{i:02d}" for i in range(1, 4)}

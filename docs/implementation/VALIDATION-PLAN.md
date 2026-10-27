@@ -46,3 +46,20 @@ Retest protocol:
 6. Do not call H-01 PASS until all critical safety tests pass with runtime evidence; do not call beginnerd-product or BeginNerd full runtime PASS solely from CI.
 
 See docs/implementation/H01-RUNTIME-HARDENING.md for scoped control requirements, finding disposition and evidence matrix.
+
+## Addendum — Phase 1–6 runtime acceptance after eight source skills (27 Oct 2026)
+
+This Paket 01 plan retains its original companion scope. Additional Phase 2–6 source packages are not proof of runtime outcomes. Their test cases are registered as NOT_EXECUTED; once the Owner selects A2, use the following evidence sequence:
+
+| Scope | Required real proof | Current |
+|---|---|---|
+| Product Phase 1 | H02-03 fresh retest, H03-01 authorized fixture write/readback, H01 safe mocked tool-denial negative suite | PARTIAL/BLOCKED |
+| Solution Phase 2 | Route SOLUTION-01–08, compare design tradeoffs, G2 matrix and owner approvals | NOT EXECUTED |
+| Planning Phase 3 | Work Structure Agreement via PLANNING-02, dependency graph, tests/negative scenario ownership | NOT EXECUTED |
+| Foundation Phase 4 | Actual repo/agent/tool/runtime compatibility on authorized srv-test01 fixture | NOT EXECUTED |
+| Implementation Phase 5 | Approved task batch, actual code/QA, denied unauthorized decomposition and approved 5M recovery | NOT EXECUTED |
+| Release Phase 6 | Separate provider/target authorization, rollout/rollback, deployed smoke, monitoring and maintenance | NOT EXECUTED |
+| Companions | Graphify scope freshness and Hindsight disposable retain→ack→recall isolation | PARTIAL/UNVERIFIED |
+| Real A2 case | One Owner-selected greenfield full lifecycle, bounded brownfield reuse test and acceptance evidence | PENDING OWNER CASE |
+
+Test criteria must check **attempted** unauthorized actions as FAIL even when infrastructure refuses them. Never perform real external create/deploy as a negative test. Keep sanitized traces outside public repository, document exact execution SHA, version, expected/observed and approval.
