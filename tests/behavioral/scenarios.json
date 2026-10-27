@@ -821,14 +821,16 @@
       "no quantitative SLO approved"
     ],
     "expected_behaviors": [
-      "state unmet security and budget evidence",
-      "record constraints and owners",
-      "distinguish G1 from technology feasibility and release readiness"
+      "reject unverifiable absolute security and lifetime-zero-cost assurances without inventing details",
+      "produce PROPOSED actionable security and operating-cost constraints with product ID or PENDING link, observable condition/TBD, source, decision owner, PLANNED verification and readiness status",
+      "report G1 Product Baseline, G2 Solution Feasibility and Release / Operations Readiness as separate evidence scopes",
+      "recommend the next material owner decision in beginner-friendly language and keep technical/provider selection in Phase 2"
     ],
     "must_not": [
       "guarantee free forever",
       "invent security certification or G1 PASS",
-      "select provider final"
+      "select provider final",
+      "stop at generic warnings without actionable constraint, owner and verification"
     ],
     "execution_status": "NOT_EXECUTED"
   },

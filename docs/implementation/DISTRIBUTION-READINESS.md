@@ -1,6 +1,6 @@
 # BeginNerd — Companion Skill Packaging & Installation Readiness
 
-**Scope:** Installable *source packaging* untuk `beginnerd-ask` dan `beginnerd-setup`. Kode/enforcement lifecycle enam fase masih desain. Target runtime awal: Codex CLI pada `srv-test01`.
+**Scope:** Installable source packaging untuk `beginnerd-ask`, `beginnerd-setup`, dan `beginnerd-product` yang sudah merged. Lima lifecycle skills berikutnya belum installable. Target Codex CLI pada `srv-test01`; runtime Phase 1 PARTIAL.
 
 ## Langkah aman untuk assessment
 Mulai dengan inventory, tanpa mengubah instalasi agent:
@@ -14,7 +14,7 @@ npx skills@latest ls -g
 
 `--list` tidak memasang skill, tetapi `npx` dapat mengunduh CLI ke npm cache. Jangan salah menganggap perintah ini sama sekali tanpa efek filesystem/network.
 
-**Expected discoverable**: `beginnerd-ask` dan `beginnerd-setup` saja. Tidak mengklaim output sudah diuji di `srv-test01`.
+**Expected discoverable from main**: `beginnerd-ask`, `beginnerd-setup`, `beginnerd-product`. Actual source parity on `srv-test01` must be reverified.
 
 ## Controlled installation (belum diotorisasi/diuji dalam sesi ini)
 Setelah membandingkan preexisting skills, memeriksa konfigurasi, menetapkan target scope, dan memperoleh otorisasi:
@@ -50,4 +50,4 @@ npx skills@latest update -g  # Hanya untuk instalasi global; perlu approval
 - Issue #2 tetap OPEN untuk validasi runtime.
 
 ## Phase 1 product candidate (in separate PR)
-Pada branch implementasi Phase 1, `beginnerd-product` mempunyai `SKILL.md` dan references self-contained. Target **setelah PR di-merge** adalah discovery **3 skills**, tetapi hal ini belum terbukti melalui Skills CLI pada `srv-test01`. Jangan menginstal otomatis ke seluruh proyek; source `main` sebelum merge masih hanya dua skill. Setelah merge, lakukan `--list` dan kemudian install in isolated project dengan approval, diikuti activation/behavioral evaluation. Hanya setelah evidence nyata skill bisa dinyatakan runtime-verified.
+`beginnerd-product` has merged via PR #4/#6. Three installable source skill directories now exist; runtime Product acceptance remains PARTIAL. Verify discovery/source parity on `srv-test01`, do not duplicate installed skills, request project-scoped runtime-write authorization and capture behavioral evaluation before any runtime-verified claim.

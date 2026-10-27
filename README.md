@@ -2,7 +2,7 @@
 
 **BeginNerd** adalah framework **Guided Building** untuk membantu pengguna pemula dan tim campuran merencanakan, membangun, menguji, merilis, dan memelihara aplikasi bersama AI coding agent.
 
-> **Status: FOUNDATION MERGED; PHASE 1 PRODUCT SKILL IN IMPLEMENTATION REVIEW.** Desain enam fase dan 32 workflow telah disetujui. Dua companion skills dapat ditemukan dan menurut laporan pengguna telah digunakan secara dasar pada Codex; Graphify/Hindsight belum lolos integrasi. Pada branch implementasi ini, `beginnerd-product` mempunyai entry point dan references **sebagai kandidat skill ketiga**, bukan runtime PASS. Lima lifecycle skills lainnya belum diimplementasikan.
+> **Status: FOUNDATION MERGED; PHASE 1 RUNTIME ACCEPTANCE PARTIAL.** Desain enam fase dan 32 workflow disetujui. Tiga source skills (`beginnerd-ask`, `beginnerd-setup`, `beginnerd-product`) sudah masuk `main` setelah PR #6 merged pada 26 Oktober 2026. Evaluasi runtime terakhir yang dilaporkan Owner: 4 PASS, 1 FAIL, 6 BLOCKED; bukan full Phase 1 PASS. Graphify/Hindsight belum terverifikasi E2E; lima lifecycle skills lainnya belum installable.
 
 ## Arsitektur target
 
@@ -44,7 +44,7 @@ python3 scripts/validate_skill_packages.py
 python3 -m unittest discover -s tests/contracts -p 'test_*.py' -v
 ```
 
-Target distribusi branch ini: `beginnerd-ask`, `beginnerd-setup`, dan kandidat `beginnerd-product` (tiga skill jika PR di-merge). Lima lifecycle skills berikutnya masih berupa kontrak desain. [Skill Engineering Standard](docs/engineering/SKILL-ENGINEERING-AND-DISTRIBUTION-STANDARD.md) dan [Distribution Readiness](docs/implementation/DISTRIBUTION-READINESS.md) menerangkan batas validasi, installation scope, serta persyaratan izin.
+Target distribusi source di `main` adalah tiga skill (`beginnerd-ask`, `beginnerd-setup`, `beginnerd-product`) setelah PR #6 merged. Source installable ≠ runtime-verified. Lima lifecycle skills berikutnya masih berupa kontrak desain. [Skill Engineering Standard](docs/engineering/SKILL-ENGINEERING-AND-DISTRIBUTION-STANDARD.md) dan [Distribution Readiness](docs/implementation/DISTRIBUTION-READINESS.md) menerangkan batas validasi, installation scope, serta persyaratan izin.
 
 Validator memeriksa kontrak statis, snapshots dan inventaris; penggunaan pada runtime tetap memerlukan pengujian. Discovery tiga skill melalui Skills CLI harus diverifikasi setelah commit target terintegrasi; dua companion sudah berhasil discovery dan basic invocation menurut laporan pengguna. Skenario di [tests/behavioral/scenarios.json](tests/behavioral/scenarios.json) serta [activation queries](tests/activation/queries.json) adalah **spesifikasi**, bukan hasil eksekusi agent. CI hijau tidak membuktikan kemampuan routing runtime atau Graphify/Hindsight yang benar-benar berfungsi.
 

@@ -6,7 +6,7 @@ Target: eight skills — two cross-phase companions plus six lifecycle skills co
 |---|---|---|
 | beginnerd-ask | Companion | Source installed; basic invocation reported on srv-test01; broader behavior unverified |
 | beginnerd-setup | Companion | Source installed; read-only assessment reported on srv-test01; provider integration partial |
-| beginnerd-product | Lifecycle Phase 1 | SKILL.md + four PF references, G1, templates; candidate under PR, runtime NOT VERIFIED |
+| beginnerd-product | Lifecycle Phase 1 | Source SKILL.md + PF references merged in PR #4/#6; runtime PARTIAL, NOT ACCEPTED |
 | beginnerd-solution | Lifecycle Phase 2 | Design boundary only; implementation pending |
 | beginnerd-plan | Lifecycle Phase 3 | Design boundary only; implementation pending |
 | beginnerd-foundation | Lifecycle Phase 4 | Design boundary only; implementation pending |

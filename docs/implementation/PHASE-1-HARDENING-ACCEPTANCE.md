@@ -48,3 +48,9 @@ Evidence in conversation is not automatically durable CI evidence; do not insert
 3. Confirm no critical unapproved tool or workspace mutation; a blocked **attempted** unauthorized tool call is still behavioral FAIL.
 4. Resolve or explicitly defer noncritical findings with owner and risk; never silently upgrade product G1.
 5. Final acceptance review may issue overall PASS only when applicable runtime critical criteria have direct evidence. Otherwise report PARTIAL/BLOCKED accurately.
+
+## Owner runtime review reconciliation — 27 Oktober 2026
+
+Latest Owner review: **4 behavioral PASS, 1 FAIL, 6 BLOCKED** in its assessed cases. H02-03 failed actionable owner/verification mapping; H03-01 required approved disposable write mode; H01-02–06 lacked verified external mutation isolation. These are **Owner-reported** findings; the source scenario registry remains `NOT_EXECUTED` until case-by-case runtime evidence is reconciled.
+
+Owner authorized **H02-03 remediation attempt 1** and focused status corrections through PR only. Static checks added to the source do **not** pass H02-03 runtime acceptance. Retest is still required in `srv-test01`. If failed, a second remediation proposal needs separate explicit approval; no third attempt in the same baseline.
