@@ -1,50 +1,58 @@
 # PRODUCT — [Product Name]
 
-**Document status:** DRAFT
-**Product Owner:** TBD
-**Version / canonical source:** TBD
-**Evidence / approval reference:** PENDING
+**Current state for you:** Still a draft. **Your decision:** Pending where noted.
+**Technical record:** DRAFT · **Product Owner:** TBD · **Evidence / approval:** PENDING
 
-## PRODUCT-FOUNDATION-01 — Problem Discovery
-- User segment, situation and current workaround: TBD
-- Outcome the user needs: TBD
-- Real observations and sources (not invented): TBD
-- Unverified assumptions and highest-risk hypothesis: TBD
-- Alternatives/competitor evidence and checked dates if relevant: TBD
-- Proposed interview/experiment and decision owner: PLANNED / TBD
-- Privacy, channel, language, budget and context constraints: TBD
+## Plain-language summary
+- **Who this helps and why:** TBD; describe a real person's problem, not an invented persona.
+- **What we have observed:** TBD; report actual interview/experiment evidence only.
+- **What we are still assuming:** TBD; say plainly what has not been checked.
+- **What we will try first:** TBD; the smallest useful, reversible test of the idea.
+- **What is included in the first version:** TBD.
+- **What we will leave for later:** TBD.
+- **What could go wrong:** TBD; explain privacy, cost or safety in everyday terms.
+- **What needs your decision:** TBD; propose one recommendation and its trade-off.
+- **What happens next:** TBD; an interview, walkthrough or authorized handoff, not an assumed deploy.
 
-## PRODUCT-FOUNDATION-02 — Product Requirements
+## Discovery and feedback
+- User situation, workaround and wanted outcome: TBD
+- Actual evidence versus assumptions, competitors/alternatives: TBD
+- Small interview, paper/mock prototype or experiment (planned until done): TBD
+- Success signal and approval owner: TBD
+
+## Features and how we will check them
+| User need | Priority | Expected observable behavior | Our confidence |
+|---|---|---|---|
+| TBD | TBD | TBD | Not checked yet |
+
+## First version and constraints
+- Included / deferred / excluded features: TBD
+- Privacy, accessibility, hosting/budget and reuse constraints: TBD
+- Test ideas and questions to investigate: TBD (planned, not run)
+
+## Technical appendix — traceability and audit only
+Internal IDs belong here rather than in headings for a beginner. Keep them stable for tools, reviewers and later phases.
+
+### Product discovery — PRODUCT-FOUNDATION-01
+Real sources, assumptions and proposed experiment references: TBD.
+
+### Product requirements — PRODUCT-FOUNDATION-02
 | ID | User need / actor | Priority | Acceptance ID | Evidence source | Status |
 |---|---|---|---|---|---|
 | REQUIREMENTS-001 | TBD | TBD | ACCEPTANCE-CRITERIA-001 | TBD | DRAFT |
+- ACCEPTANCE-CRITERIA-001 (REQUIREMENTS-001): expected behavior and negative case — TBD.
 
-### Acceptance criteria
-- ACCEPTANCE-CRITERIA-001 (REQUIREMENTS-001): observable expected behavior, including relevant failure cases — TBD.
+### Minimum viable product — PRODUCT-FOUNDATION-03
+Essential requirement IDs: TBD. Deferred and out of scope: TBD. Scope approval: PENDING.
 
-## PRODUCT-FOUNDATION-03 — Minimum Viable Product
-- Essential capability and requirement IDs: TBD
-- Deferred capability and revisit trigger: TBD
-- Out of scope: TBD
-- Hypothesis, proposed success signal and observation method: TBD (PLANNED)
-- Material scope approval: PENDING
-
-## PRODUCT-FOUNDATION-04 — Technical Requirements
-| ID | Product requirement | Observable constraint or TBD | Source | Planned verification | Owner | Status |
+### Technical constraints — PRODUCT-FOUNDATION-04
+| ID | Product requirement | Observable constraint | Evidence | Planned verification | Owner | Status |
 |---|---|---|---|---|---|---|
 | TECHNICAL-REQUIREMENTS-001 | REQUIREMENTS-001 | TBD | TBD | NOT EXECUTED | TBD | DRAFT |
+Final technology selection belongs to SOLUTION-06, not this Product artifact.
 
-- Data/privacy, accessibility, integrations and failure behavior: TBD
-- Reusable components, licensing, hosting and operating budget: TBD
-- Final technology selection: DEFER TO SOLUTION-06
-
-## Decisions, Risks and Changes
-| Reference | Decision / open question | Evidence / Owner | Status |
+### Decision and readiness register
+| Reference | Proposal / decision | Evidence / approver | Status |
 |---|---|---|---|
 | TBD | TBD | TBD | PENDING |
-
-## Product Baseline Readiness
-**Proposed verdict:** NOT_ASSESSED (never default PASS)
-**Approvals and critical blockers:** PENDING / TBD
-**Market/user validation:** PLANNED or UNVERIFIED until real evidence exists
-**Next phase:** Only approved unblocked scope can continue.
+G1: NOT_ASSESSED (not PASS by default). Tests: NOT EXECUTED. Market validation: UNVERIFIED until directly observed.

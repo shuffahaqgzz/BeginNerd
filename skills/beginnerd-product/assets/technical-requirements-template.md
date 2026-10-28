@@ -1,32 +1,29 @@
 # TECHNICAL-REQUIREMENTS-DOC — [Product Name]
 
-**Status:** DRAFT · **Version:** TBD · **Owner:** TBD · **Approval:** PENDING
+**Your current status:** Technical needs to verify before choosing a solution.
+**Technical record:** DRAFT · **Version:** TBD · **Owner:** TBD · **Approval:** PENDING
 
-## Requirement Sources
-Product requirements and minimum viable product scope: TBD.
+## Plain-language summary
+- **What must work and under which conditions:** TBD
+- **What needs protecting:** TBD; user data, permissions, backups or availability as relevant
+- **What we already know:** TBD; sourced evidence only
+- **What still needs checking:** TBD; unknown costs, performance or security claims are not promises
+- **Who decides the open trade-offs:** TBD
+- **What happens next:** review solution/technology choices, not automatic coding
 
-## Technical Requirements
+## Requirements we can explain to a beginner
+| Practical need | Observable result | How we plan to test it | Decision owner |
+|---|---|---|---|
+| TBD | TBD | TBD (planned) | TBD |
+
+## Technical appendix — stable IDs and statuses
 | ID | Product requirement | Observable property or constraint | Planned verification | Criticality | Status |
 |---|---|---|---|---|---|
 | TECHNICAL-REQUIREMENTS-001 | REQUIREMENTS-001 | TBD | NOT EXECUTED | TBD | DRAFT |
-
-## Evidence and Deferred Decisions
-| Technical ID | Observable condition or TBD | Evidence source and approval | Planned test | Decision Owner | Status |
+| Technical ID | Observable condition or TBD | Evidence/approval | Planned test | Decision owner | Status |
 |---|---|---|---|---|---|
 | TECHNICAL-REQUIREMENTS-001 | TBD | UNVERIFIED/PENDING | NOT EXECUTED | TBD | DRAFT |
 
-## Proportional Risk Domains
-- Data classification, privacy, retention and access: TBD
-- Availability, consistency, performance, recovery and accessibility: TBD
-- Integrations, platform constraints and provider outage fallback: TBD
-- Security behavior, negative/unauthorized requests and data integrity: TBD
-- Existing software, license, operations cost and maintenance: TBD
-
-## Open Technical Decisions
-| Need | Context / assumptions | Owner | Status |
-|---|---|---|---|
-| Final technology selection | TBD | SOLUTION-06 | DEFERRED |
-
-## Product Versus Solution Versus Release Evidence
-Product-level acceptance: PENDING. Technical design verification: NOT EXECUTED. Actual runtime/deployment evidence: NOT EXECUTED.
-No absolute security/cost guarantees or fabricated numeric targets.
+Privacy, roles, retention, accessibility, integrations, security failures, relevant reusable solutions and cost: TBD.
+Final technology selection: SOLUTION-06 / DEFERRED.
+Product approval: PENDING. G2 verification: NOT EXECUTED. Real deployment verification: NOT EXECUTED.
