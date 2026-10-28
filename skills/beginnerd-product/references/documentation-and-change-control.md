@@ -17,6 +17,8 @@ Inspect current docs/approved names and reuse valid sources. If a stable require
 4. Record real Owner evidence, decisions, open assumptions, hypotheses and next verification; do not invent participants, interview findings, approval or experiment success.
 5. For authorized file writes, read back the actual saved content, validate traceability, status, and pending decision references. File-write permission does not imply product-scope approval.
 
+## One-time grant and document readback
+For a novice starting a project, check the existing Scoped Workspace Grant before prompting for file-write permission. An approved grant for in-scope Product documentation covers multiple draft updates and readback across sessions while valid; do not ask "may I save PRODUCT.md?" after every revision. If missing, propose once with the project root, allowed new/edited documents and excluded unrelated/hidden/destructive files. A clear answer to the specific proposal is effective permission, not an unrelated product decision. Preserve actual before/after evidence and do not infer access beyond the named root.
 ## Workspace integrity
 - Before writing, inspect target files and in-scope preexisting edits, including untracked/ignored files when permission permits.
 - After writing, record path, content hash, timestamp and a scoped **before-and-after** inventory of relevant paths. An unchanged Git status for untracked directories does **not** prove their contents are unchanged.
