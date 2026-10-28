@@ -16,6 +16,8 @@
 7. Record actual evidence and its limitations in PRODUCT.md (Lean) or PRODUCT-BRIEF.md (Structured). Use references/documentation-and-change-control.md for authorized file writes.
 8. Revisit validated/invalidated assumptions after real feedback from the released product. Route accepted scope refinements to PRODUCT-FOUNDATION-02/03; implementation tasks still belong to Planning.
 
+## Prototypes are experiments, not automatic coding authority
+Explain a simple validation tool in plain language: paper sketch, walk-through, manually managed service, clickable mock or limited prototype. Define what to observe from genuine participants and obtain appropriate data consent. Product owns the hypothesis and experiment plan, not app scaffolding, coding or provider deployment. Route an approved implementation need to Planning and authorized Implementation; do not invent formal tasks or mark a planned experiment as completed.
 ## Outcome
 A human-readable problem statement, known target audience, evidence/assumption separation, next highest-value hypothesis, proposed validation method and product outcome. Label interviews and experiments **PLANNED** until they actually occur. Do not claim product-market fit or customer validation from a drafted brief.
 

@@ -16,7 +16,11 @@ This register captures decisions supported by the supplied BeginNerd source disc
 | BN-DEC-009.6A–F | Release & Operations; Scoped Authorization, Adaptive Risk-Based Deployment, Operational Readiness, Incident Response, Lifecycle Governance | CLOSED — DESIGN |
 | BN-DEC-009 cross-phase addendum | Research-First & Reuse-First, without new workflow | APPROVED — DESIGN |
 | Companion skills | beginnerd-ask, beginnerd-setup across all phases | APPROVED — DESIGN |
-| Knowledge & Memory | Graphify required Knowledge Provider; Hindsight required Memory Provider; consent-based activation and project scope | APPROVED — DESIGN |
+| Knowledge & Memory (historical) | Graphify and Hindsight originally selected as required setup providers | SUPERSEDED FOR DEFAULT ONBOARDING by Owner T7, 27 October 2026 |
+| Knowledge & Memory (current) | Graphify and Hindsight separately optional, opt-in through beginnerd-setup; enabled providers retain scoped recall/retain/isolation verification | APPROVED — CURRENT |
+
+## Reviewer evaluation adaptation — 28 October 2026
+Owner approved one scoped source-hardening batch in response to the beginner usability review of commit `78dd897`. Adopt bounded action lights without automatic local-write authorization, preserve phase ownership and separately approved two-attempt remediation, simplify artifacts, promote authorized task continuity and inactive deployment preparation, and add source regression cases. This is source change authorization via one PR, **not** runtime/provider/deployment/release approval or evidence that the review was independently reproduced. See [adaptation record](REVIEW-EVAL-2026-10-28-ADAPTATION.md).
 
 ## Public repository license decision
 Owner choice **D2 — MIT License** on 27 October 2026. The license notice and public contribution guideline are included for source publication in PR #8; the selected license is MIT, without automatically implying runtime acceptance. This is a distribution/license decision; it does not amend BN-DEC-009 SDLC/skill ownership or validate third-party licenses. Confirm copyright holder and dependency-license obligations before an actual v1.0 release.

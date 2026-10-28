@@ -1,25 +1,26 @@
 # MINIMUM-VIABLE-PRODUCT-SCOPE — [Product Name]
 
-**Status:** DRAFT · **Version:** TBD · **Owner:** TBD · **Approval:** PENDING
+**Your current status:** First-version proposal; not yet approved.
+**Technical record:** DRAFT · **Version:** TBD · **Owner:** TBD · **Approval:** PENDING
 
-## Value to Test
-Core user outcome and highest-risk hypothesis: TBD.
+## Plain-language summary
+- **The one useful job this first version should solve:** TBD
+- **What it includes:** TBD
+- **What it deliberately does not include:** TBD
+- **What we will test with users:** TBD (not yet tested)
+- **What needs your decision:** TBD; include best-fit recommendation
 
-## Essential Capabilities
-| Requirement ID | Capability | Acceptance ID | Why essential for user/learning |
-|---|---|---|---|
-| REQUIREMENTS-001 | TBD | ACCEPTANCE-CRITERIA-001 | TBD |
-
-## Deferred and Out of Scope
-| Requirement ID | Capability | Reason / evidence needed to revisit |
+## First-version features
+| Feature in everyday language | Why it matters now | How to check it |
 |---|---|---|
 | TBD | TBD | TBD |
 
-## Validation Plan
-Smallest useful experiment/walkthrough, proposed metric or qualitative signal, evidence collection consent and Owner decision threshold: PLANNED / TBD.
+## Validation plan
+Smallest interview, example walkthrough or authorized prototype, privacy consent and proposed observation signal: PLANNED / TBD. A prepared test does not mean users validated it.
 
-## Assumptions and Risks
-TBD.
-
-## Approval
-Scope, exclusions and risk acceptance: PENDING. Do not claim the market or customers have validated this scope.
+## Technical appendix — traceable scope
+| Requirement ID | Capability | Acceptance ID | Evidence |
+|---|---|---|---|
+| REQUIREMENTS-001 | TBD | ACCEPTANCE-CRITERIA-001 | TBD |
+Deferred/out-of-scope requirement references: TBD.
+Approved scope, exclusions and risk reference: PENDING. Do not invent customer feedback.

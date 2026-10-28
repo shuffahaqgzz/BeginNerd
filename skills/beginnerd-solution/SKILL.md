@@ -26,6 +26,8 @@ One modular skill covers SOLUTION-01–08 and Solution Design Readiness (interna
 6. Cross-check flows, data, API, user interface, technology, threat controls and planned tests against actual requirements. Explain missing evidence plainly.
 7. Handoff only the approved unblocked scope to Planning. A design document does not prove code, security certification or deployment readiness.
 
+## Useful design progress with bounded decisions
+For low-risk, reversible design choices, recommend one justified default plus a concise alternative and deliver the applicable blueprint without repeated questions. If the user confirms an already described material recommendation, record the bounded decision once; an unspecified "continue" does not approve unknown technology, security, hosting, costs or architecture changes. Research host compatibility when it influences solution design, while keeping final external activation in Release.
 ## Boundaries
 No formal task decomposition (PLANNING-02 owns it), provider installation, code execution or deployment. Source instructions are native English, but user-facing terms must be easy to understand and internal codes hidden unless requested. Optional Graphify/Hindsight integrations are configured only by beginnerd-setup and are never prerequisites for design.
 

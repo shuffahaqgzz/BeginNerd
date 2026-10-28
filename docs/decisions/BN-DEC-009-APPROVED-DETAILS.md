@@ -66,7 +66,10 @@ Inventory actual dependencies and services → detect advisory/EOL/API/license/d
 ## Companion skills adopted later
 - beginnerd-ask: cross-phase explanation, recovery of verified context, routing and project position; not lifecycle owner.
 - beginnerd-setup: first-use preference/interview, existing config discovery, consented project setup and functional Graphify/Hindsight verification; not application foundation owner.
-- Session continuity design: recall at start, verify against canonical sources, retain meaningful state, retain before handoff; MEMORY_SYNC_PENDING when acknowledgement fails.
+- Session continuity design: when Hindsight is explicitly enabled and verified, recall at start, verify against canonical sources, retain permitted meaningful state before handoff; MEMORY_SYNC_PENDING only when an approved required retain lacks acknowledgement. Without opt-in, use canonical project records with no provider error.
+
+## Reviewer usability adaptation — 28 October 2026
+Scoped source hardening clarifies existing batch approval and progressive execution without changing six phases, eight skills or 32 workflows. Safe work inside an authorized scope should continue without re-approval, material decisions require bounded confirmation, and external/high-impact actions retain separate consent. See [review evaluation record](REVIEW-EVAL-2026-10-28-ADAPTATION.md). Runtime effectiveness is not yet verified.
 
 ## Provenance and remaining reconciliation
 This consolidation reflects specific approved outcomes in the available source discussions. Full original phase-specific reference contracts and all early BN-DEC-001–008 approval evidence are not wholly available as machine-readable canonical artifacts in this repository. Do **not** claim this document is a complete provenance archive or silently fill those gaps.

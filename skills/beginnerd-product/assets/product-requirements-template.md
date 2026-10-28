@@ -1,23 +1,24 @@
 # PRODUCT-REQUIREMENTS-DOC — [Product Name]
 
-**Status:** DRAFT · **Version:** TBD · **Owner:** TBD · **Approval:** PENDING
+**Your current status:** Proposed feature needs; not yet approved.
+**Technical record:** DRAFT · **Version:** TBD · **Owner:** TBD · **Approval:** PENDING
 
-## Product Goal and Evidence
-Product Brief source and customer evidence versus untested assumptions: TBD.
+## Plain-language summary
+- **Why this matters for the user:** TBD; link to actual problem/evidence.
+- **What the first version should do:** TBD; explain useful outcomes rather than layers.
+- **How we will know each feature works:** TBD; include failures and unauthorized access where relevant.
+- **What is outside this decision:** TBD; no automatic code/deploy authorization.
+- **What you need to confirm:** TBD with a recommended choice.
 
-## Requirements
-| ID | User / actor | Product need and value | Priority | Source / evidence | Acceptance ID | Status |
+## Features to review
+| User / role | What they need | Priority | Simple way to check |
+|---|---|---|---|
+| TBD | TBD | TBD | TBD |
+
+## Technical appendix — stable requirement references
+| ID | User / actor | Product need and value | Priority | Source/evidence | Acceptance ID | Status |
 |---|---|---|---|---|---|---|
 | REQUIREMENTS-001 | TBD | TBD | TBD | TBD | ACCEPTANCE-CRITERIA-001 | DRAFT |
-
-## Acceptance Criteria
-- ACCEPTANCE-CRITERIA-001 (REQUIREMENTS-001): observable behavior in Given/When/Then or another suitable form, including negative paths when relevant — TBD.
-
-## Data, Access and Constraints
-Privacy, roles, retention, budget/hosting and existing components: TBD; detailed security design belongs to Solution.
-
-## Hypotheses, Exclusions and Dependencies
-TBD. Separate assumed value from observed user behavior.
-
-## Owner Decision and Change Record
-Approval reference: PENDING. Product requirements do not authorize implementation or deployment.
+- ACCEPTANCE-CRITERIA-001 (REQUIREMENTS-001): observable expectation and relevant negative path — TBD.
+Risk, privacy, roles, dependencies, assumptions and exclusions: TBD.
+Owner decision reference: PENDING. Requirements do not authorize local code changes, new formal tasks or deployment.

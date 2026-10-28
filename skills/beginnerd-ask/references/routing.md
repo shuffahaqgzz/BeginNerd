@@ -17,6 +17,8 @@ Choose a workflow by the **user's actual goal**, not a rigid phase lock. Consult
 | Execute an **approved** task, quality checks or safe integration | beginnerd-implement | IMPLEMENTATION-01–05 |
 | Release, monitor, handle incidents and maintain services | beginnerd-release | RELEASE-01–03 and OPERATIONS-01–03 |
 
+## Approved scope can continue across skill routing
+If a named batch has already been approved and the required local-write/environment authorization is verified, hand it to the actual skill owner without asking the user another ceremonial "go". A plan-only approval is not a code-edit approval; Ask cannot execute Implementation. Unspecified "do everything" does not permit new material scope, external actions or provider calls.
 ## Broad requests and missing owners
 "Build my app", "do whatever is necessary" and "deploy this privately" are not universal approval. First explain the smallest safe next step and the difference between local code, provider setup, external creation and deployment.
 

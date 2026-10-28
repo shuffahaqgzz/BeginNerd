@@ -12,3 +12,6 @@
 **Canonical output:** SECURITY-ARCHITECTURE.md or Lean section. Lean/Structured is adaptive; do not require every design document.
 **Acceptance for this design workflow:** Critical threats mitigated by proposed controls, test plans and approval; no G2 PASS with critical gap.
 **Governance:** Explain → Interview → Approve → Record; write only within an authorized path. A planned verification is NOT EXECUTED. No formal task decomposition and no change of application runtime.
+
+## Authentication and credential boundary
+For a login system, do not recommend storing reusable admin passwords as plaintext in a .env file or comparing plaintext secrets as an authentication design. Specify suitable, maintained password hashing for stored credentials, protected environment secrets/tokens, sessions, authorization and relevant negative tests according to risk. Live credential rotation or secrets administration needs separate authorization; a documented control is not security assurance until actual verification. Keep critical security gaps open in G2.

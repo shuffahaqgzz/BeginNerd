@@ -10,6 +10,8 @@
 6. Obtain Work Structure Agreement and material approval before locking formal task registry. Executor cannot re-decompose, even via agent delegation.
 7. During execution, internal technical steps or additional debugging within an approved task are allowed without creating formal subtasks. A material change to product scope, acceptance, architecture or the formal dependency graph requires a scoped HOLD → impact analysis → PLANNING-02 controlled replanning and Owner approval. Preserve task identity and allow unrelated authorized work to continue.
 
+## Ready-first-task handoff
+For the earliest approved and unblocked task, provide a readable "ready to start" summary of goal, acceptance, dependencies, executor, scoped project/path/action authorization and necessary foundation checks. An approved plan alone does **not** grant local-write rights. If a separate valid execution batch exists, route directly to Implementation without another permission question; otherwise request one precise execution authorization while continuing unblocked read-only work. Preserve formal task ownership under PLANNING-02.
 **Canonical output:** IMPLEMENTATION-PLAN.md or Lean DEVELOPMENT-PLAN.md section plus approved task registry.
 **Completion criteria:** Each approved task has Ready definition, explicit dependencies and measurable Done criteria; no authorization to execute implied.
 **Boundaries:** Do not claim task accepted or tests executed from drafting. Files/issues publishing require target-specific authorization and readback. If prerequisites fail, report PARTIAL/BLOCKED and restrict affected work.

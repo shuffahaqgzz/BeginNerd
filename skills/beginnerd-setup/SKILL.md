@@ -8,6 +8,8 @@ description: Use this skill when beginning a BeginNerd project, choosing how muc
 ## Purpose
 Make BeginNerd usable in the current agent and project without reinstalling tools or imposing memory providers. Graphify and Hindsight are **optional, opt-in choices**. The six development phases work without either provider.
 
+## Quick first result
+Begin with a useful read-only observation or in-chat sample aligned with the user's immediate goal. Ask the first-use guidance preference once during onboarding, ideally after that short result when feasible, and always before changing personal settings. Never configure Graphify/Hindsight or persist data without explicit opt-in. Do not ask again if the preference is already verified.
 ## First-use flow
 1. Explain what setup can and cannot change. Confirm project identity, intended harness, and whether the user wants to review existing configuration.
 2. Inspect installed skills, namespaces, provider registrations, paths and user settings before proposing modifications. Default to read-only discovery.

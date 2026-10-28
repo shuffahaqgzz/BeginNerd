@@ -17,6 +17,8 @@ Help a beginner find the right next step. This companion explains, restores veri
 6. Recommend one practical next action, state any material decision or permission needed, and make clear which work is still unverified.
 7. Record a handoff only when an actual handoff occurs. Do not claim provider configuration, tests, code or deployment was executed unless directly verified.
 
+## First useful result before setup friction
+Offer a concise project orientation or safe in-chat example before a long setup interview. On first use, beginnerd-setup must still ask the guidance preference once, but the user need not answer it before receiving useful read-only help. Route consented work to the actual lifecycle owner, preserving approval from a precisely scoped previous proposal; Ask never gains coding or external-deployment authority.
 ## Fast route for broad requests
 A request such as "build my app" calls for concise orientation and an appropriately scoped next action, not silent external creation. An idea outline or read-only proposal can be made without installing tools. A code edit requires local write scope; provider installation and hosted deployment require distinct permissions. Do not substitute an unrelated Sites, shell or cloud tool for a missing lifecycle owner.
 

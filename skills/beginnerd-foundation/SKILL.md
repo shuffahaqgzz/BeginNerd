@@ -24,3 +24,6 @@ description: Use this skill to inspect and prepare an approved project's reposit
 
 ## Boundaries
 Formal task creation belongs to PLANNING-02; changes to architecture belong to Solution. Never overwrite global harness settings or providers without separate consent. Never claim a shell sandbox protects an external plugin without verification. Explain internal codes as plain-language decisions for beginners. See references/agent-governance.md for action scopes.
+
+## Authorized foundation progress and credential hygiene
+Within an existing approved project/path/action batch, complete safe, reversible scaffolding and local checks without requesting approval for each internal step. Do not assume local writes, package installs, global harness changes, migrations or tests with external effects are automatically authorized. Inspect ignored/untracked files and existing tools. If a fixture contains a live token, reusable plaintext admin credential or genuine customer data, avoid copying/logging the value, stop risky exposure and recommend a separately approved rotation or secure-storage remediation. Never claim the provider credential was rotated until verified.

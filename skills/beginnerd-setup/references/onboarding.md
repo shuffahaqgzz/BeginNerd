@@ -8,6 +8,8 @@
 5. Recommend minimal Lean or Structured documentation depth when relevant, but leave feature priorities, architecture and formal tasks to the appropriate lifecycle owner.
 6. Group related material configuration requests. Obtain explicit provider/path/secret permissions for actual changes. No consent means NOT_ENABLED—not a setup failure.
 
+## First useful result, then one-time preference
+Give a short safe read-only orientation or in-chat illustration before a lengthy first-use interview when feasible. Still ask the required one-time guidance preference and honor its answer before changing configured preferences. If the user already chose a style, reuse the verified setting. Graphify/Hindsight and persistent memory remain separately opt-in before any configuration or retain.
 ## Rerun
 Preserve valid existing preferences and scoped installation. If the user has chosen neither provider, skip Graphify/Hindsight checks and keep setup usable. For a selected provider, verify native read/write/isolation after separately authorized configuration, report direct evidence and failures. Never claim a provider works merely because it has a config entry.
 

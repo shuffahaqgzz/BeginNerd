@@ -8,6 +8,8 @@
 4. Perform smallest authorized technical steps; monitor scope and keep reproducible commit/diff/test evidence.
 5. After changes, validate actual behavior against acceptance and error paths; do not declare DONE from successful code generation alone.
 
+## Internal steps do not consume new approval
+Inside an already authorized task, perform safe helper edits, tests and debugging until accepted or genuinely blocked. Do not generate formal tasks or add new feature scope. An explicit declared verification failure activates the separate approved-remediation budget (maximum two) and cannot be reframed as a routine retry. For login-related work verify stored-password hashing, auth/session/access boundaries and negative security tests. Avoid exposing customer data or credentials in fixtures or logs.
 **Output:** Implementation/diff and test evidence attached to existing approved task, not a newly created formal task.
 **Completion:** only direct verifiable acceptance for authorized scope counts; documentation or scripts without execution do not prove runtime PASS.
 **Guardrails:** no formal task decomposition outside PLANNING-02, no unapproved remediation after declared failure, no external deployment without Phase 6 approval.
