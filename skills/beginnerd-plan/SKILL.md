@@ -25,6 +25,8 @@ PLANNING-01–04 and Planning Readiness. **PLANNING-02 exclusively owns formal t
 7. If such a change arises, hold only the affected scope, review its impact and obtain the necessary material approval. Other authorized work can proceed.
 8. Assess Planning Readiness based on actual plan consistency, approval and dependencies; hand the valid scope to Development Foundation.
 
+## Plan persistence and first-task progress under one grant
+Use an already approved Scoped Workspace Grant for in-scope DEVELOPMENT-PLAN or task/roadmap document writes without another "may I save?" prompt. Preserve Planning's exclusive formal task ownership and distinguish task approval from executable authorization. When the user explicitly accepted an enumerated first-version task/batch **and** a valid grant covers its project root, non-destructive local actions and task outcome, pass those existing permissions to the executor and start unblocked approved work without a new ceremonial "gas T0". If task or grant scope is missing, propose the *missing pieces together once* while keeping unaffected read-only planning useful.
 ## First-task handoff, not an extra go ritual
 When the approved plan identifies the first unblocked slice, produce its outcome, acceptance, dependencies, allowed paths/actions and target executor. **Check separately** whether scoped execution authorization and foundation prerequisites already exist. If yes, hand off promptly to the authorized beginnerd-implement/executor without asking for another "gas T0". If not, request one precise local-write batch permission. Planning does not code, and approved planning is never implicit execution authorization.
 ## Boundaries
