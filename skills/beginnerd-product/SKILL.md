@@ -21,6 +21,8 @@ Only run the workflow relevant to the user's request. The four responsibilities 
 8. **Review readiness only when requested.** Read references/g1-readiness.md. A document being filled out does not mean the product is validated or ready. Mark only the scope supported by evidence as ready and explain unresolved decisions.
 9. **Observe the write boundary.** Draft in conversation freely; edit project files only with scoped local-write permission and actual read-back of the saved content. Do not infer that untracked/ignored files stayed unchanged from Git status alone.
 
+## Demonstrable validation without premature application code
+When a user needs evidence for an idea, propose the smallest validation aid: paper/mock screen, sample order flow, manual concierge test or disposable prototype. Product may produce an in-chat walkthrough or interview script; actual application code, files and deployment remain owned by Planning/Foundation/Implementation/Release and require the corresponding scoped permission. A proposed prototype is not an observed customer test; never invent validation results. Deliver a meaningful Product outcome even when coding is not yet authorized.
 ## Approval and learning
 Routine analysis and authorized edits do not need approval for every sentence. Informed approval is needed for material product scope, data access, risk/cost changes, or changes to an approved baseline. An approved product draft is **not** authorization to code, deploy, install providers or create formal development tasks.
 

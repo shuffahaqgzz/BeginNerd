@@ -25,5 +25,7 @@ PLANNING-01–04 and Planning Readiness. **PLANNING-02 exclusively owns formal t
 7. If such a change arises, hold only the affected scope, review its impact and obtain the necessary material approval. Other authorized work can proceed.
 8. Assess Planning Readiness based on actual plan consistency, approval and dependencies; hand the valid scope to Development Foundation.
 
+## First-task handoff, not an extra go ritual
+When the approved plan identifies the first unblocked slice, produce its outcome, acceptance, dependencies, allowed paths/actions and target executor. **Check separately** whether scoped execution authorization and foundation prerequisites already exist. If yes, hand off promptly to the authorized beginnerd-implement/executor without asking for another "gas T0". If not, request one precise local-write batch permission. Planning does not code, and approved planning is never implicit execution authorization.
 ## Boundaries
 Do not select new software without Solution ownership, execute code, reconfigure providers or deploy. Avoid internal IDs and jargon in beginner-facing conversation unless requested. File/provider mutations require their own scoped authorization. Optional Graphify/Hindsight do not block planning. See references/agent-governance.md and references/work-structure-policy.md when needed.

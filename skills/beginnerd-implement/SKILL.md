@@ -20,6 +20,8 @@ Read references/completion-check.md for actual completion assessment.
 3. Use a **risk-based approved batch** for routine internal technical steps and tests. **Do not ask permission for every new coding step** within that scope.
 4. Do not create a new formal task/subtask/feature. If a discovery changes scope, approval, dependency graph, security design or acceptance, return only the affected work to PLANNING-02 or the design owner; unaffected authorized work may continue.
 
+## Continue approved work, not an invented feature
+Within an already approved task and valid local-write batch, a clear "continue" means complete safe internal edits, debugging and tests through the original acceptance—no repeated prompt for every helper or test. New formal tasks, product capabilities, material architecture/acceptance changes and **each corrective remediation after declared failure** still require their established owner and consent. An urgent security concern justifies alerting the user and safe work within current scope, not unapproved production/provider mutation. For login changes, check stored password hashing (not reusable plaintext password comparison), least-privilege access, sessions, secrets and relevant unauthorized-access tests. Never commit real credentials or customer data.
 ## During and after execution
 5. Apply the smallest approved change; capture actual edits, tests and negative behavior. Delegate only within inherited permissions. Never use a different available tool to bypass an authorization boundary.
 6. Distinguish planned, implemented, executed, passed and failed tests. A denied but **attempted** unauthorized provider action is a behavioral failure, not a successful refusal.
