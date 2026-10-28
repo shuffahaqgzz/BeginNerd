@@ -70,6 +70,53 @@ class ReviewerEvaluationAdaptationTests(unittest.TestCase):
         self.assertIn("optional, opt-in", decisions)
         self.assertIn("not", read("docs/implementation/STATUS.md").lower())
 
+    def test_scoped_workspace_grant_reuse_and_separate_owners(self):
+        policy = read("docs/governance/AGENT-GOVERNANCE.md").lower()
+        for phrase in ("one-time scoped workspace grant", "project-root",
+                       "existing project state", "reused across product",
+                       "never permits destructive", "approved task"):
+            self.assertIn(phrase, policy)
+        setup = read("skills/beginnerd-setup/SKILL.md").lower()
+        product = read("skills/beginnerd-product/SKILL.md").lower()
+        plan = read("skills/beginnerd-plan/SKILL.md").lower()
+        implement = read("skills/beginnerd-implement/SKILL.md").lower()
+        self.assertIn("one bounded workspace grant", setup)
+        self.assertIn("document grant", product)
+        self.assertIn("planning does not code", plan)
+        self.assertIn("both permit", implement)
+        for name in ("beginnerd-ask", "beginnerd-setup", "beginnerd-product",
+                     "beginnerd-solution", "beginnerd-plan", "beginnerd-foundation",
+                     "beginnerd-implement", "beginnerd-release"):
+            ref = read(f"skills/{name}/references/agent-governance.md").lower()
+            self.assertIn("one-time scoped workspace grant", ref)
+
+    def test_merged_source_status_and_public_docs_are_reconciled(self):
+        status = read("docs/implementation/STATUS.md")
+        self.assertIn("PR #12 MERGED", status)
+        self.assertIn("PR #13 MERGED", status)
+        self.assertIn("8e9272d", status)
+        self.assertNotIn("proposed PR branch", status.lower())
+        validation = read("docs/implementation/VALIDATION-PLAN.md")
+        self.assertNotIn("/home/infra/beginnerd-review", validation)
+        e2e = read("docs/implementation/REAL-WORLD-E2E-VALIDATION.md")
+        self.assertIn("opt-in only", e2e.lower())
+        checklist = read("docs/implementation/FRAMEWORK-RELEASE-CHECKLIST.md")
+        self.assertIn("otherwise N/A", checklist)
+        self.assertIn("NOT EXECUTED", status)
+
+    def test_novice_grant_transition_cases_require_real_execution(self):
+        cases = json.loads(read("tests/behavioral/scenarios.json"))
+        selected = [x for x in cases if x["id"].startswith("REVAL-") and
+                    int(x["id"].split("-")[1]) >= 14]
+        self.assertEqual(len(selected), 7)
+        self.assertTrue(all(x["execution_status"] == "NOT_EXECUTED" for x in selected))
+        for name in ("REVAL-14-NO-GRANT-ONE-QUESTION",
+                     "REVAL-15-GRANT-ACCEPTED-THEN-PRODUCT-WRITE",
+                     "REVAL-16-PRODUCT-PLAN-IMPLEMENT-GRANT-CONTINUITY"):
+            case = next(x for x in selected if x["id"] == name)
+            self.assertGreaterEqual(len(case["turns"]), 2)
+            self.assertTrue(case["must_not"] and case["expected_behaviors"])
+
     def test_review_scenarios_are_new_definitions_not_executed(self):
         cases = json.loads(read("tests/behavioral/scenarios.json"))
         review = [x for x in cases if x["id"].startswith("REVAL-")]
