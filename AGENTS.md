@@ -37,6 +37,13 @@ Preserve current status, source refs, authorization, requirement/task/test IDs, 
 ## Git contribution
 Use focused branches and PRs. Do not push directly to main after bootstrap, merge PRs, change repository settings, publish releases, or alter CI permissions without appropriate authorization. Never commit credentials or private knowledge/memory.
 
+## Reviewer evaluation adaptation — 28 October 2026
+- GREEN/YELLOW/RED depend on actual risk, scope and permission. A local write or destructive action is not automatically GREEN.
+- Clear delegation confirms only previously described scoped decisions and already authorized technical steps; avoid duplicate approvals.
+- Planning hands off approved work. Only Implementation may code after verifying task, dependencies, environment and separate local-write authorization.
+- Recommend and prepare deployment plans without activating external providers; remote push, hosted release, real API calls and credential administration need separate permission.
+- Present user-facing status in plain language, reserving stable IDs and machine verdict codes for technical traceability.
+
 ## Current reviewer-approved guidance
 - All runtime instructions and canonical source documents use native English, while user-facing explanations follow the user's chosen language and avoid internal identifiers unless requested.
 - Formal workflow IDs use full words; see docs/workflows/WORKFLOW-ID-MIGRATION.md for compatibility with previous IDs.
