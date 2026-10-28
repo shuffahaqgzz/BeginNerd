@@ -71,7 +71,7 @@ class ReviewerEvaluationAdaptationTests(unittest.TestCase):
         self.assertIn("not", read("docs/implementation/STATUS.md").lower())
 
     def test_scoped_workspace_grant_reuse_and_separate_owners(self):
-        policy = read("docs/governance/AGENT-GOVERNANCE.md").lower()
+        policy = read("docs/governance/AGENT-GOVERNANCE.md").lower().replace("**", "")
         for phrase in ("one-time scoped workspace grant", "project-root",
                        "existing project state", "reused across product",
                        "never permits destructive", "approved task"):
