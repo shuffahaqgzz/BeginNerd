@@ -2,6 +2,12 @@
 
 All notable source changes are recorded with Git history and Pull Requests. This file avoids suggesting an unshipped runtime release.
 
+## Unreleased — post-merge security and workspace grant hardening (28 October 2026)
+- Narrow optional read-only hook to explicit project-root regular-file Read and direct-file Grep; reject recursive searches, glob bypass, symlinks, sensitive paths and unsupported tools by default.
+- Introduce one-time Scoped Workspace Grant to reuse approved safe local actions across lifecycle skills without repeated file prompts or new privileges.
+- Add negative and multi-turn novice acceptance fixtures, clarify conditional provider tests, correct status history and remove machine-specific absolute reviewer evidence paths.
+- This is source and offline contract hardening only; new behavioral cases, live harness enforcement and full framework E2E remain NOT EXECUTED.
+
 ## Unreleased — beginner evaluation adaptation (28 October 2026)
 - Owner-authorized one-PR source hardening after the 27 October blinded beginner review: scoped GREEN/YELLOW/RED permissions, named batch delegation, first useful result and authorized task continuity.
 - Updated eight skill entry points, relevant workflow references, plain-language templates and historical Graphify/Hindsight decision provenance without adding workflows.

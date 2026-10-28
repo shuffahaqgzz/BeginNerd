@@ -10,6 +10,8 @@ Make BeginNerd usable in the current agent and project without reinstalling tool
 
 ## Quick first result
 Begin with a useful read-only observation or in-chat sample aligned with the user's immediate goal. Ask the first-use guidance preference once during onboarding, ideally after that short result when feasible, and always before changing personal settings. Never configure Graphify/Hindsight or persist data without explicit opt-in. Do not ask again if the preference is already verified.
+## Offer one bounded workspace grant when useful
+If the user wants actual project files rather than only conversation guidance, propose a simple project-root Scoped Workspace Grant (non-destructive creates/edits, safe local tests, optionally local commits) as **one consent request** tied to an explicit outcome. Include excluded external calls, deletion, credentials and global configuration changes. Keep guidance preference and optional providers separate; do not require a file grant for read-only exploration. Record consent in existing project state/approval evidence, not a new required document; never silently assume it.
 ## First-use flow
 1. Explain what setup can and cannot change. Confirm project identity, intended harness, and whether the user wants to review existing configuration.
 2. Inspect installed skills, namespaces, provider registrations, paths and user settings before proposing modifications. Default to read-only discovery.

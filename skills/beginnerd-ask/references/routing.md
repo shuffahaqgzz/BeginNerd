@@ -19,6 +19,8 @@ Choose a workflow by the **user's actual goal**, not a rigid phase lock. Consult
 
 ## Approved scope can continue across skill routing
 If a named batch has already been approved and the required local-write/environment authorization is verified, hand it to the actual skill owner without asking the user another ceremonial "go". A plan-only approval is not a code-edit approval; Ask cannot execute Implementation. Unspecified "do everything" does not permit new material scope, external actions or provider calls.
+## Reuse a confirmed project grant across phase routing
+The optional Scoped Workspace Grant is part of existing project authorization evidence, not a new skill/workflow. Read its project root, allowed local actions, MVP/task boundary and exclusions. Route permitted document creation to Product, plan persistence to Planning, and approved tasks to Implementation without re-confirming a valid grant. If no grant exists, propose one clear project-root/local-action scope before file writes; do not interpret generic "continue" as an unnamed write grant. Formal tasks and deployments still require their own appropriate authority.
 ## Broad requests and missing owners
 "Build my app", "do whatever is necessary" and "deploy this privately" are not universal approval. First explain the smallest safe next step and the difference between local code, provider setup, external creation and deployment.
 

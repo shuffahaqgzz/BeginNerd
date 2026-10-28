@@ -44,6 +44,11 @@ Use focused branches and PRs. Do not push directly to main after bootstrap, merg
 - Recommend and prepare deployment plans without activating external providers; remote push, hosted release, real API calls and credential administration need separate permission.
 - Present user-facing status in plain language, reserving stable IDs and machine verdict codes for technical traceability.
 
+## Scoped Workspace Grant, optional source hook and current safety boundaries
+- A single named project-root local-write grant can cover in-scope non-destructive documentation, approved task edits and offline tests. Verify project, paths, approved work, allowed action classes, exclusions, user consent and revocation before reuse. No per-file approval after the valid grant, and no new formal task from permission alone.
+- Local destruction, provider/network calls, remote push, deployment, credential changes and global configuration remain outside the grant. Each requires the applicable separate scoped authorization.
+- The strict-read hook example now requires an absolute `--root` and rejects recursive/directory Grep, unknown glob selectors, symlinks and unsupported tools. It is not installed enforcement; keep secrets outside accessible workspace and test real harness routes before reliance.
+
 ## Current reviewer-approved guidance
 - All runtime instructions and canonical source documents use native English, while user-facing explanations follow the user's chosen language and avoid internal identifiers unless requested.
 - Formal workflow IDs use full words; see docs/workflows/WORKFLOW-ID-MIGRATION.md for compatibility with previous IDs.

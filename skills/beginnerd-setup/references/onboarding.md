@@ -10,6 +10,8 @@
 
 ## First useful result, then one-time preference
 Give a short safe read-only orientation or in-chat illustration before a lengthy first-use interview when feasible. Still ask the required one-time guidance preference and honor its answer before changing configured preferences. If the user already chose a style, reuse the verified setting. Graphify/Hindsight and persistent memory remain separately opt-in before any configuration or retain.
+## Optional one-time project-folder consent
+After providing an immediate helpful result, if writing agreed drafts or code would materially improve progress, show one short proposal with project-root path, version-one outcome, allowed offline actions, exclusions and how to revoke. The user may accept this specific proposal with "oke/lanjutin aja" without answering several prompts. Store the consent in existing project state and reuse it only for covered tasks; do not auto-enable memory/providers or assume global write access. If not approved, proceed with in-chat help.
 ## Rerun
 Preserve valid existing preferences and scoped installation. If the user has chosen neither provider, skip Graphify/Hindsight checks and keep setup usable. For a selected provider, verify native read/write/isolation after separately authorized configuration, report direct evidence and failures. Never claim a provider works merely because it has a config entry.
 

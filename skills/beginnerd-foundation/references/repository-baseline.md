@@ -11,3 +11,6 @@
 **Canonical output:** WORKSPACE-MANIFEST.md or current repo inventory plus applied baseline references.
 **Foundation completion condition:** Repository skeleton runnable/testable when scope requires; no claim all features are done.
 **Guardrails:** Before mutations require permission for exact target, preserve current settings and rollback; no duplicate tooling or unapproved formal decomposition. An artifact/checklist does not establish actual host runtime PASS.
+
+## Grant-aware repository baseline
+Before any local changes, inventory the current root and any existing Scoped Workspace Grant. Confirm it matches this repository, approved task/batch, permitted offline actions and exclusions; preserve ignored/untracked/user-owned files. If no valid grant exists, propose one project-root consent for clearly described safe file changes and tests. Once approved, use the same bounded authorization for successive allowed workspace files, without requiring a new write question per file. Any global installation, destructive operation, real network request, remote push or deployment is outside the grant.

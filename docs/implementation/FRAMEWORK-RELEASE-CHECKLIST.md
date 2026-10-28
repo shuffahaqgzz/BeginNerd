@@ -4,13 +4,13 @@
 
 | Dimension | Acceptance evidence | Current |
 |---|---|---|
-| 8 skill source | SKILL.md valid, references/assets self-contained, generated snapshot parity | Candidate; static CI must be checked |
+| 8 skill source | SKILL.md valid, references/assets self-contained, generated snapshot parity | PR #13 post-merge CI PASS; current hardening revision requires its own checks |
 | 32 workflow boundaries | Correct routing, no owner overlap, approval behavior | DESIGN APPROVED, runtime NOT EXECUTED |
 | Beginner guidance | Contextual Learning, first-use guidance interview, appropriate routing | PARTIAL |
 | G1 Product | H02-03 actionable constraints retest and H01/H03 negative/authorized write coverage | PARTIAL / NOT ACCEPTED |
 | G2 Solution | Real requirement→design→security/cost decision and G2 check | NOT EXECUTED |
 | Phase 3 Planning | Approved Work Structure Agreement, vertical slices, DoR/DoD/test strategy | NOT EXECUTED |
-| Phase 4 Foundation | Installed versions, runtime, Codex/Graphify/Hindsight scoped integration | NOT EXECUTED |
+| Phase 4 Foundation | Installed versions and runtime; Codex permissions; selected Graphify/Hindsight integrations only if opted in (otherwise N/A) | NOT EXECUTED |
 | Phase 5 Implementation | Approved tasks, QA tests, no unauthorized task split, recovery attempts | NOT EXECUTED |
 | Phase 6 Release/Ops | Separately authorized deployment, actual smoke, monitoring and lifecycle | NOT EXECUTED |
 | Real-world greenfield | User-selected A2 case, full lifecycle and acceptance evidence | PENDING OWNER CASE |
@@ -34,3 +34,6 @@ Proposed source instructions and portable snapshots are not live evidence of usa
 
 ## Reviewer evaluation adaptation still awaiting runtime acceptance
 Source changes for bounded GREEN/YELLOW/RED actions, authorized task continuity, plain-language owner artifacts, login credential guidance and inactive deployment preparation are not independently verified runtime behavior. Review raw reviewer evidence, run new matched no-skill/current/candidate scenarios and safe negative permission tests, and collect novice feedback before any validated release. Existing H-01/H-02/H-03, provider isolation, security and E2E blockers remain in effect.
+
+## Post-merge hook and workspace-grant validation still outstanding
+The stricter optional read-only hook and reusable Scoped Workspace Grant require real harness/runtime negative and positive tests on disposable data before either is claimed effective. A missing optional Hindsight/Graphify provider is NOT APPLICABLE when declined, not an automatic blocker. No source hardening CI run substitutes for the earlier failed H01 live action or the unresolved phase-level behavior acceptance.
