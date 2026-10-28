@@ -28,6 +28,8 @@ SOURCES = {
     "docs/architecture/ARTIFACT-AND-READINESS-CONTRACT.md":
         tuple(f"skills/{s}/references/artifact-readiness-contract.md"
               for s in ("beginnerd-product", *LIFECYCLE)),
+    "docs/governance/FAMILIARITY-GUIDANCE-CONTRACT.md":
+        tuple(f"skills/{s}/references/familiarity-check.md" for s in ALL_SKILLS),
     "docs/governance/WORK-STRUCTURE-POLICY.md":
         tuple(f"skills/{s}/references/work-structure-policy.md"
               for s in ("beginnerd-plan", "beginnerd-foundation",

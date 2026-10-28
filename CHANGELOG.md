@@ -2,6 +2,13 @@
 
 All notable source changes are recorded with Git history and Pull Requests. This file avoids suggesting an unshipped runtime release.
 
+## Unreleased — adaptive first-use guidance, BN-DEC-003 revised (28 October 2026)
+- Owner decision: ACCEPT DESIGN DIRECTION — CHANGES REQUIRED (FC-01–FC-09). BN-DEC-003's first-use guidance-mode choice is superseded, with the original approval kept in the register.
+- New canonical contract docs/governance/FAMILIARITY-GUIDANCE-CONTRACT.md, generated into references/familiarity-check.md of all eight skills (7 canonical sources, 46 portable copies), so each standalone skill adapts without another package.
+- Help first; provisional level from context or supportive Level 0; familiarity questions zero by default, one when needed, at most three; guidance style derived from the level; explicit override and topic-specific adaptation.
+- Familiarity never changes authorization, security, ownership or verification; the guidance preference is minimal, project-scoped and separate from the workspace grant; Graphify/Hindsight are not promoted in a beginner's first reply unless requested.
+- SETUP-01 and REVAL-13 synchronized; REVAL-21–30 added as definitions only (NOT EXECUTED). Source and offline contract validation only; runtime behavior unverified.
+
 ## Unreleased — post-merge security and workspace grant hardening (28 October 2026)
 - Narrow optional read-only hook to explicit project-root regular-file Read and direct-file Grep; reject recursive searches, glob bypass, symlinks, sensitive paths and unsupported tools by default.
 - Introduce one-time Scoped Workspace Grant to reuse approved safe local actions across lifecycle skills without repeated file prompts or new privileges.

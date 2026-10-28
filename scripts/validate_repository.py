@@ -22,6 +22,7 @@ REQUIRED = (
     "docs/governance/MEMORY-KNOWLEDGE-CONTRACT.md",
     "docs/governance/RESEARCH-REUSE-POLICY.md",
     "docs/governance/WORK-STRUCTURE-POLICY.md",
+    "docs/governance/FAMILIARITY-GUIDANCE-CONTRACT.md",
     "docs/implementation/STATUS.md",
     "docs/implementation/PHASE-1-PRODUCT-IMPLEMENTATION-CONTRACT.md",
     "skills/beginnerd-product/SKILL.md",

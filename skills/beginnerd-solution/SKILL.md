@@ -32,3 +32,6 @@ For low-risk, reversible design choices, recommend one justified default plus a 
 No formal task decomposition (PLANNING-02 owns it), provider installation, code execution or deployment. Source instructions are native English, but user-facing terms must be easy to understand and internal codes hidden unless requested. Optional Graphify/Hindsight integrations are configured only by beginnerd-setup and are never prerequisites for design.
 
 See references/document-control.md, references/agent-governance.md and references/research-reuse-policy.md only when relevant.
+
+## Adapt to the user's familiarity
+Apply references/familiarity-check.md in place when this skill is the first BeginNerd skill used in a project: use evident familiarity as a provisional level or the supportive Level 0, ask a familiarity question only when it materially helps, and do not send the user into a separate setup interview or build a questionnaire here. Adapt explanation depth, user-facing steps and choices presented; complete already authorized internal work without extra prompts. A level never changes permissions, safety checks, ownership or verification, and critical risks are always disclosed in plain language.

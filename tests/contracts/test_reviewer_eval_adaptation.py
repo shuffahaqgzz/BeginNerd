@@ -107,7 +107,7 @@ class ReviewerEvaluationAdaptationTests(unittest.TestCase):
     def test_novice_grant_transition_cases_require_real_execution(self):
         cases = json.loads(read("tests/behavioral/scenarios.json"))
         selected = [x for x in cases if x["id"].startswith("REVAL-") and
-                    int(x["id"].split("-")[1]) >= 14]
+                    14 <= int(x["id"].split("-")[1]) <= 20]
         self.assertEqual(len(selected), 7)
         self.assertTrue(all(x["execution_status"] == "NOT_EXECUTED" for x in selected))
         for name in ("REVAL-14-NO-GRANT-ONE-QUESTION",

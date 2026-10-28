@@ -64,7 +64,7 @@ Already have a project?
 
 > "Use beginnerd-ask to review the existing project and recommend the next useful step. Don't make me start from scratch."
 
-On first use, `beginnerd-setup` can help choose a guidance style. **Graphify and Hindsight are optional**, enabled only if you choose them and authorize setup. You can use the six development phases without either provider.
+On first use, BeginNerd gives you something useful first, then adjusts how much it explains based on what you already know (it may ask up to three simple questions if it can't tell). **Graphify and Hindsight are optional**, enabled only if you choose them and authorize setup. You can use the six development phases without either provider.
 
 ## Meet the skills
 
