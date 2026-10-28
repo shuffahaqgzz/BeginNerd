@@ -9,25 +9,24 @@ The historical BeginNerd private Sites publication without separate release appr
 
 ## Optional strict read-only profile — hardened source example
 
-The optional \`scripts/guardrails/read_only_hook.py\` is a **fail-closed demonstration**, not a security sandbox or automatically installed guard. The former "allow Read, Glob, Grep and LS with a filename regex" approach could allow broad Grep from \`.\` and unchecked \`glob\` selectors. **That design is no longer safe to use.** The stricter version accepts only:
+The optional `scripts/guardrails/read_only_hook.py` is a **fail-closed demonstration**, not a security sandbox or automatically installed guard. The former "allow Read, Glob, Grep and LS with a filename regex" approach could allow broad Grep from `.` and unchecked `glob` selectors. **That design is no longer safe to use.** The stricter version accepts only:
 
-- \`Read\` of an explicitly named **existing regular file** under a configured absolute \`--root\`, after resolving the path and denying sensitive path components, traversal and symlinks.
-- \`Grep\` against **one explicitly named existing regular file** in the same approved root; its \`pattern\` means *content to search*, not a path. Unscoped \`Grep\`, a directory path such as \`.\`, any \`glob\`/extra selector, and recursive searches are denied.
-- \`Glob\`, \`LS\`, unknown tools, mutations, missing roots and malformed inputs are denied. Broad file discovery is outside this example's verifiable confidentiality boundary.
+- `Read` of an explicitly named **existing regular file** under a configured absolute `--root`, after resolving the path and denying sensitive path components, traversal and symlinks.
+- `Grep` against **one explicitly named existing regular file** in the same approved root; its `pattern` means *content to search*, not a path. Unscoped `Grep`, a directory path such as `.`, any `glob`/extra selector, and recursive searches are denied.
+- `Glob`, `LS`, unknown tools, mutations, missing roots and malformed inputs are denied. Broad file discovery is outside this example's verifiable confidentiality boundary.
 
 **Source-level usage illustration only** (review against the installed harness API before adopting):
-
 
 ```bash
 python3 scripts/guardrails/read_only_hook.py --harness claude --root /absolute/approved/project
 ```
 
-For Cursor, use \`--harness cursor\` with the matching validated hook integration. **Do not install hooks or alter global/project settings without authorization.** The root must be a real absolute directory; no implicit working directory is allowed. Confirm the hook intercepts every relevant tool route, and independently constrain shell, filesystem ACLs, MCP/network/plugin access and delegated agents.
+For Cursor, use `--harness cursor` with the matching validated hook integration. **Do not install hooks or alter global/project settings without authorization.** The root must be a real absolute directory; no implicit working directory is allowed. Confirm the hook intercepts every relevant tool route, and independently constrain shell, filesystem ACLs, MCP/network/plugin access and delegated agents.
 
 **Important confidentiality limit:** safe-looking files can contain secrets, hard links can expose aliased content, and provider tools may bypass this hook. Name checks and file-type checks do not establish that a document is free of credentials. Store real secrets outside the reachable project or enforce dedicated filesystem permissions; use a disposable directory with synthetic data for test cases.
 
-* **Claude Code:** Adapt its documented PreToolUse hook interface to run the script with \`--harness claude --root <approved-absolute-project-dir>\`. A deny returns exit code 2. Inspect matcher coverage, tool schemas, precedence, command path and CLI version. No hook installation is performed by BeginNerd source.
-* **Cursor:** Adapt the documented project hook interface to use \`--harness cursor --root <approved-absolute-project-dir>\` with supported failClosed behavior. Verify preToolUse, beforeShellExecution and beforeMCPExecution separately; other app features may not be gated.
+* **Claude Code:** Adapt its documented PreToolUse hook interface to run the script with `--harness claude --root <approved-absolute-project-dir>`. A deny returns exit code 2. Inspect matcher coverage, tool schemas, precedence, command path and CLI version. No hook installation is performed by BeginNerd source.
+* **Cursor:** Adapt the documented project hook interface to use `--harness cursor --root <approved-absolute-project-dir>` with supported failClosed behavior. Verify preToolUse, beforeShellExecution and beforeMCPExecution separately; other app features may not be gated.
 * **OpenCode:** Use independently reviewed project-scoped allow/ask/deny permissions for its current version.
 * **Codex, Hermes and others:** Use their native sandbox and provider permissions. A Claude/Cursor hook should not be assumed compatible.
 
