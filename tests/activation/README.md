@@ -10,3 +10,6 @@ References: https://agentskills.io/skill-creation/optimizing-descriptions and ht
 
 ## Language and trigger coverage
 Skill frontmatter and source instructions are authored in native English. Some test prompts intentionally use Indonesian (the user's language) to test **multilingual user requests**, not to make the source instructions bilingual. Require positive and negative activation evidence for the actual harness before claiming routing accuracy. The six new reviewer fixtures remain NOT_EXECUTED until validated.
+
+## Loaded then routed
+An agent may load beginnerd-ask to orient and then route to the owning skill. For a `should_trigger: false` ask query, record "loaded then routed to the correct owner" as a separate outcome rather than a plain FAIL, and report it next to the strict verdict. A companion skill that loads and then acts, such as setup inspecting configuration for a general technical question, is still a FAIL.

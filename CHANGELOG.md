@@ -2,6 +2,11 @@
 
 All notable source changes are recorded with Git history and Pull Requests. This file avoids suggesting an unshipped runtime release.
 
+## Unreleased — runtime re-evaluation remediation (proposed, 31 October 2026)
+- Closes gaps seen in two reviewer-reported runtime runs of issue #2: a visible check before the first code write in Implement, Product and Plan; sticky revocation with no self-recorded approvals; approvals and delegated assumptions recorded in the same turn; plain Level 0 risk disclosure and explicit brevity overrides over a recorded level.
+- Credential hygiene: read-only discovery never opens credential stores, memory/knowledge providers are contacted only after the user chooses them and only in the current project's namespace, and found secrets are reported by location and type only. Setup description narrowed against general API/database/cache questions; early grant proposals keep code conditional.
+- SETUP-09, REVAL-35 and ACT-SETUP-09–11 added; REVAL-14, REVAL-17 and REVAL-33 definitions corrected (all NOT EXECUTED). Runtime evaluation isolation protocol added to the behavioral test README. Source and offline contract validation only; runtime behavior unverified.
+
 ## Unreleased — phase-bounded continuation (source merged via PR #16, 30 October 2026)
 - Clarifies Agent Governance: a generic "lanjut" or "ikut rekomendasi" approves only the described next step of the current phase and never passes an unseen lifecycle approval point; an early grant proposal does not bundle immediate code; one combined stop after the Product draft only for still-unapproved material decisions; one explicit approval may cover several described decisions, but coding requires an approved Planning task, design decisions, satisfied dependencies and execution authorization.
 - REVAL-31 to REVAL-34 added (REVAL-34 negative: coding request before prerequisites) as definitions only (NOT EXECUTED). Source and offline contract validation only; runtime behavior unverified.

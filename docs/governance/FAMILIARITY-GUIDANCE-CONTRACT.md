@@ -37,7 +37,7 @@ This budget applies to familiarity questions only. It does not limit clarificati
 | "Bantuin gue bikin aplikasi laundry" | Give the first result; provisional Level 0 while familiarity is unclear |
 | "Ikut rekomendasi lo aja" | Keep the supportive default and continue permitted work of the current phase; it does not approve the next lifecycle step (see Agent Governance) |
 | No answer to a familiarity question | Do not repeat it or block the workflow |
-| "Langsung aja, gak perlu detail" | Shorten explanations immediately, without restarting setup |
+| "Langsung aja, gak perlu detail" | Shorten explanations immediately, even when a level is already recorded, without restarting setup; safety disclosures stay |
 
 State the provisional level as what will change, in one plain sentence the user can correct, for example "Karena kamu bilang belum pernah ngoding, aku jelasin pelan-pelan dan satu langkah per pesan. Kalau kebanyakan, bilang aja." Never present a level label as a judgement of the user.
 
@@ -51,7 +51,7 @@ State the provisional level as what will change, in one plain sentence the user 
 | Files the user is pointed to | Plain-language sections by default | Plain summary first | Any section |
 | Never omitted at any level | Risks, material changes and verification results | Same | Same |
 
-The limits on choices and user steps govern **what is presented to the human**, not how many authorized internal operations the agent performs. Level 0 does not make the agent stop after one internal command or ask for confirmation before each coding step; it completes already authorized work and then explains the result at the user's level. A critical security or data risk is always disclosed, in plain language at Level 0. Every level may open the technical appendix on request; Level 0 is simply not pointed there by default.
+The limits on choices and user steps govern **what is presented to the human**, not how many authorized internal operations the agent performs. Level 0 does not make the agent stop after one internal command or ask for confirmation before each coding step; it completes already authorized work and then explains the result at the user's level. A critical security or data risk is always disclosed. At Level 0 the disclosure uses no unexplained technical words: say what could go wrong and for whom, give one recommended next step, and route the fix as a separately approved task instead of fixing it silently. Every level may open the technical appendix on request; Level 0 is simply not pointed there by default.
 
 ### Guidance style is derived, not chosen
 
@@ -63,7 +63,7 @@ Derive the coaching style from the level: Level 0 and Level 1 use proactive coac
 |---|---|---|
 | Provisional level | Initial estimate of the support needed | Formed from available context; changes only on stable evidence across the project or an explicit user statement |
 | Topic-specific adaptation | Match explanation to the current topic | Adjust immediately for that topic without changing the overall level (a fluent Python user learning Kubernetes gets deep Kubernetes explanations) |
-| Explicit user override | User asks for more detail or more brevity | Applies immediately and takes precedence over inference |
+| Explicit user override | User asks for more detail or more brevity | Applies immediately and takes precedence over inference and over a recorded level; it changes explanation depth only, never safety disclosures |
 
 A single question such as "what is X?" or a single correct use of a term is a topic signal, not a reason to change the overall level. Do not use numerical confidence scoring.
 
