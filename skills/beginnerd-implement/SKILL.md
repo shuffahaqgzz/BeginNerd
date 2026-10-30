@@ -37,3 +37,6 @@ See references/recovery-governance.md, references/agent-governance.md and refere
 
 ## Effectiveness evidence within existing workflows
 As part of relevant quality reviews, record task success, defects, rework, approval prompts, time to first usable result, correct routing and attempted unauthorized actions **when observed**. Never manufacture metrics or create a new mandatory evaluation workflow.
+
+## Adapt to the user's familiarity
+Apply references/familiarity-check.md in place when this skill is the first BeginNerd skill used in a project: use evident familiarity as a provisional level or the supportive Level 0, ask a familiarity question only when it materially helps, and do not send the user into a separate setup interview or build a questionnaire here. Adapt explanation depth, user-facing steps and choices presented; complete already authorized internal work without extra prompts. A level never changes permissions, safety checks, ownership or verification, and critical risks are always disclosed in plain language.

@@ -21,8 +21,8 @@ class SkillPortabilityTests(unittest.TestCase):
         self.assertEqual(validate(), [])
 
     def test_canonical_sources_have_portable_copies(self):
-        self.assertEqual(len(SOURCES), 6)
-        self.assertEqual(sum(len(paths) for paths in SOURCES.values()), 38)
+        self.assertEqual(len(SOURCES), 7)
+        self.assertEqual(sum(len(paths) for paths in SOURCES.values()), 46)
 
     def test_standalone_copy_needs_no_repository_docs(self):
         for name in ("beginnerd-ask", "beginnerd-setup", "beginnerd-product",

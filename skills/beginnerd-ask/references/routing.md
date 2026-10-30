@@ -4,7 +4,7 @@ Choose a workflow by the **user's actual goal**, not a rigid phase lock. Consult
 
 | User intent | Owning skill | Canonical workflow or function |
 |---|---|---|
-| Choose guidance style or optionally activate knowledge/memory | beginnerd-setup | First-use onboarding |
+| Explicitly change guidance style or optionally activate knowledge/memory | beginnerd-setup | First-use onboarding |
 | Explain current project state, decisions or the next step | beginnerd-ask | Orientation and routing |
 | Investigate a user problem, validate hypotheses or define the user segment | beginnerd-product | PRODUCT-FOUNDATION-01 |
 | Define acceptance-backed product requirements | beginnerd-product | PRODUCT-FOUNDATION-02 |
@@ -17,6 +17,8 @@ Choose a workflow by the **user's actual goal**, not a rigid phase lock. Consult
 | Execute an **approved** task, quality checks or safe integration | beginnerd-implement | IMPLEMENTATION-01–05 |
 | Release, monitor, handle incidents and maintain services | beginnerd-release | RELEASE-01–03 and OPERATIONS-01–03 |
 
+## Familiarity guidance does not need routing
+Every BeginNerd skill carries references/familiarity-check.md and applies it in place. Do not route a user to beginnerd-setup only to establish familiarity; routing and phase ownership stay unchanged.
 ## Approved scope can continue across skill routing
 If a named batch has already been approved and the required local-write/environment authorization is verified, hand it to the actual skill owner without asking the user another ceremonial "go". A plan-only approval is not a code-edit approval; Ask cannot execute Implementation. Unspecified "do everything" does not permit new material scope, external actions or provider calls.
 ## Reuse a confirmed project grant across phase routing

@@ -10,7 +10,7 @@ Validate beginnerd-ask and beginnerd-setup in an actual supported agent runtime 
 | V02 | Parse skill metadata, references and required repository content | Static CLI / CI output |
 | V03 | Ask: project orientation without mutations | Recorded runtime prompt/output and target owner |
 | V04 | Ask: ambiguous and cross-phase routing; missing context | Recorded routing cases |
-| V05 | Setup: onboarding/guidance preference with explanations | Real user-facing flow transcript |
+| V05 | Setup: onboarding familiarity check and derived guidance preference with explanations | Real user-facing flow transcript |
 | V06 | Setup: rerun/idempotence, no duplicate install | Before/after inventory and diff |
 | V07 | Graphify: scoped query, freshness and isolation | Provider-native evidence (sanitized) |
 | V08 | Hindsight: recall, retain, read-back and failed-write handling | Provider-native evidence (sanitized) |
@@ -72,3 +72,6 @@ Test the same two-turn novice scenario in isolated sessions: first propose a nam
 
 ## Strict-read hook regression protocol — planned integration
 Offline tests cover explicit-file safe reads, blocked recursive/directory Grep, ignored `glob` bypass attempts, sensitive paths, symlinks, traversal, missing root and malformed payload. To claim actual runtime enforcement, install a reviewed project-scoped hook in a disposable harness with separate authorization, test the real interception routes and validate fail-closed behavior on unsupported tools. The hook is optional source, not automatically active.
+
+## Adaptive first-use guidance (BN-DEC-003 revised) — planned, not run
+Run SETUP-01, REVAL-13 and REVAL-21–30 in fresh multi-turn sessions where the novice persona can actually answer or ignore familiarity questions. Include a standalone-package case (one lifecycle skill installed alone), a topic-specific case, a provider-declined case, a revoked-grant case and a Level 0 critical-security case. Score, per session: familiarity questions asked before the first useful result (target zero), total familiarity questions, whether the provisional level was stated and then reflected in the replies, whether overrides applied immediately, and any permission, ownership or verification difference attributable to level (target none). Preserve transcripts, attempted tool calls and before/after files; compare with baseline `c3d74e9` and no skill under a matched harness. Static contracts and CI are prerequisites, not runtime acceptance.
