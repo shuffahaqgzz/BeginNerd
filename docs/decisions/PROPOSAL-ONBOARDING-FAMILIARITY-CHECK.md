@@ -1,6 +1,6 @@
 # Proposal — Onboarding Familiarity Check (28 October 2026)
 
-**Status:** Owner design direction accepted with required changes (**ACCEPT DESIGN DIRECTION — CHANGES REQUIRED**, FC-01–FC-09). Source changes pending repository validation, CI and merge. Runtime behavior NOT VERIFIED. **Baseline:** `c3d74e9`. **Decision:** revises BN-DEC-003; see [Decision Register](DECISION-REGISTER.md).
+**Status:** Owner design direction accepted with required changes (**ACCEPT DESIGN DIRECTION — CHANGES REQUIRED**, FC-01–FC-09). Source accepted and merged through [PR #15](https://github.com/shuffahaqgzz/BeginNerd/pull/15) on 30 October 2026 (squash `30c094b`); CI PASS. Runtime behavior NOT VERIFIED. **Baseline:** `c3d74e9`. **Decision:** revises BN-DEC-003; see [Decision Register](DECISION-REGISTER.md).
 
 ## Problem
 BeginNerd's intent is to guide users with no software-engineering background, and first use is meant to adapt guidance to what the user already knows. The baseline source does not do that:

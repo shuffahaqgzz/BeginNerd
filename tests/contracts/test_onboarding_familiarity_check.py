@@ -110,7 +110,8 @@ class FamiliarityGuidanceContractTests(unittest.TestCase):
         self.assertIn("BN-DEC-003 (historical) | Ask guidance preference at first use", register)
         self.assertIn("SUPERSEDED FOR FIRST-USE BEHAVIOR", register)
         self.assertIn("BN-DEC-003 revised", register)
-        self.assertIn("SOURCE ACCEPTANCE PENDING", register)
+        self.assertIn("SOURCE ACCEPTED — PR #15 MERGED", register)
+        self.assertIn("RUNTIME NOT VERIFIED", register)
 
     def test_familiarity_scenarios_are_definitions_not_executed(self):
         cases = {x["id"]: x for x in json.loads(read("tests/behavioral/scenarios.json"))}
