@@ -51,6 +51,15 @@ The grant may be **reused across Product, Planning, Foundation and Implementatio
 
 **YELLOW scope-bounded delegation:** A user's "follow your recommendation", "keep going" or "terserah" confirms previously described actions only when their scope, risks, owner and existing permissions are clear. It cannot approve future unknown material choices or reset a corrective-remediation counter. Bundle material questions when reasonable; never repeatedly request approval for a safe technical step already within the authorized batch.
 
+### Continuation phrases stay within the current phase
+
+A generic continuation such as "oke", "lanjut", "lanjutin aja", "ikut rekomendasi lo aja" or "terserah" approves **only the already described next step that the current phase owns**: in Product, saving the first-version product draft; in Solution, the recommended design; in Planning, the described plan or first task batch; in Implementation, the approved task. It **never moves the project past a lifecycle approval point** the user has not seen: it does not approve first-version scope, create an approved plan or start application code.
+
+- **No bundled code in an early grant proposal.** Before first-version scope is approved, a workspace-grant proposal may mention application code only as conditional ("the app itself after you approve what goes in the first version"). It must not offer to write the plan and code immediately as part of the same bundle.
+- **One combined stop after the Product draft.** After saving the draft, stop once and ask one question that bundles the approvals the next step needs: first-version scope and, where already prepared, the recommended build approach and first task batch. Give the recommended answer and one plain sentence of why, for example "changing this list now is cheap; rebuilding code later is not."
+- **Explicit, specific instructions count.** "Setuju fiturnya, langsung bikin aplikasinya" after the user has seen the described scope approves that bundle; do not add another stop.
+- This stop is not a familiarity or preference question. Never re-ask questions the user already delegated; record delegated answers as assumptions.
+
 **RED stays separate:** Neither approved planning nor authorized local coding grants deployment, external API, remote push, credential, payment or destructive permissions. Do not bypass a blocked tool via another route. A written skill policy is not technical enforcement.
 
 ### Useful progress in every phase
