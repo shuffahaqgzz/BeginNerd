@@ -1,6 +1,6 @@
 # Proposal — Phase-Bounded Continuation (30 October 2026)
 
-**Status:** Proposed; pending Owner decision, repository validation, CI and merge. Runtime behavior NOT VERIFIED. **Baseline:** `30c094b` (PR #15). **Type:** clarification of existing Agent Governance rules; no new workflow, skill, phase or permission class.
+**Status:** OWNER-REVIEWED — SOURCE MERGED via [PR #16](https://github.com/shuffahaqgzz/BeginNerd/pull/16) on 30 October 2026 (squash `98f5353`); static CI PASS (91 contract tests). **Runtime behavior NOT VERIFIED**; REVAL-31–34 remain `NOT_EXECUTED`. **Original proposal baseline:** `30c094b` (PR #15). **Type:** clarification of existing Agent Governance rules; no new workflow, skill, phase or permission class.
 
 ## Problem
 Agent Governance already says a Scoped Workspace Grant does not approve product scope, a plan or implementation, and that "follow your recommendation" confirms only *previously described* actions. It does not say what happens when the described bundle itself spans several lifecycle approval points.
@@ -11,7 +11,7 @@ In the reviewer's familiarity re-evaluation of `30c094b` (scenario f2-unclear, 4
 
 Both readings are defensible under the current text. The Owner chose the gated reading as the intended boundary: a beginner should see what goes into the first version before code is written.
 
-## Proposed change
+## Approved source change (historical proposal)
 1. A generic continuation ("oke", "lanjut", "ikut rekomendasi", "terserah") approves only the already described next step that the **current phase** owns. It never moves past a lifecycle approval point the user has not seen.
 2. Before first-version scope is approved, a grant proposal may mention code only as conditional. It must not bundle "plan and code immediately".
 3. After saving the Product draft, stop **once**, and only while scope or another material decision the next step needs is still unapproved. Ask one combined question covering exactly those decisions: scope, plus the build approach and first task batch where already prepared. Include the recommended answer and a one-sentence reason. Already valid approvals are never re-requested; with nothing pending, work continues without a stop.
@@ -33,4 +33,4 @@ The Owner requested: (1) explicit approval may cover several described decisions
 Six phases, eight skills, 32 workflows, the Scoped Workspace Grant, GREEN/YELLOW/RED and RED separation. REVAL-30 still holds: when a grant and a first task were already proposed and accepted, "oke, lanjutin aja" proceeds without another prompt.
 
 ## Verification
-Static contracts and portability tests only. REVAL-31 to REVAL-34 need a matched multi-turn runtime run before any behavioral claim.
+PR #16 source review and its 30 October 2026 merge are complete: 91 offline contract tests, repository validator, skill package validator and generated portable-reference parity PASS, with post-merge CI SUCCESS. These checks verify **source only**; REVAL-31 to REVAL-34 still need matched multi-turn runtime evidence before any behavioral acceptance claim. No deployment, provider mutation or production operation is implied.
