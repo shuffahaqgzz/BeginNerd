@@ -35,7 +35,7 @@ This budget applies to familiarity questions only. It does not limit clarificati
 | "Gue belum pernah coding sama sekali" | Level 0 immediately; no familiarity question |
 | "Gue biasa pakai Git, Docker dan Python" | Concise explanations; no onboarding questionnaire |
 | "Bantuin gue bikin aplikasi laundry" | Give the first result; provisional Level 0 while familiarity is unclear |
-| "Ikut rekomendasi lo aja" | Keep the supportive default and continue permitted work |
+| "Ikut rekomendasi lo aja" | Keep the supportive default and continue permitted work of the current phase; it does not approve the next lifecycle step (see Agent Governance) |
 | No answer to a familiarity question | Do not repeat it or block the workflow |
 | "Langsung aja, gak perlu detail" | Shorten explanations immediately, without restarting setup |
 

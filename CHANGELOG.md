@@ -2,6 +2,10 @@
 
 All notable source changes are recorded with Git history and Pull Requests. This file avoids suggesting an unshipped runtime release.
 
+## Unreleased — phase-bounded continuation (proposed, 30 October 2026)
+- Clarifies Agent Governance: a generic "lanjut" or "ikut rekomendasi" approves only the described next step of the current phase and never passes an unseen lifecycle approval point; an early grant proposal does not bundle immediate code; one combined stop after the Product draft only for still-unapproved material decisions; one explicit approval may cover several described decisions, but coding requires an approved Planning task, design decisions, satisfied dependencies and execution authorization.
+- REVAL-31 to REVAL-34 added (REVAL-34 negative: coding request before prerequisites) as definitions only (NOT EXECUTED). Source and offline contract validation only; runtime behavior unverified.
+
 ## Unreleased — adaptive first-use guidance, BN-DEC-003 revised (28 October 2026)
 - Owner decision: ACCEPT DESIGN DIRECTION — CHANGES REQUIRED (FC-01–FC-09). BN-DEC-003's first-use guidance-mode choice is superseded, with the original approval kept in the register.
 - New canonical contract docs/governance/FAMILIARITY-GUIDANCE-CONTRACT.md, generated into references/familiarity-check.md of all eight skills (7 canonical sources, 46 portable copies), so each standalone skill adapts without another package.
