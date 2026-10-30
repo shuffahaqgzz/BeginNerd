@@ -425,5 +425,26 @@
     "query": "Saya mau pakai BeginNerd tanpa Graphify atau Hindsight.",
     "should_trigger": true,
     "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-SETUP-09",
+    "skill": "beginnerd-setup",
+    "query": "Endpoint API pesanan gue balikin error 500, gimana cara ngecek konfigurasinya?",
+    "should_trigger": false,
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-SETUP-10",
+    "skill": "beginnerd-setup",
+    "query": "Database Postgres atau SQLite yang cocok buat aplikasi kasir kecil?",
+    "should_trigger": false,
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-SETUP-11",
+    "skill": "beginnerd-setup",
+    "query": "Cache aplikasi gue pakai Redis, perlu disetel TTL berapa?",
+    "should_trigger": false,
+    "execution_status": "NOT_EXECUTED"
   }
 ]

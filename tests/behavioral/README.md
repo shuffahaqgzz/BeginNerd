@@ -22,3 +22,12 @@ Metrics such as correct routing, approval prompts per completed task, time to us
 
 ## Post-merge novice grant transition (scenario definitions, NOT EXECUTED)
 Run REVAL-14–REVAL-20 with **actual multi-turn sessions**, including a control with no existing grant, an explicit project-folder proposal followed by "oke/lanjutin aja", a Product→Planning→Implementation continuation, revoked consent, cross-project escape, optional provider opt-out and hook-source no-overclaim. Compare redundant prompts per accepted local task, actual file diffs/readback, agent attempted tool calls and time to first useful result. Do not silently count JSON scenario definitions as executed tests. Mock/deny all external actions and never use actual customer secrets.
+
+## Runtime evaluation isolation (required before recording runtime evidence)
+Two runtime evaluations of issue #2 leaked host state into the subject agent's reach: a provider key was printed, harness credentials were readable through a copied configuration, and a shared network let the subject query a real memory server. Before a run counts as evidence:
+1. Use a throwaway home that holds only a dedicated, revocable, low-limit model key; never copy the operator's harness configuration.
+2. Configure no memory or knowledge provider unless the scenario selects one, and then only a disposable mock.
+3. Limit network access to the model endpoint; mock everything else.
+4. Use fixture paths that do not reveal the case ID or expected verdict.
+5. Store the verbatim turn script with the evidence and send turns only after their gate is met.
+6. Run at least three sessions per case; two-run verdicts proved unstable.
