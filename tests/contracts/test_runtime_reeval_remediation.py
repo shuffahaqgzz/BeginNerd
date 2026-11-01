@@ -77,7 +77,7 @@ class RuntimeReevalRemediationTests(unittest.TestCase):
         self.assertIn("contact the memory endpoint", cases["SETUP-09-SETUP-CHECK-NO-CREDENTIAL-READ"]["must_not"])
         self.assertIn("only as conditional",
                       " ".join(cases["REVAL-14-NO-GRANT-ONE-QUESTION"]["expected_behaviors"]))
-        self.assertEqual(len(cases["REVAL-17-REVOKED-GRANT-STOPS-WRITES"]["turns"]), 3)
+        self.assertEqual(len(cases["REVAL-17-REVOKED-GRANT-STOPS-WRITES"]["turns"]), 2)
         queries = {x["id"]: x for x in json.loads(read("tests/activation/queries.json"))}
         for name in ("ACT-SETUP-09", "ACT-SETUP-10", "ACT-SETUP-11"):
             self.assertFalse(queries[name]["should_trigger"])
