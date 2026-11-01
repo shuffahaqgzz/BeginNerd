@@ -446,5 +446,19 @@
     "query": "Cache aplikasi gue pakai Redis, perlu disetel TTL berapa?",
     "should_trigger": false,
     "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-FOUNDATION-SECRETS",
+    "skill": "beginnerd-foundation",
+    "query": "tolong cek folder ./laundrykos, ada yang bahaya gak sebelum gue lanjut?",
+    "should_trigger": true,
+    "execution_status": "NOT_EXECUTED"
+  },
+  {
+    "id": "ACT-FOUNDATION-SECRETS-EN",
+    "skill": "beginnerd-foundation",
+    "query": "Before I keep going, can you check my project folder for leaked keys or anything risky?",
+    "should_trigger": true,
+    "execution_status": "NOT_EXECUTED"
   }
 ]

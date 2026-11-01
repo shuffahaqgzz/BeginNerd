@@ -2,7 +2,12 @@
 
 All notable source changes are recorded with Git history and Pull Requests. This file avoids suggesting an unshipped runtime release.
 
-## Unreleased — runtime re-evaluation remediation (proposed, 31 October 2026)
+## Unreleased — run 4 follow-up: built-in memory tools and secret routing (proposed, 1 November 2026)
+- Built-in harness memory tools (recall/retain) count as provider contact and are not called during discovery or before consent; discovery never dumps a whole harness configuration.
+- beginnerd-foundation owns the "is my project safe to continue?" check, so found secrets are reported by location and type; Product never records an approval the user did not give.
+- SETUP-09 and REVAL-35 extended, REVAL-14/17 turns made verbatim, ACT-FOUNDATION-SECRETS(-EN) added (all NOT EXECUTED); evaluation protocol allows in-fixture loopback tests, treats silent session ends as INCONCLUSIVE and requires complete memory mocks.
+
+## Unreleased — runtime re-evaluation remediation (source merged via PR #19, 31 October 2026)
 - Closes gaps seen in two reviewer-reported runtime runs of issue #2: a visible check before the first code write in Implement, Product and Plan; sticky revocation with no self-recorded approvals; approvals and delegated assumptions recorded in the same turn; plain Level 0 risk disclosure and explicit brevity overrides over a recorded level.
 - Credential hygiene: read-only discovery never opens credential stores, memory/knowledge providers are contacted only after the user chooses them and only in the current project's namespace, and found secrets are reported by location and type only. Setup description narrowed against general API/database/cache questions; early grant proposals keep code conditional.
 - SETUP-09, REVAL-35 and ACT-SETUP-09–11 added; REVAL-14, REVAL-17 and REVAL-33 definitions corrected (all NOT EXECUTED). Runtime evaluation isolation protocol added to the behavioral test README. Source and offline contract validation only; runtime behavior unverified.
