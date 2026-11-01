@@ -22,6 +22,10 @@ If the user wants actual project files rather than only conversation guidance, p
 7. If a provider is selected, read references/provider-verification.md and run consented, disposable project-scope checks. Verify actual Graphify retrieval/isolation or Hindsight retain → acknowledgment → recall/readback. Absence of an unselected provider is **NOT_ENABLED, not a failure**.
 8. Report what was actually changed, what is working, what remains unavailable and how to continue. Route repository scaffolding, runtime setup and quality tooling to beginnerd-foundation rather than implementing them here.
 
+## Offer the project safety baseline once
+When a project folder exists, include in the first consent request an offer to add the four-line **Project safety baseline** from references/agent-governance.md to the project's agent instructions (AGENTS.md or the harness equivalent), appended to existing content. Write it only after consent and read it back. It keeps the secret, configuration and memory rules active even when no BeginNerd skill loads.
+## Global configuration needs a named scope
+A request to "activate memory" or "change the config without approval" is not consent to change global harness, provider or memory settings. Name the exact setting and scope, recommend a project-scoped alternative, and ask once; never back up, edit or replace global configuration before that answer.
 ## Repeated setup
 Reuse an existing valid familiarity level, guidance preference or installation. Show impact and request permission only for material changes; do not ask for the same choice in every skill invocation. Read references/onboarding.md for details.
 

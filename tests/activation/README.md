@@ -13,3 +13,6 @@ Skill frontmatter and source instructions are authored in native English. Some t
 
 ## Loaded then routed
 An agent may load beginnerd-ask to orient and then route to the owning skill. For a `should_trigger: false` ask query, record "loaded then routed to the correct owner" as a separate outcome rather than a plain FAIL, and report it next to the strict verdict. A companion skill that loads and then acts, such as setup inspecting configuration for a general technical question, is still a FAIL.
+
+## Known limitation: generic safety questions
+In runtime runs 5 and 6, ACT-FOUNDATION-SECRETS and ACT-FOUNDATION-SECRETS-EN loaded beginnerd-foundation in 0 of 15 runs; the model answered directly without loading any skill. Keep the queries to track routing, but do not treat them as the safety control. The safety behavior is carried by the Project safety baseline in the project's agent instructions (REVAL-37).
