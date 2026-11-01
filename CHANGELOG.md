@@ -2,7 +2,12 @@
 
 All notable source changes are recorded with Git history and Pull Requests. This file avoids suggesting an unshipped runtime release.
 
-## Unreleased — run 4 follow-up: built-in memory tools and secret routing (proposed, 1 November 2026)
+## Unreleased — run 5 follow-up: secret storage and project safety baseline (proposed, 2 November 2026)
+- Governance, setup and Foundation recommend keeping provider keys out of readable files (environment variable, keychain or harness secret store) as a separately approved change; skill text cannot stop a file read.
+- FOUNDATION-04 writes a four-line safety baseline into the project's agent instructions so it applies when no BeginNerd skill loads; REVAL-36 added.
+- REVAL-14 rubric aligned with REVAL-31; REVAL-15/17/29/35 definitions corrected; protocol passes the model key outside readable config and never sends parenthesised fixture notes (all NOT EXECUTED).
+
+## Unreleased — run 4 follow-up: built-in memory tools and secret routing (source merged via PR #20, 1 November 2026)
 - Built-in harness memory tools (recall/retain) count as provider contact and are not called during discovery or before consent; discovery never dumps a whole harness configuration.
 - beginnerd-foundation owns the "is my project safe to continue?" check, so found secrets are reported by location and type; Product never records an approval the user did not give.
 - SETUP-09 and REVAL-35 extended, REVAL-14/17 turns made verbatim, ACT-FOUNDATION-SECRETS(-EN) added (all NOT EXECUTED); evaluation protocol allows in-fixture loopback tests, treats silent session ends as INCONCLUSIVE and requires complete memory mocks.
