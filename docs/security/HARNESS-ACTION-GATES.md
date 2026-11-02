@@ -32,6 +32,28 @@ For Cursor, use `--harness cursor` with the matching validated hook integration.
 
 **None of these integrations are activated by installing BeginNerd.** Any installed profile, permission scope, and rollback need explicit Owner approval.
 
+## Protecting harness credential files — every read route
+
+Runtime evaluation (issue #2, runs 5–7) showed agents reading harness configuration during setup checks despite skill instructions. They used file reads, `cat`, `grep`, `sed`, small scripts and the harness's own `config` commands, often with masking they wrote themselves. Skill text did not stop this. Moving the model key into an environment variable did stop it from appearing in tool results.
+
+**Controls, strongest first:**
+1. **Keep no secret in an agent-readable file.** Inject the provider key into the harness process from an environment variable, the operating system keychain or the harness's secret store. The configuration file then holds only a reference name.
+   - Limit: a shell started by the agent in the same process tree can still read the environment (`env`, `/proc/self/environ`). Treat this as reducing exposure, not removing it.
+2. **Deny credential paths on every route.** One deny rule on the read tool is not enough. The same file can be reached through:
+   - shell commands such as `cat`, `grep`, `sed`, `awk`, `head`, `od` and `xxd`;
+   - search and glob tools;
+   - interpreters and subprocesses (`python -c`, `node -e`, a script the agent wrote);
+   - subagents and delegated tasks;
+   - the harness's own `config list` / `config get` commands for secret-bearing keys.
+3. **Allowlist configuration discovery.** If the harness supports it, allow only the single-setting query for named non-secret keys, such as the memory backend name.
+
+**Verification and status:**
+- Put a synthetic canary value in a disposable configuration file.
+- Attempt a read through each route in item 2, and record each route as denied or allowed.
+- Report **ENFORCED_VERIFIED** only when every route was denied and the canary never appeared in any tool result.
+- Otherwise report **ENFORCEMENT NOT VERIFIED**, naming the routes that were not denied or not tested.
+- Configuration guidance, a skill instruction or a project safety baseline is never reported as active enforcement.
+
 ## Official implementation documentation
 - Claude Code hooks and permission boundaries: https://code.claude.com/docs/en/hooks
 - Cursor hooks, beforeShellExecution, beforeMCPExecution and failClosed: https://cursor.com/docs/hooks

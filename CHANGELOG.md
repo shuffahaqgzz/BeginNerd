@@ -2,7 +2,12 @@
 
 All notable source changes are recorded with Git history and Pull Requests. This file avoids suggesting an unshipped runtime release.
 
-## Unreleased — run 6 follow-up: early safety baseline and global configuration scope (proposed, 2 November 2026)
+## Unreleased — run 7 follow-up: configuration allowlist, grant boundaries and evaluation record (proposed, 2 November 2026)
+- Configuration discovery uses an allowlist of single non-secret settings; harness configuration files are never opened by any route, and provider contact by any route needs consent.
+- A workspace grant never approves product scope, direction or features; a revoked grant is never restored by the agent; the Project safety baseline gains a fifth line on global configuration.
+- Credential-read enforcement must be verified on every route with a canary, otherwise ENFORCEMENT NOT VERIFIED; docs/implementation/RUNTIME-EVAL-RUNS-4-7.md records runs 4–7 as reviewer-reported evidence. REVAL-38 added and SETUP-09/REVAL-14 extended (NOT EXECUTED).
+
+## Unreleased — run 6 follow-up: early safety baseline and global configuration scope (source merged via PR #22, 2 November 2026)
 - Agent Governance holds the canonical four-line Project safety baseline; beginnerd-setup offers it once at first use, appended to the project's agent instructions with consent, because run 6 showed it held with no skill loaded.
 - "Change the config without approval" is not consent to change global harness, provider or memory configuration: name the scope, prefer project scope, ask once.
 - REVAL-37 and SETUP-10 added; SETUP-08, REVAL-35 and REVAL-36 corrected; failed gates restart in a fresh fixture; Foundation routing for generic safety questions documented as a known limitation (all NOT EXECUTED).
