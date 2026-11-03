@@ -30,6 +30,9 @@ SOURCES = {
               for s in ("beginnerd-product", *LIFECYCLE)),
     "docs/governance/FAMILIARITY-GUIDANCE-CONTRACT.md":
         tuple(f"skills/{s}/references/familiarity-check.md" for s in ALL_SKILLS),
+    "docs/workflows/PHASE-USAGE-CYCLES.md":
+        tuple(f"skills/{s}/references/usage-cycles.md"
+              for s in ("beginnerd-ask", "beginnerd-setup")),
     "docs/governance/WORK-STRUCTURE-POLICY.md":
         tuple(f"skills/{s}/references/work-structure-policy.md"
               for s in ("beginnerd-plan", "beginnerd-foundation",

@@ -36,6 +36,9 @@ These tests verify package references and offline repository contracts only—no
 
 ## 4. When building a real application
 
+Read [Using BeginNerd well](USAGE-BEST-PRACTICES.md) first: skills are guidance and vary by model, so keep secrets out of readable files, accept the project safety baseline, and use harness controls for rules that must never break. Each phase's cycle is in [PHASE-USAGE-CYCLES.md](../workflows/PHASE-USAGE-CYCLES.md).
+
+
 Product G1 → Solution G2 → Planning → Foundation → Implementation/QA → separately authorized Release/Operations. You can invoke a single relevant workflow rather than regenerating every phase.
 
 More detail: [multi-harness installation](MULTI-HARNESS-ADOPTION.md), [status & open gaps](../implementation/STATUS.md), [real-world E2E protocol](../implementation/REAL-WORLD-E2E-VALIDATION.md).

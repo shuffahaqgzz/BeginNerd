@@ -10,6 +10,7 @@
 
 ## Authoring standards
 - Every installable skill lives under skills/<name>/SKILL.md. The file starts with valid YAML frontmatter containing exact `name` and meaningful native-English `description`.
+- Every SKILL.md opens with the five-line Project safety baseline, copied exactly from docs/governance/AGENT-GOVERNANCE.md, before any other section. Rules that must hold even when the skill is not loaded belong in the project baseline or in harness controls, not only in skill text (BN-DEC-010).
 - Use short entry points; load supporting references only when relevant. Aim below 500 lines and 5,000 tokens per entry point (guidance, not a formal limit).
 - Source instructions and canonical documents use **native English**. User-visible replies follow the user's preferred language, with internal tracking IDs and issue codes omitted unless technically necessary or requested.
 - Stable workflow IDs use the **full words** of their phase names, such as PRODUCT-FOUNDATION-01 and IMPLEMENTATION-01. Historical aliases remain documented at docs/workflows/WORKFLOW-ID-MIGRATION.md.
@@ -18,9 +19,9 @@
 - Guidance must remain adaptive: a small bug fix should not trigger the entire product lifecycle. Material approvals should be risk-tiered, and routine authorized technical steps should not restart Planning.
 
 ## Portable packages and duplicate references
-Skills CLI often copies a **single skill folder** without the root canonical docs. Every package therefore contains the self-contained references it needs. The six canonical sources synchronized by scripts/build_portable_references.py produce **38 generated snapshots**, with Git blob provenance.
+Skills CLI often copies a **single skill folder** without the root canonical docs. Every package therefore contains the self-contained references it needs. The eight canonical sources synchronized by scripts/build_portable_references.py produce **48 generated snapshots**, with Git blob provenance.
 
-The canonical sources remain authoritative: docs/governance/AGENT-GOVERNANCE.md, docs/governance/MEMORY-KNOWLEDGE-CONTRACT.md, docs/governance/WORK-STRUCTURE-POLICY.md, docs/governance/RESEARCH-REUSE-POLICY.md, docs/architecture/ARTIFACT-AND-READINESS-CONTRACT.md and docs/workflows/WORKFLOW-REGISTRY.md.
+The canonical sources remain authoritative: docs/governance/AGENT-GOVERNANCE.md, docs/governance/MEMORY-KNOWLEDGE-CONTRACT.md, docs/governance/WORK-STRUCTURE-POLICY.md, docs/governance/RESEARCH-REUSE-POLICY.md, docs/architecture/ARTIFACT-AND-READINESS-CONTRACT.md, docs/governance/FAMILIARITY-GUIDANCE-CONTRACT.md, docs/workflows/WORKFLOW-REGISTRY.md and docs/workflows/PHASE-USAGE-CYCLES.md.
 
 After changing a canonical source, run `python3 scripts/build_portable_references.py --write`, inspect the generated diff, then run `--check`. Never hand-edit generated snapshots or make standalone skills depend on ../../docs at runtime.
 

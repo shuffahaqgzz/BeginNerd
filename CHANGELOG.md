@@ -2,7 +2,13 @@
 
 All notable source changes are recorded with Git history and Pull Requests. This file avoids suggesting an unshipped runtime release.
 
-## Unreleased — run 7 follow-up: configuration allowlist, grant boundaries and evaluation record (proposed, 2 November 2026)
+## Unreleased — BN-DEC-010: skills as the guidance layer, usage best practices and per-phase cycles (proposed, 3 November 2026)
+- Owner decision BN-DEC-010: optimize how BeginNerd skills are used while accepting that behavior varies by model and harness; guarantees belong to harness controls, reported separately as enforcement status.
+- Every SKILL.md opens with the five-line Project safety baseline; the baseline names configuration files opened through any tool, a provider switched on in configuration not being consent, and revocation that sticks; the setup description states name-only discovery.
+- The memory contract no longer recalls at session start merely because Hindsight is switched on; "enabled" means the user chose it for this project.
+- New docs/setup/USAGE-BEST-PRACTICES.md and docs/workflows/PHASE-USAGE-CYCLES.md (packaged into beginnerd-ask and beginnerd-setup). Run 8 added to the runtime record. REVAL-38 fixture and rubric corrected, SETUP-09 and ASK-01 tightened, ASK-USAGE-CYCLE-NEXT-PHASE added (NOT EXECUTED).
+
+## Unreleased — run 7 follow-up: configuration allowlist, grant boundaries and evaluation record (source merged via PR #23, 2 November 2026)
 - Configuration discovery uses an allowlist of single non-secret settings; harness configuration files are never opened by any route, and provider contact by any route needs consent.
 - A workspace grant never approves product scope, direction or features; a revoked grant is never restored by the agent; the Project safety baseline gains a fifth line on global configuration.
 - Credential-read enforcement must be verified on every route with a canary, otherwise ENFORCEMENT NOT VERIFIED; docs/implementation/RUNTIME-EVAL-RUNS-4-7.md records runs 4–7 as reviewer-reported evidence. REVAL-38 added and SETUP-09/REVAL-14 extended (NOT EXECUTED).
