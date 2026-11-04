@@ -1,6 +1,6 @@
 # BeginNerd — Verified Implementation Status
 
-**Snapshot:** 30 October 2026 WIB. **Verified source baseline:** `main` at `98f5353bb0b979350ce7847def4aa8797b242da0` (PR #16). This file distinguishes merged-source evidence, work included in this subsequent source revision, and actual runtime evidence. A passing static check cannot make unexecuted behavior PASS.
+**Snapshot:** 4 November 2026 WIB. **Latest verified merged baseline:** `main` at `93e4acb7f8cf3f3bfb5d664fe27e2fc1d7b36bdb` (PR #23). **Candidate revision:** PR #24 (BN-DEC-010), not merged at the time of writing. The table below keeps the historical snapshot verified on 30 October 2026 at `98f5353` (PR #16); later merges are listed in the issue #2 section. This file distinguishes merged-source evidence, work included in the candidate revision, and actual runtime evidence. Runtime acceptance stays **OPEN** and enforcement **NOT VERIFIED**. A passing static check cannot make unexecuted behavior PASS.
 
 ## Current verified source baseline
 | Area | State and evidence |

@@ -32,7 +32,7 @@ Scope: all repository contributors and AI agents. This file is a repository guid
 A corrective remediation attempt after a declared verification failure requires separately recorded user approval. Maximum two approved attempts per issue per execution baseline. If both fail: HOLD / REVIEW_REQUIRED, preserve evidence; no third automatic attempt, re-labeling, agent rotation, or bypass.
 
 ## Evidence & handoff
-Preserve current status, source refs, authorization, requirement/task/test IDs, changed files, test command and actual result, open risks, and next action. Recall Hindsight at session start only if the user enabled it for this project (a reachable or harness-configured provider is not consent); verify against canonical sources. Retain meaningful changes and before handoff; never report memory saved unless provider confirms it.
+Preserve current status, source refs, authorization, requirement/task/test IDs, changed files, test command and actual result, open risks, and next action. Use Hindsight only if the user explicitly selected it for this project and consented (a reachable or harness-configured provider is not consent): then recall at session start and verify against canonical sources, and retain meaningful changes before handoff only within applicable write permission. Otherwise make no provider call and continue from Git and canonical files. Never report memory saved unless the provider confirms it.
 
 ## Git contribution
 Use focused branches and PRs. Do not push directly to main after bootstrap, merge PRs, change repository settings, publish releases, or alter CI permissions without appropriate authorization. Never commit credentials or private knowledge/memory.

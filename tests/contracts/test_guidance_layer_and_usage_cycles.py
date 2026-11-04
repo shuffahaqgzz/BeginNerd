@@ -55,6 +55,13 @@ class GuidanceLayerTests(unittest.TestCase):
         self.assertIn("a backend that the harness configuration switches on", contract)
         self.assertIn("if the user enabled hindsight for this project, recall", contract)
 
+    def test_repository_agents_md_gates_recall_and_retain(self):
+        handoff = plain(read("AGENTS.md").split("## Evidence & handoff", 1)[1].split("\n## ", 1)[0])
+        self.assertIn("use hindsight only if the user explicitly selected it for this project and consented", handoff)
+        self.assertIn("retain meaningful changes before handoff only within applicable write permission", handoff)
+        self.assertIn("otherwise make no provider call and continue from git and canonical files", handoff)
+        self.assertNotIn("retain meaningful changes and before handoff", handoff)
+
     def test_usage_cycles_cover_every_phase_and_are_packaged(self):
         cycles = read("docs/workflows/PHASE-USAGE-CYCLES.md")
         for heading in PHASES:

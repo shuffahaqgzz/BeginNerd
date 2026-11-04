@@ -20,7 +20,7 @@ The Owner asked three questions:
 3. How do skills compare with plugins for rules a model must follow accurately?
 
 ## Findings presented to the Owner
-- **Skills influence behavior but do not determine it.** A skill is text that the model chooses to load. Only its name and description are always in context, and loaded instructions are context, not enforced configuration. Adherence also falls as the number of instructions grows. Sources:
+- **Skills influence behavior but do not determine it.** A skill is text that the model chooses to load. In the progressive-disclosure pattern used by Claude and many compatible harnesses, only its name and description are always in context (loading varies by host), and loaded instructions are context, not enforced configuration. Adherence also falls as the number of instructions grows. Sources:
   - [Anthropic, Agent Skills](https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills)
   - [Claude Code memory](https://code.claude.com/docs/en/memory)
   - [IFScale, arXiv:2507.11538](https://arxiv.org/abs/2507.11538)
