@@ -84,7 +84,7 @@ On first use, BeginNerd gives you something useful first, then adjusts how much 
 | [`beginnerd-implement`](skills/beginnerd-implement/SKILL.md) | How do we build and test the work we've agreed on? |
 | [`beginnerd-release`](skills/beginnerd-release/SKILL.md) | How do we release safely, learn from real use, and maintain the product? |
 
-You **don't** need to run all six phases for every small change. Use the part that fits your current problem. BeginNerd keeps formal project records in the background; it shouldn't make beginners memorize workflow IDs.
+You **don't** need to run all six phases for every small change. Use the part that fits your current problem; the [usage cycles](docs/workflows/PHASE-USAGE-CYCLES.md) show what each phase does and what you approve. BeginNerd keeps formal project records in the background; it shouldn't make beginners memorize workflow IDs.
 
 ## Why BeginNerd?
 
@@ -110,6 +110,6 @@ Read the [implementation status](docs/implementation/STATUS.md), [multi-harness 
 
 ## Go deeper
 
-[How the framework works](docs/architecture/FRAMEWORK-ARCHITECTURE.md) · [Workflow responsibilities](docs/workflows/WORKFLOW-REGISTRY.md) · [Security and permissions](docs/governance/AGENT-GOVERNANCE.md) · [Contributing](CONTRIBUTING.md)
+[Best practices](docs/setup/USAGE-BEST-PRACTICES.md) · [Usage cycle per phase](docs/workflows/PHASE-USAGE-CYCLES.md) · [How the framework works](docs/architecture/FRAMEWORK-ARCHITECTURE.md) · [Workflow responsibilities](docs/workflows/WORKFLOW-REGISTRY.md) · [Security and permissions](docs/governance/AGENT-GOVERNANCE.md) · [Contributing](CONTRIBUTING.md)
 
 BeginNerd is open source under the [MIT License](LICENSE). For security concerns, see [SECURITY.md](SECURITY.md).

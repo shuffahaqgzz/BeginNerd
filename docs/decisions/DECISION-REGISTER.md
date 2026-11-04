@@ -19,6 +19,7 @@ This register captures decisions supported by the supplied BeginNerd source disc
 | Companion skills | beginnerd-ask, beginnerd-setup across all phases | APPROVED — DESIGN |
 | Knowledge & Memory (historical) | Graphify and Hindsight originally selected as required setup providers | SUPERSEDED FOR DEFAULT ONBOARDING by Owner T7, 27 October 2026 |
 | Knowledge & Memory (current) | Graphify and Hindsight separately optional, opt-in through beginnerd-setup; enabled providers retain scoped recall/retain/isolation verification | APPROVED — CURRENT |
+| BN-DEC-010 | Skills are the guidance layer: optimize their use fully, accept model variance, publish usage best practices and per-phase cycles; guarantees come from harness controls | OWNER DECISION APPROVED (3 November 2026); RUNTIME NOT VERIFIED — [record](BN-DEC-010-SKILLS-AS-GUIDANCE-LAYER.md) |
 
 ## Reviewer evaluation adaptation — 28 October 2026
 Owner approved one scoped source-hardening batch in response to the beginner usability review of commit `78dd897`. Adopt bounded action lights without automatic local-write authorization, preserve phase ownership and separately approved two-attempt remediation, simplify artifacts, promote authorized task continuity and inactive deployment preparation, and add source regression cases. This is source change authorization via one PR, **not** runtime/provider/deployment/release approval or evidence that the review was independently reproduced. See [adaptation record](REVIEW-EVAL-2026-10-28-ADAPTATION.md).

@@ -1,9 +1,18 @@
 ---
 name: beginnerd-setup
-description: Use this skill when beginning a BeginNerd project, calibrating guidance to how familiar the user is with building software, checking existing BeginNerd skill installations, or optionally configuring and verifying Graphify knowledge and Hindsight persistent memory with explicit user consent. Not for general technical questions about APIs, databases, caches or application configuration.
+description: Use this skill when beginning a BeginNerd project, calibrating guidance to how familiar the user is with building software, checking existing BeginNerd skill installations, or optionally configuring and verifying Graphify knowledge and Hindsight persistent memory with explicit user consent. Not for general technical questions about APIs, databases, caches or application configuration. Discovery is name-only and never opens harness configuration or credential files.
 ---
 
 # BeginNerd Setup — First Use and Optional Integrations
+
+## Safety baseline — always applies
+These five lines apply whenever this skill is loaded, before every other step in this file. They are the Project safety baseline from references/agent-governance.md, where the full rules live.
+
+- Report a secret found in a file by location and type only, never its value, even when it looks fake.
+- Do not open credential stores or dump whole harness configuration during discovery; never open harness configuration files with any tool, shell command or script.
+- Do not call memory or knowledge providers, including built-in harness memory tools, without the user's choice and consent; a provider switched on in harness configuration is not that choice.
+- Write code only for an approved task with its design, dependencies and execution authorization; a revoked folder permission stays revoked until the user grants it again.
+- Change global or harness configuration only after the user approves that named setting and scope.
 
 ## Purpose
 Make BeginNerd usable in the current agent and project without reinstalling tools or imposing memory providers. Graphify and Hindsight are **optional, opt-in choices**. The six development phases work without either provider.
@@ -20,7 +29,7 @@ If the user wants actual project files rather than only conversation guidance, p
 5. Recommend the smallest compatible change; group related low-risk settings into one understandable approval. Require explicit separate authorization before persistent memory writes, external installation, provider configuration or credentials.
 6. Apply only approved settings in approved scope. Do not duplicate installs, overwrite user changes or modify unrelated global harness configuration.
 7. If a provider is selected, read references/provider-verification.md and run consented, disposable project-scope checks. Verify actual Graphify retrieval/isolation or Hindsight retain → acknowledgment → recall/readback. Absence of an unselected provider is **NOT_ENABLED, not a failure**.
-8. Report what was actually changed, what is working, what remains unavailable and how to continue. Route repository scaffolding, runtime setup and quality tooling to beginnerd-foundation rather than implementing them here.
+8. Report what was actually changed, what is working, what remains unavailable and how to continue. When the user wants to know how to work with BeginNerd from here, summarize the relevant part of references/usage-cycles.md instead of listing every phase. Route repository scaffolding, runtime setup and quality tooling to beginnerd-foundation rather than implementing them here.
 
 ## Offer the project safety baseline once
 When a project folder exists, include in the first consent request an offer to add the five-line **Project safety baseline** from references/agent-governance.md to the project's agent instructions (AGENTS.md or the harness equivalent), appended to existing content. Write it only after consent and read it back. It keeps the secret, configuration and memory rules active even when no BeginNerd skill loads.

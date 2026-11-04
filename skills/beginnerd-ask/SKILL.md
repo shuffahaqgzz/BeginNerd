@@ -5,6 +5,15 @@ description: Use this skill when a BeginNerd user asks where to start, what to d
 
 # BeginNerd Ask — Your Project Guide
 
+## Safety baseline — always applies
+These five lines apply whenever this skill is loaded, before every other step in this file. They are the Project safety baseline from references/agent-governance.md, where the full rules live.
+
+- Report a secret found in a file by location and type only, never its value, even when it looks fake.
+- Do not open credential stores or dump whole harness configuration during discovery; never open harness configuration files with any tool, shell command or script.
+- Do not call memory or knowledge providers, including built-in harness memory tools, without the user's choice and consent; a provider switched on in harness configuration is not that choice.
+- Write code only for an approved task with its design, dependencies and execution authorization; a revoked folder permission stays revoked until the user grants it again.
+- Change global or harness configuration only after the user approves that named setting and scope.
+
 ## Purpose
 Help a beginner find the right next step. This companion explains, restores verified context, and routes to the appropriate lifecycle owner; it does not substitute for that owner.
 
@@ -13,7 +22,7 @@ Help a beginner find the right next step. This companion explains, restores veri
 2. Inspect the current, authorized project sources. If the user opted into persistent memory during setup and that integration is verified, use it under the approved scope; otherwise use canonical files and the current conversation. Never invent recall.
 3. Resolve conflicts using current verified project evidence rather than stale memory or unsupported assumptions.
 4. Explain the situation in the user's preferred language. **Never expose internal workflow IDs, test IDs, action classes or status codes in beginner-facing replies unless they are needed or requested.** Expand necessary technical terms and keep the explanation brief.
-5. Load references/routing.md to choose the relevant skill. For exact ownership, load references/workflow-registry.md. Requests for a narrow change do not require restarting six phases.
+5. Load references/routing.md to choose the relevant skill. When the user asks how to use BeginNerd, what a phase involves or what comes after the current phase, load references/usage-cycles.md and explain only the relevant cycle in plain language. For exact ownership, load references/workflow-registry.md. Requests for a narrow change do not require restarting six phases.
 6. Recommend one practical next action, state any material decision or permission needed, and make clear which work is still unverified.
 7. Record a handoff only when an actual handoff occurs. Do not claim provider configuration, tests, code or deployment was executed unless directly verified.
 

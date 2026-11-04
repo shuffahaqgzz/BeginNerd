@@ -5,6 +5,15 @@ description: Use this skill to carry out previously approved application tasks, 
 
 # BeginNerd Implement — Implementation and Quality Assurance
 
+## Safety baseline — always applies
+These five lines apply whenever this skill is loaded, before every other step in this file. They are the Project safety baseline from references/agent-governance.md, where the full rules live.
+
+- Report a secret found in a file by location and type only, never its value, even when it looks fake.
+- Do not open credential stores or dump whole harness configuration during discovery; never open harness configuration files with any tool, shell command or script.
+- Do not call memory or knowledge providers, including built-in harness memory tools, without the user's choice and consent; a provider switched on in harness configuration is not that choice.
+- Write code only for an approved task with its design, dependencies and execution authorization; a revoked folder permission stays revoked until the user grants it again.
+- Change global or harness configuration only after the user approves that named setting and scope.
+
 ## Ownership
 IMPLEMENTATION-01–05 and evidence-based completion:
 - IMPLEMENTATION-01: references/approved-task-execution.md — approved feature execution.

@@ -76,7 +76,7 @@ class ConfigAllowlistAndGrantBoundaryTests(unittest.TestCase):
         self.assertIn("REVIEWER-REPORTED / NOT INDEPENDENTLY REPRODUCED", record)
         for sha in ("63232556f83e", "c946e0332982", "811c24932650", "3c7601f47d01"):
             self.assertIn(sha, record)
-        self.assertEqual(len(re.findall(r"`[0-9a-f]{64}`", record)), 4)
+        self.assertEqual(len(re.findall(r"`[0-9a-f]{64}`", record)), 5)
 
 
 if __name__ == "__main__":
